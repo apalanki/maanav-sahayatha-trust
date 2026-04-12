@@ -1,25 +1,418 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Home Page - Manav Sahayata Trust
+ * 
+ * Design Philosophy: Humanitarian Editorial Modernism
+ * - Documentary clarity and dignity
+ * - Asymmetric editorial flow with offset content blocks
+ * - Mobile-first responsive design
+ * - Earth-rooted colors: deep maroon, saffron, muted green
+ * - Vertical rule accents and textured backgrounds
+ * - Restrained, respectful interactions
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Heart, Users, BookOpen, Stethoscope, Home as HomeIcon, MapPin } from "lucide-react";
+import { useState } from "react";
+
+export default function HomePage() {
+  const [activeTab, setActiveTab] = useState("mission");
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Header Navigation */}
+      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="container py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-primary rounded-sm flex items-center justify-center">
+              <Heart className="w-6 h-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h1 className="text-lg sm:text-xl font-bold text-primary">MST</h1>
+              <p className="text-xs sm:text-sm text-muted-foreground">Manav Sahayata Trust</p>
+            </div>
+          </div>
+          <nav className="hidden sm:flex gap-6 text-sm">
+            <a href="#programs" className="hover:text-primary transition-colors">Programs</a>
+            <a href="#impact" className="hover:text-primary transition-colors">Impact</a>
+            <a href="#story" className="hover:text-primary transition-colors">Story</a>
+            <a href="#donate" className="hover:text-primary transition-colors">Donate</a>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch min-h-[500px] md:min-h-[600px]">
+          {/* Left: Content */}
+          <div className="bg-background flex flex-col justify-center p-6 sm:p-8 md:p-12 order-2 md:order-1">
+            <div className="max-w-md">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="divider-accent" />
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Service to Others</span>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
+                Empowering Communities Through Education & Care
+              </h1>
+              <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
+                Following Swami Vivekananda's teaching, Manav Sahayata Trust has been serving rural and tribal communities since 2006, providing educational support, medical assistance, and cultural development.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+                >
+                  Support Our Mission
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-primary text-primary hover:bg-primary/5"
+                >
+                  Learn More
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Image */}
+          <div className="order-1 md:order-2 h-64 md:h-auto">
+            <img 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663547862433/2SBUmynbxwSWRrHK638uC4/mst-hero-community-SBczcy3bDRoLvpvj85LyX5.webp"
+              alt="Community members and educators in rural India"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Programs Section */}
+      <section id="programs" className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="container">
+          <div className="max-w-3xl mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="divider-accent" />
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">What We Do</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Our Programs & Services
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              MST operates five core programs designed to uplift and support vulnerable populations in rural and tribal areas.
+            </p>
+          </div>
+
+          {/* Programs Grid - Mobile First */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Education */}
+            <Card className="p-6 sm:p-8 border border-border hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+            <div className="p-3 bg-primary/10 rounded-lg">
+                  <HomeIcon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Educational Support</h3>
+              </div>
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                Financial assistance for school and college fees, exam preparation support, and special focus on educating girls facing financial barriers.
+              </p>
+              <p className="text-sm font-semibold text-primary">120+ students supported in 2025-26</p>
+            </Card>
+
+            {/* Medical */}
+            <Card className="p-6 sm:p-8 border border-border hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="p-3 bg-secondary/10 rounded-lg">
+                  <Stethoscope className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Medical Services</h3>
+              </div>
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                Medical camps, medicine distribution, and financial assistance for treatment in nearby hospitals for women, children, and the elderly.
+              </p>
+              <p className="text-sm font-semibold text-secondary">Regular health interventions</p>
+            </Card>
+
+            {/* Bala Vikas */}
+            <Card className="p-6 sm:p-8 border border-border hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="p-3 bg-accent/10 rounded-lg">
+                  <Users className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Bala Vikas Schools</h3>
+              </div>
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                After-school centers in tribal areas teaching values, culture, literacy, and moral development through games and songs.
+              </p>
+              <p className="text-sm font-semibold text-accent">300+ children in 7 centers</p>
+            </Card>
+
+            {/* Tribal Outreach */}
+            <Card className="p-6 sm:p-8 border border-border hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <MapPin className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Tribal Distribution</h3>
+              </div>
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                Clothing distribution, eye camps with cataract surgeries, and essential supplies to 35+ tribal villages in partnership with community organizations.
+              </p>
+              <p className="text-sm font-semibold text-primary">2,500+ beneficiaries</p>
+            </Card>
+
+            {/* Religious Services */}
+            <Card className="p-6 sm:p-8 border border-border hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="p-3 bg-secondary/10 rounded-lg">
+                  <HomeIcon className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Religious Services</h3>
+              </div>
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                Construction of temples, promotion of tribal dances, and spiritual programs to foster community connection and cultural pride.
+              </p>
+              <p className="text-sm font-semibold text-secondary">18 temples built</p>
+            </Card>
+
+            {/* Community Support */}
+            <Card className="p-6 sm:p-8 border border-border hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="p-3 bg-accent/10 rounded-lg">
+                  <Heart className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Holistic Care</h3>
+              </div>
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                Nutritious food distribution, teaching materials provision, and comprehensive support based on individual need and dedication.
+              </p>
+              <p className="text-sm font-semibold text-accent">Ongoing community engagement</p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Section */}
+      <section id="impact" className="py-12 sm:py-16 md:py-20 section-textured">
+        <div className="container">
+          <div className="max-w-3xl mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="divider-accent" />
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Our Results</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Measurable Impact
+            </h2>
+          </div>
+
+          {/* Impact Stats - Mobile First Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            <div className="text-center">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2">20+</p>
+              <p className="text-sm sm:text-base text-muted-foreground">Engineers, Doctors & Teachers</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-2">300+</p>
+              <p className="text-sm sm:text-base text-muted-foreground">Children in Bala Vikas</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent mb-2">35+</p>
+              <p className="text-sm sm:text-base text-muted-foreground">Tribal Villages Served</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2">18</p>
+              <p className="text-sm sm:text-base text-muted-foreground">Temples Built</p>
+            </div>
+          </div>
+
+          {/* Success Story */}
+          <Card className="p-6 sm:p-8 md:p-12 bg-white border-l-4 border-l-primary">
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Success Story: From Student to Teacher</h3>
+            <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
+              <strong>Pragada Suresh</strong>, a former beneficiary of MST's educational support, exemplifies our impact. After completing his B.A. in Telugu Literature with MST's assistance, he worked in the Indian Railways for six years before qualifying in the 2025 DSC competitive exams to become an SGT Teacher.
+            </p>
+            <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
+              Now teaching in Boddumamidi village in Alluri District—one of the most remote tribal areas with no roads or basic facilities—Suresh has increased school enrollment from 18 to 34 students in just three months. He personally convinced illiterate parents of the value of education, helped families obtain Aadhaar cards, and extended education to children from neighboring villages.
+            </p>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              Inspired by Vivekananda's philosophy and MST's service model, Suresh is utilizing his personal resources to teach not just academics but also moral and religious values to children far from civilization.
+            </p>
+          </Card>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Image */}
+            <div className="order-2 md:order-1">
+              <img 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663547862433/2SBUmynbxwSWRrHK638uC4/mst-tribal-outreach-JqThwzDxyXKnFB29ZuFQCA.webp"
+                alt="Children in tribal area learning values and culture"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="order-1 md:order-2">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="divider-accent" />
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">About MST</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Founded on Service
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
+                Manav Sahayata Trust was formally registered in 2023 with five founding members, building on nearly two decades of grassroots service. Our mission is rooted in Swami Vivekananda's principle: <em>"Service to others is the ultimate goal of life."</em>
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
+                We believe that assistance should be provided based on financial need, dedication, interest, and attitude. Every program is designed with dignity and respect, recognizing the inherent potential in every individual and community we serve.
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                Our work spans educational scholarships, medical camps, tribal outreach, cultural preservation, and spiritual development—all coordinated with local partners and volunteers committed to sustainable, community-led change.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Medical Support Section */}
+      <section className="py-12 sm:py-16 md:py-20 section-textured">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Content */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="divider-accent" />
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Healthcare Access</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Bringing Medical Care to Remote Communities
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
+                In tribal areas where poverty and isolation prevent access to healthcare, MST conducts medical camps, distributes medicines, and provides financial assistance for hospital treatment.
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
+                Through partnerships with organizations like Vema Netralaya, we have performed cataract surgeries, distributed eyeglasses, and provided ongoing medical support to women, children, and the elderly who would otherwise suffer without care.
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              >
+                Support Medical Programs
+              </Button>
+            </div>
+
+            {/* Image */}
+            <div>
+              <img 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663547862433/2SBUmynbxwSWRrHK638uC4/mst-medical-support-k3Ks94iH6P8FqxqVcK8bkM.webp"
+                alt="Healthcare worker providing medical assistance to family"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Impact Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Image */}
+            <div className="order-2 md:order-1">
+              <img 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663547862433/2SBUmynbxwSWRrHK638uC4/mst-education-impact-gsQCtgMMbJCFKtrDkgbbg.webp"
+                alt="Students with mentor reviewing studies and exam preparation"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="order-1 md:order-2">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="divider-accent" />
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Education First</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Unlocking Potential Through Education
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
+                Education is the foundation of opportunity. MST provides full and partial scholarships to deserving students, exam preparation support for competitive exams, and special assistance for girls facing financial barriers.
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
+                Our approach has proven transformative: over 20 former beneficiaries have become engineers, doctors, and teachers, returning to serve their communities. In the 2025-26 academic year alone, we supported 120 school and college students.
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              >
+                Support Education
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section id="donate" className="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
+        <div className="container text-center">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+              Join Us in Serving Others
+            </h2>
+            <p className="text-base sm:text-lg mb-8 leading-relaxed opacity-95">
+              Your support—in any form—helps us expand education, healthcare, and cultural programs in rural and tribal communities. Together, we can create lasting change.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary font-semibold"
+              >
+                Make a Donation
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                Contact Us
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-foreground text-background py-12 sm:py-16">
+        <div className="container">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="font-bold text-lg mb-4">Manav Sahayata Trust</h3>
+              <p className="text-sm opacity-80 leading-relaxed">
+                Serving rural and tribal communities through education, healthcare, and cultural development since 2006.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#programs" className="hover:text-primary transition-colors">Programs</a></li>
+                <li><a href="#impact" className="hover:text-primary transition-colors">Impact</a></li>
+                <li><a href="#donate" className="hover:text-primary transition-colors">Donate</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">Contact</h4>
+              <p className="text-sm opacity-80">
+                For more information about our work and how to support us, please reach out.
+              </p>
+            </div>
+          </div>
+          <div className="border-t border-background/20 pt-8 text-center text-sm opacity-75">
+            <p>&copy; 2024 Manav Sahayata Trust. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
