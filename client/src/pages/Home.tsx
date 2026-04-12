@@ -141,31 +141,37 @@ export default function HomePage() {
             {programs.map((program, index) => {
               const style = getCardStyle(index);
               const Icon = program.icon;
-              const CardContent = (
-                <Card className="p-6 sm:p-8 hover:shadow-lg transition-shadow h-full" style={{ border: style.border, backgroundColor: style.background }}>
+              return (
+                <Card 
+                  key={index} 
+                  className="p-6 sm:p-8 hover:shadow-lg transition-shadow h-full flex flex-col" 
+                  style={{ border: style.border, backgroundColor: style.background }}
+                >
                   <div className="flex items-start gap-4 mb-4">
                     <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: style.iconBackground }}>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-foreground">{program.title}</h3>
                   </div>
-                  <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed flex-grow">
                     {program.desc}
                   </p>
-                  <p className="text-sm font-semibold" style={{ color: style.text }}>
+                  <p className="text-sm font-semibold mb-4" style={{ color: style.text }}>
                     {program.stat}
                   </p>
+                  {program.link && (
+                    <Link href={program.link}>
+                      <Button 
+                        size="sm" 
+                        className="w-full text-white font-semibold"
+                        style={{ backgroundColor: style.text }}
+                      >
+                        Learn More
+                      </Button>
+                    </Link>
+                  )}
                 </Card>
               );
-
-              if (program.link) {
-                return (
-                  <Link key={index} href={program.link} className="cursor-pointer">
-                    {CardContent}
-                  </Link>
-                );
-              }
-              return <div key={index}>{CardContent}</div>;
             })}
           </div>
         </div>
@@ -247,7 +253,7 @@ export default function HomePage() {
             {/* Image */}
             <div>
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663547862433/2SBUmynbxwSWRrHK638uC4/mst-tribal-outreach-Lm9Kp2Xq8rT3vN5wY7zB.webp"
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
                 alt="Community gathering - tribal outreach and cultural activities"
                 className="w-full rounded-lg shadow-lg"
               />
@@ -286,7 +292,7 @@ export default function HomePage() {
             {/* Image */}
             <div>
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663547862433/2SBUmynbxwSWRrHK638uC4/mst-medical-support-k3Ks94iH6P8FqxqVcK8bkM.webp"
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
                 alt="Healthcare worker providing medical assistance to family"
                 className="w-full rounded-lg shadow-lg"
               />
@@ -302,7 +308,7 @@ export default function HomePage() {
             {/* Image */}
             <div className="order-2 md:order-1">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663547862433/2SBUmynbxwSWRrHK638uC4/mst-education-impact-gsQCtgMMbJCFKtrDkgbbg.webp"
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
                 alt="Students with mentor reviewing studies and exam preparation"
                 className="w-full rounded-lg shadow-lg"
               />
