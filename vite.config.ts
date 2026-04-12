@@ -159,7 +159,7 @@ const plugins = [
 ];
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/maanav-sahayatha-trust/' : '/',
+  base: process.env.VITE_BASE_PATH || (process.env.NODE_ENV === 'production' ? '/maanav-sahayatha-trust/' : '/'),
   plugins,
   resolve: {
     alias: {

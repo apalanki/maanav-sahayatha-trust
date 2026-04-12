@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, Calendar, MapPin, Image as ImageIcon, TrendingUp, Target } from "lucide-react";
-import { Link } from "wouter";
+import { useRouter } from "wouter";
 
 interface TimelineActivity {
   id: string;
@@ -57,17 +57,23 @@ const activities: TimelineActivity[] = [
 ];
 
 export default function EducationProgram() {
+  const handleBack = () => {
+    window.history.back();
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="border-b border-border bg-background sticky top-0 z-40">
         <div className="container py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Link href="/">
-              <Button variant="ghost" size="icon">
-                <ArrowLeft className="w-5 h-5" />
-              </Button>
-            </Link>
+            <button
+              onClick={handleBack}
+              className="p-2 hover:bg-accent rounded-lg transition-colors"
+              aria-label="Go back"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </button>
             <div>
               <h1 className="text-2xl font-bold text-primary">
                 Educational Support
@@ -340,11 +346,13 @@ export default function EducationProgram() {
             tribal communities, providing them with quality education and
             opportunities for a better future.
           </p>
-          <Link href="/">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              Make a Donation
-            </Button>
-          </Link>
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary/90"
+            onClick={() => window.history.back()}
+          >
+            Make a Donation
+          </Button>
         </div>
       </main>
     </div>
