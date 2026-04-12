@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Heart, Users, BookOpen, Stethoscope, Home as HomeIcon, MapPin } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState("mission");
@@ -25,12 +26,12 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-sm flex items-center justify-center">
-              <Heart className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <div>
-              <h1 className="text-lg sm:text-xl font-bold text-primary">MST</h1>
-              <p className="text-xs sm:text-sm text-muted-foreground">Manav Sahayata Trust</p>
+            <div className="flex flex-col leading-none">
+              <div className="text-lg sm:text-xl font-bold">
+                <span className="text-primary">manav</span>
+                <span className="text-secondary"> sahayata</span>
+              </div>
+              <p className="text-xs sm:text-sm text-foreground font-semibold">trust</p>
             </div>
           </div>
           <nav className="hidden sm:flex gap-6 text-sm">
@@ -106,18 +107,20 @@ export default function HomePage() {
           {/* Programs Grid - Mobile First */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Education */}
-            <Card className="p-6 sm:p-8 border border-border hover:shadow-lg transition-shadow">
-              <div className="flex items-start gap-4 mb-4">
-            <div className="p-3 bg-primary/10 rounded-lg">
-                  <HomeIcon className="w-6 h-6 text-primary" />
+            <Link href="/programs/education">
+              <Card className="p-6 sm:p-8 border border-border hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="flex items-start gap-4 mb-4">
+              <div className="p-3 bg-primary/10 rounded-lg">
+                    <BookOpen className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">Educational Support</h3>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Educational Support</h3>
-              </div>
-              <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
-                Financial assistance for school and college fees, exam preparation support, and special focus on educating girls facing financial barriers.
-              </p>
-              <p className="text-sm font-semibold text-primary">120+ students supported in 2025-26</p>
-            </Card>
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+                  Financial assistance for school and college fees, exam preparation support, and special focus on educating girls facing financial barriers.
+                </p>
+                <p className="text-sm font-semibold text-primary">120+ students supported in 2025-26</p>
+              </Card>
+            </Link>
 
             {/* Medical */}
             <Card className="p-6 sm:p-8 border border-border hover:shadow-lg transition-shadow">
@@ -385,7 +388,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground text-background py-12 sm:py-16">
+      <footer className="bg-primary text-primary-foreground py-12 sm:py-16">
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
             <div>
@@ -395,11 +398,11 @@ export default function HomePage() {
               </p>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Quick Links</h4>
+              <h4 className="font-bold mb-4">Programs</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#programs" className="hover:text-primary transition-colors">Programs</a></li>
-                <li><a href="#impact" className="hover:text-primary transition-colors">Impact</a></li>
-                <li><a href="#donate" className="hover:text-primary transition-colors">Donate</a></li>
+                <li><Link href="/programs/education" className="hover:text-secondary transition-colors">Educational Support</Link></li>
+                <li><a href="#programs" className="hover:text-secondary transition-colors">Medical Services</a></li>
+                <li><a href="#programs" className="hover:text-secondary transition-colors">Tribal Distribution</a></li>
               </ul>
             </div>
             <div>
@@ -409,8 +412,8 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <div className="border-t border-background/20 pt-8 text-center text-sm opacity-75">
-            <p>&copy; 2024 Manav Sahayata Trust. All rights reserved.</p>
+          <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-90">
+            <p>&copy; {new Date().getFullYear()} Manav Sahayata Trust. All rights reserved.</p>
           </div>
         </div>
       </footer>
