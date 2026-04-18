@@ -111,7 +111,7 @@ export default function HomePage() {
             {/* Image */}
             <div>
               <img
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80"
+                src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-hero-community_original.png"
                 alt="Community members - rural families and children"
                 className="w-full rounded-lg shadow-lg"
               />
@@ -253,7 +253,7 @@ export default function HomePage() {
             {/* Image */}
             <div>
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+                src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-education-impact_original.png"
                 alt="Community gathering - tribal outreach and cultural activities"
                 className="w-full rounded-lg shadow-lg"
               />
@@ -292,7 +292,7 @@ export default function HomePage() {
             {/* Image */}
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+                src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-medical-support_original.png"
                 alt="Healthcare worker providing medical assistance to family"
                 className="w-full rounded-lg shadow-lg"
               />
@@ -308,7 +308,7 @@ export default function HomePage() {
             {/* Image */}
             <div className="order-2 md:order-1">
               <img 
-                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80"
+                src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-tribal-outreach_original.png"
                 alt="Students with mentor reviewing studies and exam preparation"
                 className="w-full rounded-lg shadow-lg"
               />
