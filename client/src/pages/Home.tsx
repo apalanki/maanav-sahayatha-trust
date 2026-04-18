@@ -111,7 +111,7 @@ export default function HomePage() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-hero-community_original.png"
+                src="/mst-hero-community_original.png"
                 alt="Community members - rural families and children"
                 className="w-full rounded-lg"
               />
@@ -253,7 +253,7 @@ export default function HomePage() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-education-impact_original.png"
+                src="/mst-education-impact_original.png"
                 alt="Community gathering - tribal outreach and cultural activities"
                 className="w-full rounded-lg"
               />
@@ -292,7 +292,7 @@ export default function HomePage() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img 
-                src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-medical-support_original.png"
+                src="/mst-medical-support_original.png"
                 alt="Healthcare worker providing medical assistance to family"
                 className="w-full rounded-lg"
               />
@@ -308,7 +308,7 @@ export default function HomePage() {
             {/* Image */}
             <div className="order-2 md:order-1 bg-white p-4 rounded-lg shadow-lg">
               <img 
-                src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-tribal-outreach_original.png"
+                src="/mst-tribal-outreach_original.png"
                 alt="Students with mentor reviewing studies and exam preparation"
                 className="w-full rounded-lg"
               />
