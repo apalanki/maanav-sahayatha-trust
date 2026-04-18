@@ -111,9 +111,10 @@ export default function HomePage() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/mst-hero-community_original.png"
+                src="/manus-storage/mst-hero-community_original_ddcfdb07.png"
                 alt="Community members - rural families and children"
-                className="w-full rounded-lg"
+                className="w-full rounded-lg bg-white"
+                style={{ backgroundColor: 'white' }}
               />
             </div>
           </div>
@@ -253,9 +254,10 @@ export default function HomePage() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/mst-education-impact_original.png"
+                src="/manus-storage/mst-education-impact_original_578b5072.png"
                 alt="Community gathering - tribal outreach and cultural activities"
-                className="w-full rounded-lg"
+                className="w-full rounded-lg bg-white"
+                style={{ backgroundColor: 'white' }}
               />
             </div>
           </div>
@@ -292,9 +294,10 @@ export default function HomePage() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img 
-                src="/mst-medical-support_original.png"
+                src="/manus-storage/mst-medical-support_original_31f45d5b.png"
                 alt="Healthcare worker providing medical assistance to family"
-                className="w-full rounded-lg"
+                className="w-full rounded-lg bg-white"
+                style={{ backgroundColor: 'white' }}
               />
             </div>
           </div>
@@ -308,9 +311,10 @@ export default function HomePage() {
             {/* Image */}
             <div className="order-2 md:order-1 bg-white p-4 rounded-lg shadow-lg">
               <img 
-                src="/mst-tribal-outreach_original.png"
+                src="/manus-storage/mst-tribal-outreach_original_e384afa4.png"
                 alt="Students with mentor reviewing studies and exam preparation"
-                className="w-full rounded-lg"
+                className="w-full rounded-lg bg-white"
+                style={{ backgroundColor: 'white' }}
               />
             </div>
 
