@@ -109,11 +109,11 @@ export default function HomePage() {
             </div>
 
             {/* Image */}
-            <div>
+            <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
                 src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-hero-community_original.png"
                 alt="Community members - rural families and children"
-                className="w-full rounded-lg shadow-lg"
+                className="w-full rounded-lg"
               />
             </div>
           </div>
@@ -251,11 +251,11 @@ export default function HomePage() {
             </div>
 
             {/* Image */}
-            <div>
+            <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
                 src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-education-impact_original.png"
                 alt="Community gathering - tribal outreach and cultural activities"
-                className="w-full rounded-lg shadow-lg"
+                className="w-full rounded-lg"
               />
             </div>
           </div>
@@ -263,7 +263,7 @@ export default function HomePage() {
       </section>
 
       {/* Medical Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-secondary/5">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Content */}
@@ -290,11 +290,11 @@ export default function HomePage() {
             </div>
 
             {/* Image */}
-            <div>
+            <div className="bg-white p-4 rounded-lg shadow-lg">
               <img 
                 src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-medical-support_original.png"
                 alt="Healthcare worker providing medical assistance to family"
-                className="w-full rounded-lg shadow-lg"
+                className="w-full rounded-lg"
               />
             </div>
           </div>
@@ -306,11 +306,11 @@ export default function HomePage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Image */}
-            <div className="order-2 md:order-1">
+            <div className="order-2 md:order-1 bg-white p-4 rounded-lg shadow-lg">
               <img 
                 src="https://raw.githubusercontent.com/apalanki/maanav-sahayatha-trust/main/assets/images/mst-tribal-outreach_original.png"
                 alt="Students with mentor reviewing studies and exam preparation"
-                className="w-full rounded-lg shadow-lg"
+                className="w-full rounded-lg"
               />
             </div>
 
