@@ -1,0 +1,236 @@
+import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Heart, Pill, Building2, Eye, MessageCircle } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+export default function MedicalServicesProgram() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const whatsappDonationLink = "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20MST's%20Medical%20Services%20program";
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
+
+      {/* Main Content */}
+      <main className="container py-12">
+        {/* Program Overview */}
+        <div className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Image */}
+            <div className="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                src="/images/tribal/IMG_20251207_123121544_HDR_AE.jpg"
+                alt="Medical camp providing healthcare in tribal village"
+                className="w-full rounded-lg object-cover aspect-[4/3]"
+              />
+            </div>
+
+            {/* Content */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-1 h-8 bg-secondary" />
+                <span className="text-sm font-semibold text-secondary uppercase tracking-wide">Healthcare Access</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+                Healthcare Where It's Needed Most
+              </h2>
+              <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+                In tribal and rural areas where poverty and isolation prevent timely medical treatment, many men, women, children, and elderly people suffer from preventable or treatable illnesses. MST addresses this critical gap by bringing comprehensive medical support directly to communities in need.
+              </p>
+              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+                Through medical camps, medicine distribution, and financial assistance for hospital treatment, we ensure that healthcare reaches those who would otherwise suffer without care.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Our Approach */}
+        <div className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+            Our Medical Support Programs
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="p-6 border border-primary/20 bg-gradient-to-br from-primary/5 to-background">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-primary">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Medical Camps</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Regular health camps in tribal villages provide free medical consultations, basic health check-ups, and immediate care. We bring doctors and medical professionals to communities that have limited or no access to healthcare facilities.
+              </p>
+            </Card>
+
+            <Card className="p-6 border border-border bg-white">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-secondary">
+                  <Pill className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Medicine Distribution</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Essential medicines are distributed to remote communities, ensuring that families have access to basic treatments for common ailments. This program prevents minor health issues from becoming serious due to lack of medication.
+              </p>
+            </Card>
+
+            <Card className="p-6 border border-border bg-white">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-primary">
+                  <Building2 className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Hospital Treatment Support</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Financial assistance for hospital treatment at nearby facilities helps families access critical care they couldn't otherwise afford. We support surgeries, specialized treatments, and ongoing medical needs.
+              </p>
+            </Card>
+
+            <Card className="p-6 border border-secondary/20 bg-gradient-to-br from-secondary/5 to-background">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-secondary">
+                  <Eye className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Eye Care & Cataract Surgeries</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Through partnerships with organizations like Vema Netralaya, we conduct eye camps, perform cataract surgeries, and distribute eyeglasses—restoring sight and independence to elderly community members.
+              </p>
+            </Card>
+          </div>
+        </div>
+
+        {/* Partnership Highlight */}
+        <div className="mb-12 bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 rounded-lg p-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-primary">
+            Partnerships for Greater Impact
+          </h2>
+          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+            MST collaborates with medical professionals, hospitals, and organizations to maximize our impact. Our partnership with <strong>Vema Netralaya</strong> has enabled us to conduct specialized eye camps and cataract surgeries in tribal villages, transforming the lives of elderly community members who had lost their sight.
+          </p>
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+            Local doctors volunteer their time to conduct health camps, and nearby hospitals provide discounted or subsidized care to patients referred by the Trust. These collaborations ensure that quality healthcare reaches even the most remote areas.
+          </p>
+        </div>
+
+        {/* Impact Story */}
+        <div className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+            Communities We Serve
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Image */}
+            <div className="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                src="/images/tribal/IMG_5772.JPEG"
+                alt="Medical camp in tribal village"
+                className="w-full rounded-lg object-cover aspect-[4/3]"
+              />
+            </div>
+
+            {/* Story */}
+            <div className="flex flex-col justify-center">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
+                Donkada Village & Beyond
+              </h3>
+              <p className="text-base text-foreground/80 mb-4 leading-relaxed">
+                In remote villages like Donkada, where there are no roads or basic facilities, MST has provided comprehensive healthcare support to women, children, and elderly patients. These communities face extreme poverty and isolation, making access to medical care nearly impossible without intervention.
+              </p>
+              <p className="text-base text-foreground/80 mb-4 leading-relaxed">
+                Our medical camps bring immediate relief—treating infections, providing prenatal care, addressing chronic conditions, and performing life-changing surgeries. For many families, this is their only access to professional medical care.
+              </p>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                The integration of medical support with our other programs (education, distribution, cultural services) ensures holistic community development where healthcare is not isolated but part of comprehensive support.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Images */}
+        <div className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+            Our Medical Outreach
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src="/images/tribal/IMG_20251207_123010466_HDR_AE.jpg"
+                alt="Community medical outreach"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src="/images/tribal/IMG_20260104_192923.jpg"
+                alt="Medical supplies distribution"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src="/images/tribal/WhatsApp Image 2026-01-05 at 6.09.28 PM (1).jpeg"
+                alt="Healthcare support in tribal communities"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Focus Areas */}
+        <div className="mb-12 bg-accent/5 border border-border rounded-lg p-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-6 text-primary">
+            Who We Serve
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <h4 className="font-bold text-lg mb-2 text-foreground">Women & Mothers</h4>
+              <p className="text-foreground/80 leading-relaxed">
+                Prenatal care, maternal health services, and treatment for conditions that disproportionately affect women in remote areas.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-lg mb-2 text-foreground">Children</h4>
+              <p className="text-foreground/80 leading-relaxed">
+                Pediatric care, vaccinations, treatment for common childhood illnesses, and nutritional support for healthy development.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-lg mb-2 text-foreground">Elderly</h4>
+              <p className="text-foreground/80 leading-relaxed">
+                Chronic disease management, cataract surgeries, mobility support, and specialized care for age-related health conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
+            Support Our Medical Programs
+          </h3>
+          <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
+            Your contribution helps us bring life-saving healthcare to tribal and rural communities where medical care is otherwise unavailable. Every donation makes a tangible difference in someone's life.
+          </p>
+          <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 flex items-center gap-2 mx-auto"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Contact Us to Support
+            </Button>
+          </a>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

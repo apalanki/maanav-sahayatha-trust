@@ -1,0 +1,175 @@
+import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Home as HomeIcon, Users, Sparkles, Heart, MessageCircle } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+export default function ReligiousCulturalProgram() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const whatsappDonationLink = "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20MST's%20Religious%20and%20Cultural%20Services%20program";
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
+
+      {/* Main Content */}
+      <main className="container py-12">
+        {/* Program Overview */}
+        <div className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Content */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-1 h-8 bg-secondary" />
+                <span className="text-sm font-semibold text-secondary uppercase tracking-wide">Cultural Heritage</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+                Strengthening Community Bonds Through Faith & Culture
+              </h2>
+              <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+                In tribal areas where people live far from mainstream society, religious faith and cultural traditions serve as spiritual centers that strengthen community bonds and cultural identity. MST recognizes the vital role these traditions play in preserving tribal heritage and community cohesion.
+              </p>
+              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+                The organization actively supports tribal religious traditions such as Bhajans, Kolatam, and other cultural practices that are integral to tribal heritage, ensuring that as communities modernize, their cultural and spiritual identity remains strong and vibrant.
+              </p>
+            </div>
+
+            {/* Image */}
+            <div className="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                src="/images/religious/IMG-20260313-WA0045.jpg"
+                alt="Cultural and religious traditions in tribal communities"
+                className="w-full rounded-lg object-cover aspect-[4/3]"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Our Programs */}
+        <div className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+            How We Support Spiritual & Cultural Life
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="p-6 border border-secondary/20 bg-gradient-to-br from-secondary/5 to-background">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-secondary">
+                  <HomeIcon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Temple Renovation & Construction</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                MST has renovated 18 Sri Ram temples in tribal villages and constructed one Hanuman temple, providing spaces for spiritual gathering and community connection. These temples serve as centers of faith and cultural continuity for tribal communities.
+              </p>
+            </Card>
+
+            <Card className="p-6 border border-border bg-white">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-secondary">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Cultural Programs</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Beyond temple work, the Trust conducts and supports numerous religious and cultural programs that preserve and celebrate tribal traditions—including Bhajans, Kolatam, and other cultural practices integral to tribal heritage.
+              </p>
+            </Card>
+
+            <Card className="p-6 border border-border bg-white">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-primary">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Spiritual Gathering Spaces</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Creating and maintaining spaces where tribal communities can gather for prayer, festivals, and cultural celebrations. These spaces strengthen bonds, pass traditions to younger generations, and provide spiritual comfort.
+              </p>
+            </Card>
+
+            <Card className="p-6 border border-primary/20 bg-gradient-to-br from-primary/5 to-background">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-secondary">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Cultural Identity Preservation</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Ensuring that tribal cultural and spiritual heritage remains strong and vibrant as communities develop. Supporting traditional practices and ceremonies that define tribal identity and connect generations.
+              </p>
+            </Card>
+          </div>
+        </div>
+
+        {/* Visual Impact */}
+        <div className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+            Cultural Celebrations & Traditions
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src="/images/religious/IMG-20260313-WA0011.jpg"
+                alt="Religious celebration in tribal village"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src="/images/religious/IMG20250126193413.jpg"
+                alt="Cultural program - community gathering"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src="/images/religious/IMG-20260221-WA0105.jpg"
+                alt="Traditional cultural practices"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Long-Term Impact */}
+        <div className="mb-12 bg-gradient-to-br from-secondary/5 to-primary/5 border border-secondary/20 rounded-lg p-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-foreground">
+            Preserving Heritage for Future Generations
+          </h2>
+          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+            As tribal communities face modernization and external influences, maintaining strong cultural and spiritual identity becomes increasingly important. MST's religious and cultural services ensure that traditions, values, and practices are not lost but instead celebrated and passed to younger generations.
+          </p>
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+            Temples and cultural spaces become focal points for community life—places where elders share wisdom, children learn traditions, and families celebrate festivals together. This work ensures tribal culture remains vibrant, respected, and integral to community identity for decades to come.
+          </p>
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
+            Support Cultural Preservation
+          </h3>
+          <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
+            Your contribution helps us preserve tribal spiritual heritage, support cultural programs, and maintain community gathering spaces that strengthen bonds and pass traditions to future generations.
+          </p>
+          <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 flex items-center gap-2 mx-auto"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Contact Us to Support
+            </Button>
+          </a>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

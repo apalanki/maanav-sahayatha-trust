@@ -1,0 +1,269 @@
+import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Users, BookOpen, Heart, Sparkles, MessageCircle } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+export default function BalaVikasProgram() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const whatsappDonationLink = "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20MST's%20Bala%20Vikas%20Schools%20program";
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
+
+      {/* Main Content */}
+      <main className="container py-12">
+        {/* Program Overview */}
+        <div className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Image */}
+            <div className="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                src="/images/bala-vikas/IMG-20260311-WA0023.jpg"
+                alt="Bala Vikas school - children learning values and culture"
+                className="w-full rounded-lg object-cover aspect-[4/3]"
+              />
+            </div>
+
+            {/* Content */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-1 h-8 bg-secondary" />
+                <span className="text-sm font-semibold text-secondary uppercase tracking-wide">After-School Centers</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+                Developing Children with Values & Purpose
+              </h2>
+              <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+                Recognizing that tribal children need more than formal schooling to thrive, MST established Viveka Bala Vidya Vikas Vidyalayas (Bala Vikas Schools) as after-school learning centers. Operating two hours daily in the evening, these centers provide comprehensive child development through cultural, moral, and educational activities specifically designed for tribal youth.
+              </p>
+              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+                Currently, seven centers are functioning actively—one in an urban area and six in tribal areas. Children learn not only academics but also good moral values, discipline, ethical conduct, and spiritual awareness through games, songs, and interactive activities.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Program Philosophy */}
+        <div className="mb-12 bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 rounded-lg p-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-foreground">
+            Our Educational Philosophy
+          </h2>
+          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+            The main objective of Bala Vikas schools is to inculcate <strong>values, culture, moral discipline, and good conduct</strong> among boys and girls while supporting their overall development. We believe that education is not just about academic knowledge—it's about building character, fostering positive thinking, and creating value-based individuals who contribute meaningfully to their communities.
+          </p>
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+            Each child enrolled receives <strong>nutritious food along with quality education</strong> to ensure their holistic development. We honor dedicated teachers who teach selflessly with recognition and incentives, while continuously providing required teaching and learning materials.
+          </p>
+        </div>
+
+        {/* What We Teach */}
+        <div className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+            What Children Learn
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="p-6 border border-primary/20 bg-gradient-to-br from-primary/5 to-background">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-primary">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Values & Moral Education</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Lessons in compassion, honesty, respect, service to others, and ethical conduct. Children learn through stories, examples, and guided discussions that help them understand right from wrong and develop strong moral foundations.
+              </p>
+            </Card>
+
+            <Card className="p-6 border border-border bg-white">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-secondary">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Cultural Heritage</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Tribal traditions, cultural practices, songs, dances, and customs are taught with pride and respect. Children connect with their heritage while developing a strong cultural identity and appreciation for their community's unique traditions.
+              </p>
+            </Card>
+
+            <Card className="p-6 border border-border bg-white">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-primary">
+                  <BookOpen className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Academic Support</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Literacy, numeracy, and homework help complement formal schooling. Children receive individual attention and support to strengthen their academic skills and build confidence in their learning abilities.
+              </p>
+            </Card>
+
+            <Card className="p-6 border border-secondary/20 bg-gradient-to-br from-secondary/5 to-background">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-lg bg-secondary">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Life Skills & Character Development</h3>
+              </div>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                Discipline, teamwork, leadership, communication, and problem-solving skills are developed through games, group activities, and structured exercises that make learning engaging and fun.
+              </p>
+            </Card>
+          </div>
+        </div>
+
+        {/* Visual Impact */}
+        <div className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+            Our Centers in Action
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Images */}
+            <div className="space-y-4">
+              <div className="bg-white p-3 rounded-lg shadow">
+                <img
+                  src="/images/bala-vikas/IMG-20260311-WA0023.jpg"
+                  alt="Bala Vikas school children learning"
+                  className="w-full rounded-lg object-cover aspect-video"
+                />
+              </div>
+              <div className="bg-white p-3 rounded-lg shadow">
+                <img
+                  src="/images/bala-vikas/IMG-20260312-WA0014.jpg"
+                  alt="Children engaged in activities"
+                  className="w-full rounded-lg object-cover aspect-video"
+                />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="flex flex-col justify-center">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
+                Creating a Generation of Value-Based Youth
+              </h3>
+              <p className="text-base text-foreground/80 mb-4 leading-relaxed">
+                Our Bala Vikas centers provide a safe, nurturing environment where tribal children can develop holistically. After their regular school day, children gather for two hours of engaging activities that build character, reinforce cultural identity, and strengthen community bonds.
+              </p>
+              <p className="text-base text-foreground/80 mb-4 leading-relaxed">
+                Teachers use games, songs, and storytelling to make learning joyful and memorable. Nutritious meals ensure that children's physical needs are met while they learn, and every session is designed to leave children feeling valued, confident, and inspired.
+              </p>
+              <p className="text-base text-foreground/80 leading-relaxed">
+                MST is committed to establishing more Bala Vikas schools and developing children into healthy, value-based individuals with positive thinking. This next generation will carry forward both their cultural heritage and modern education—equipped to lead and serve their communities with integrity.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Images */}
+        <div className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+            Learning Through Joy & Engagement
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src="/images/bala-vikas/IMG-20251224-WA0036.jpg"
+                alt="Group activities at Bala Vikas center"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src="/images/bala-vikas/IMG-20260215-WA0005.jpg"
+                alt="Cultural learning and traditions"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src="/images/bala-vikas/IMG-20260325-WA0018.jpg"
+                alt="Children learning values through activities"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Supporting Teachers */}
+        <div className="mb-12 bg-accent/5 border border-border rounded-lg p-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-6 text-primary">
+            Honoring Dedicated Teachers
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+                The success of Bala Vikas schools depends on dedicated teachers who teach selflessly and with genuine care for children's development. MST recognizes and honors these teachers with:
+              </p>
+              <ul className="space-y-2 text-foreground/80">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>Recognition and appreciation for their service</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>Incentives and support for their dedication</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>Continuous provision of teaching and learning materials</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>Training and development opportunities</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src="/images/bala-vikas/IMG-20260311-WA0015.jpg"
+                alt="Teachers and students at Bala Vikas center"
+                className="w-full rounded-lg object-cover aspect-[4/3]"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Program Impact */}
+        <div className="mb-12 bg-gradient-to-br from-secondary/5 to-primary/5 border border-secondary/20 rounded-lg p-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-foreground">
+            Long-Term Community Impact
+          </h2>
+          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+            Bala Vikas schools are creating lasting change in tribal communities. Children who grow up with strong moral values, cultural pride, and academic skills become leaders, teachers, and role models in their villages. They carry forward traditions while embracing progress, ensuring that tribal culture remains vibrant across generations.
+          </p>
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+            Parents see the positive transformation in their children—improved behavior, academic performance, and respect for elders. Communities become stronger as value-based youth take on responsibilities and contribute to collective wellbeing. This is education with purpose, creating change that extends far beyond the classroom.
+          </p>
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
+            Support Bala Vikas Schools
+          </h3>
+          <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
+            Your contribution helps us expand Bala Vikas centers, provide nutritious meals, support dedicated teachers, and develop the next generation of value-based tribal youth. Every donation invests in children's futures and strengthens communities.
+          </p>
+          <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 flex items-center gap-2 mx-auto"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Contact Us to Support
+            </Button>
+          </a>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
