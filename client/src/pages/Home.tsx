@@ -115,7 +115,7 @@ export default function HomePage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Content */}
-            <div>
+            <div className="md:order-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-1 h-8 bg-primary" />
                 <span className="text-sm font-semibold text-primary uppercase tracking-wide">Founded on Service</span>
@@ -124,7 +124,7 @@ export default function HomePage() {
                 Our Story
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-                Since 2004, Manav Sahayata Trust has been quietly serving rural and tribal communities—not with fanfare, but with steady commitment. What began as grassroots work became a formally registered organization in 2023, built on nearly two decades of trust and relationships.
+                Our journey began in 2004 as quiet, grassroots service to rural and tribal communities—not with fanfare, but with steady commitment. After nearly two decades of building trust and relationships, we became a formally registered trust in 2023.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
                 We believe in Swami Vivekananda's timeless truth: <em>"Service to others is the purpose of life."</em> That's why we support those who need it most, treating every person with dignity and recognizing that potential exists everywhere—it just needs opportunity.
@@ -135,7 +135,7 @@ export default function HomePage() {
             </div>
 
             {/* Image */}
-            <div className="bg-white p-4 rounded-lg shadow-lg">
+            <div className="md:order-1 bg-white p-4 rounded-lg shadow-lg">
               <img
                 src={getAssetPath("/images/education/IMG_20241020_173824.jpg")}
                 alt="Educational support - students receiving guidance"

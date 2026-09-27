@@ -8,7 +8,11 @@ import { PROGRAMS, homeSectionHref } from "@/lib/programs";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const whatsappDonationLink = "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20Manav%20Sahayata%20Trust";
+  // Defer closing so the link is still in the DOM when the browser follows it
+  const closeMobileMenu = () => setTimeout(() => setMobileMenuOpen(false), 0);
+
+  const whatsappDonationLink =
+    "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20Manav%20Sahayata%20Trust";
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -25,31 +29,46 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6">
-            <Link href="/">
-              <a className="text-sm font-medium hover:text-primary transition-colors">Home</a>
+            <Link
+              href="/"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              Home
             </Link>
-            <a href={homeSectionHref("about")} className="text-sm font-medium hover:text-primary transition-colors">
+            <a
+              href={homeSectionHref("about")}
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               About Us
             </a>
             <div className="relative group">
-              <button className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors" aria-haspopup="true">
+              <button
+                className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors"
+                aria-haspopup="true"
+              >
                 Programs
                 <ChevronDown className="w-4 h-4" aria-hidden="true" />
               </button>
               {/* Dropdown - opens on hover and on keyboard focus */}
               <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
                 <div className="py-2">
-                  {PROGRAMS.map((program) => (
-                    <Link key={program.path} href={program.path}>
-                      <a className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors">
-                        {program.shortName}
-                      </a>
+                  {PROGRAMS.map(program => (
+                    <Link
+                      key={program.path}
+                      href={program.path}
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                    >
+                      {" "}
+                      {program.shortName}
                     </Link>
                   ))}
                 </div>
               </div>
             </div>
-            <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+            <a
+              href="#contact"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               Contact
             </a>
             <a
@@ -57,7 +76,10 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="sm" className="bg-primary hover:bg-primary/90 flex items-center gap-2">
+              <Button
+                size="sm"
+                className="bg-primary hover:bg-primary/90 flex items-center gap-2"
+              >
                 <MessageCircle className="w-4 h-4" />
                 Donate
               </Button>
@@ -82,36 +104,37 @@ export default function Header() {
         {mobileMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 border-t border-border pt-4">
             <div className="flex flex-col gap-4">
-              <Link href="/">
-                <a
-                  className="block py-2 text-sm font-medium hover:text-primary transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Home
-                </a>
+              <Link
+                href="/"
+                className="block py-2 text-sm font-medium hover:text-primary transition-colors"
+                onClick={closeMobileMenu}
+              >
+                Home
               </Link>
               <a
                 href={homeSectionHref("about")}
                 className="block py-2 text-sm font-medium hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={closeMobileMenu}
               >
                 About Us
               </a>
-              <div className="text-sm font-semibold text-muted-foreground">Programs</div>
-              {PROGRAMS.map((program) => (
-                <Link key={program.path} href={program.path}>
-                  <a
-                    className="block pl-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors rounded"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {program.shortName}
-                  </a>
+              <div className="text-sm font-semibold text-muted-foreground">
+                Programs
+              </div>
+              {PROGRAMS.map(program => (
+                <Link
+                  key={program.path}
+                  href={program.path}
+                  className="block pl-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors rounded"
+                  onClick={closeMobileMenu}
+                >
+                  {program.shortName}
                 </Link>
               ))}
               <a
                 href="#contact"
                 className="block py-2 text-sm font-medium hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={closeMobileMenu}
               >
                 Contact
               </a>
@@ -121,7 +144,10 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="w-full"
               >
-                <Button size="sm" className="w-full bg-primary hover:bg-primary/90 flex items-center justify-center gap-2">
+                <Button
+                  size="sm"
+                  className="w-full bg-primary hover:bg-primary/90 flex items-center justify-center gap-2"
+                >
                   <MessageCircle className="w-4 h-4" />
                   Donate
                 </Button>
