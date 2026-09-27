@@ -1,0 +1,35 @@
+{
+  "siteName": "Manav Sahayata Trust",
+  "pages": {
+    "/": {
+      "title": "Manav Sahayata Trust | Charity for Tribal Communities in Visakhapatnam",
+      "description": "Since 2004, Manav Sahayata Trust has supported tribal and rural families near Visakhapatnam, Andhra Pradesh with scholarships, medical camps, after-school centers, and essential supplies.",
+      "image": "/images/tribal/IMG_20251207_123010466_HDR_AE.jpg"
+    },
+    "/programs/education": {
+      "title": "Scholarships & Educational Support | Manav Sahayata Trust",
+      "description": "Scholarships, exam coaching, and mentorship for deserving tribal and rural students in Andhra Pradesh, with a special focus on girls' education. Help a student stay in school.",
+      "image": "/images/education/IMG_20241020_173824.jpg"
+    },
+    "/programs/bala-vikas": {
+      "title": "Bala Vikas After-School Centers | Manav Sahayata Trust",
+      "description": "Bala Vikas centers give tribal children values education, cultural learning, homework help, and a nutritious meal every day. Support a child's growth.",
+      "image": "/images/bala-vikas/IMG-20260311-WA0023.jpg"
+    },
+    "/programs/medical": {
+      "title": "Medical Camps for Tribal Villages | Manav Sahayata Trust",
+      "description": "Free medical camps, medicines, cataract surgeries with Vema Netralaya, and hospital treatment support for tribal families in remote villages of Andhra Pradesh.",
+      "image": "/images/tribal/IMG_20251207_123121544_HDR_AE.jpg"
+    },
+    "/programs/tribal": {
+      "title": "Clothing & Supplies for Tribal Villages | Manav Sahayata Trust",
+      "description": "Warm clothing, blankets, eye camps, and essential supplies for remote tribal villages in Andhra Pradesh, in partnership with Bhagavan Sri Sathya Sai Seva Trust.",
+      "image": "/images/tribal/IMG_5772.JPEG"
+    },
+    "/programs/religious-cultural": {
+      "title": "Temple Renovation & Tribal Culture | Manav Sahayata Trust",
+      "description": "18 Sri Ram temples renovated and a new Hanuman temple built in tribal villages, plus support for Bhajans, Kolatam, and the cultural traditions that bind communities.",
+      "image": "/images/religious/IMG-20260313-WA0045.jpg"
+    }
+  }
+}

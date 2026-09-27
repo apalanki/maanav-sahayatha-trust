@@ -131,6 +131,8 @@ export default function ReligiousCulturalProgram() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white p-3 rounded-lg shadow">
               <img
+                loading="lazy"
+                decoding="async"
                 src={getAssetPath("/images/religious/IMG-20260313-WA0011.jpg")}
                 alt="Religious celebration in tribal village"
                 className="w-full rounded-lg object-cover aspect-video"
@@ -138,6 +140,8 @@ export default function ReligiousCulturalProgram() {
             </div>
             <div className="bg-white p-3 rounded-lg shadow">
               <img
+                loading="lazy"
+                decoding="async"
                 src={getAssetPath("/images/religious/IMG20250126193413.jpg")}
                 alt="Cultural program - community gathering"
                 className="w-full rounded-lg object-cover aspect-video"
@@ -145,6 +149,8 @@ export default function ReligiousCulturalProgram() {
             </div>
             <div className="bg-white p-3 rounded-lg shadow">
               <img
+                loading="lazy"
+                decoding="async"
                 src={getAssetPath("/images/religious/IMG-20260221-WA0105.jpg")}
                 alt="Traditional cultural practices"
                 className="w-full rounded-lg object-cover aspect-video"

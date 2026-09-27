@@ -137,6 +137,8 @@ export default function HomePage() {
             {/* Image */}
             <div className="md:order-1 bg-white p-4 rounded-lg shadow-lg">
               <img
+                loading="lazy"
+                decoding="async"
                 src={getAssetPath("/images/education/IMG_20241020_173824.jpg")}
                 alt="Educational support - students receiving guidance"
                 className="w-full rounded-lg object-cover aspect-[4/3]"

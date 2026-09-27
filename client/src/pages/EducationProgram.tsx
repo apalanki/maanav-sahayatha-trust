@@ -134,6 +134,8 @@ export default function EducationProgram() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   src={getAssetPath("/images/education/IMG_20241020_173824.jpg")}
                   alt="Students receiving educational support"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
@@ -150,6 +152,8 @@ export default function EducationProgram() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   src={getAssetPath("/images/education/WhatsApp Image 2024-09-24 at 10.53.59 AM(3).jpeg")}
                   alt="Student mentorship session"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
@@ -166,6 +170,8 @@ export default function EducationProgram() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   src={getAssetPath("/images/education/WhatsApp Image 2024-09-24 at 10.54.00 AM (6).jpeg")}
                   alt="Educational guidance and support"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
