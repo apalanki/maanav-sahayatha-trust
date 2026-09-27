@@ -37,13 +37,13 @@ export default function MedicalServicesProgram() {
                 <span className="text-sm font-semibold text-secondary uppercase tracking-wide">Healthcare Access</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
-                Healthcare Where It's Needed Most
+                No One Should Suffer Without Care
               </h2>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-                In tribal and rural areas where poverty and isolation prevent timely medical treatment, many men, women, children, and elderly people suffer from preventable or treatable illnesses. MST addresses this critical gap by bringing comprehensive medical support directly to communities in need.
+                In remote tribal villages, a simple infection can become life-threatening. Mothers give birth without prenatal care. The elderly go blind from cataracts that could easily be treated. These aren't rare tragedies—they're daily realities when healthcare is hours away and unaffordable.
               </p>
               <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-                Through medical camps, medicine distribution, and financial assistance for hospital treatment, we ensure that healthcare reaches those who would otherwise suffer without care.
+                We bring doctors, medicines, and hope directly to these communities through medical camps, free treatments, and financial assistance for hospital care. Because healthcare is a right, not a privilege.
               </p>
             </div>
           </div>
@@ -213,10 +213,10 @@ export default function MedicalServicesProgram() {
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
-            Support Our Medical Programs
+            Bring Healthcare to Those Who Need It Most
           </h3>
           <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Your contribution helps us bring life-saving healthcare to tribal and rural communities where medical care is otherwise unavailable. Every donation makes a tangible difference in someone's life.
+            Your support funds medical camps, provides medicines, and helps families afford life-saving treatments. You can be the reason someone receives care when they need it most.
           </p>
           <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
             <Button

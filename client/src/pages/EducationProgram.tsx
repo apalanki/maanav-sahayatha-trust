@@ -37,13 +37,13 @@ export default function EducationProgram() {
                 <span className="text-sm font-semibold text-primary uppercase tracking-wide">Our Mission</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
-                Empowering Through Education
+                Education Changes Everything
               </h2>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-                Education is the foundation for breaking the cycle of poverty and creating community leaders. MST provides comprehensive educational support to deserving students from rural and tribal areas who lack financial resources but possess the merit and dedication to succeed.
+                A talented student shouldn't have to drop out of school because their family can't afford fees. Education isn't just about learning—it's about breaking cycles of poverty and creating community leaders who give back.
               </p>
               <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-                Through full and partial scholarships, exam preparation support, and special assistance for girls facing financial barriers, we ensure that talented students can pursue their educational dreams with dignity and purpose.
+                We provide scholarships, exam preparation support, and special assistance for girls facing financial barriers—ensuring that deserving students can pursue their dreams with dignity, regardless of their economic background.
               </p>
             </div>
           </div>
@@ -109,13 +109,13 @@ export default function EducationProgram() {
         {/* Long-Term Impact */}
         <div className="mb-12 bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 rounded-lg p-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-foreground">
-            Creating Generational Change
+            The Ripple Effect of Education
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-            The true measure of MST's educational support program is seen in the lives transformed and communities uplifted. Former beneficiaries have become engineers, doctors, and teachers—professionals who return to serve their communities and inspire the next generation.
+            When you educate one person, you transform an entire community. Our former students have become engineers, doctors, and teachers—and many return to serve the very villages where they grew up, inspiring the next generation.
           </p>
           <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-            Stories like Pragada Suresh and Ch. Santosh—two young men who received MST support, became teachers, and now serve in remote tribal schools—demonstrate that education combined with service values creates lasting, generational change that extends far beyond individual success.
+            Like Pragada Suresh and Ch. Santosh—two young men who received MST scholarships, became teachers, and now dedicate their lives to educating children in remote tribal schools. This is the power of education: today's students become tomorrow's change-makers.
           </p>
         </div>
 
@@ -179,12 +179,10 @@ export default function EducationProgram() {
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
-            Support Our Educational Mission
+            Help a Student Stay in School
           </h3>
           <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Your donation directly impacts the lives of students in rural and
-            tribal communities, providing them with quality education and
-            opportunities for a better future.
+            Your support keeps talented students in school who would otherwise drop out due to financial hardship. Give a deserving student the chance to learn, grow, and transform their community.
           </p>
           <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
             <Button

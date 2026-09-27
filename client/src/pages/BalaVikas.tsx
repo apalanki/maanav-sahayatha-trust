@@ -37,13 +37,13 @@ export default function BalaVikasProgram() {
                 <span className="text-sm font-semibold text-secondary uppercase tracking-wide">After-School Centers</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
-                Developing Children with Values & Purpose
+                Nurturing the Next Generation
               </h2>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-                Recognizing that tribal children need more than formal schooling to thrive, MST established Viveka Bala Vidya Vikas Vidyalayas (Bala Vikas Schools) as after-school learning centers. Operating two hours daily in the evening, these centers provide comprehensive child development through cultural, moral, and educational activities specifically designed for tribal youth.
+                Children need more than textbooks to thrive—they need values, confidence, and connection to their heritage. Our Bala Vikas after-school centers give tribal children exactly that: two hours each evening of games, songs, cultural learning, and character building.
               </p>
               <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-                Currently, seven centers are functioning actively—one in an urban area and six in tribal areas. Children learn not only academics but also good moral values, discipline, ethical conduct, and spiritual awareness through games, songs, and interactive activities.
+                Seven centers now serve children across tribal and urban areas, teaching not just academics but compassion, honesty, discipline, and pride in their cultural traditions. Every child also receives a nutritious meal—because learning happens best on a full stomach.
               </p>
             </div>
           </div>
@@ -246,10 +246,10 @@ export default function BalaVikasProgram() {
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
-            Support Bala Vikas Schools
+            Invest in Tomorrow's Leaders
           </h3>
           <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Your contribution helps us expand Bala Vikas centers, provide nutritious meals, support dedicated teachers, and develop the next generation of value-based tribal youth. Every donation invests in children's futures and strengthens communities.
+            Your support helps children develop into compassionate, value-driven individuals who will lead their communities with integrity. Fund nutritious meals, teaching materials, and the expansion of Bala Vikas centers to reach more children.
           </p>
           <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
             <Button

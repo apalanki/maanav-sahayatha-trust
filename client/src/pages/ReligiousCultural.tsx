@@ -28,13 +28,13 @@ export default function ReligiousCulturalProgram() {
                 <span className="text-sm font-semibold text-secondary uppercase tracking-wide">Cultural Heritage</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
-                Strengthening Community Bonds Through Faith & Culture
+                Where Culture and Faith Unite Communities
               </h2>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-                In tribal areas where people live far from mainstream society, religious faith and cultural traditions serve as spiritual centers that strengthen community bonds and cultural identity. MST recognizes the vital role these traditions play in preserving tribal heritage and community cohesion.
+                In remote tribal villages, temples aren't just places of worship—they're where communities gather, celebrate, and connect across generations. Cultural traditions like Bhajans and Kolatam aren't just performances—they're living links to heritage and identity.
               </p>
               <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-                The organization actively supports tribal religious traditions such as Bhajans, Kolatam, and other cultural practices that are integral to tribal heritage, ensuring that as communities modernize, their cultural and spiritual identity remains strong and vibrant.
+                We've renovated 18 temples and built spaces where tribal families can practice their faith and pass traditions to their children. Because as these communities face modernization, preserving spiritual and cultural identity matters more than ever.
               </p>
             </div>
 
@@ -152,10 +152,10 @@ export default function ReligiousCulturalProgram() {
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
-            Support Cultural Preservation
+            Help Keep Culture and Traditions Alive
           </h3>
           <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Your contribution helps us preserve tribal spiritual heritage, support cultural programs, and maintain community gathering spaces that strengthen bonds and pass traditions to future generations.
+            Your support helps renovate temples, fund cultural programs, and create spaces where communities gather and traditions thrive. Ensure tribal heritage lives on for generations to come.
           </p>
           <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
             <Button

@@ -110,10 +110,10 @@ export default function HomePage() {
               <span className="text-sm font-semibold text-primary uppercase tracking-wide">What We Do</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Five Core Programs
+              Five Ways We Create Change
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground">
-              Each program is designed to uplift vulnerable populations with dignity, recognizing the inherent potential within every person and community we serve.
+              Every person has potential. Every community has strength. Our programs help unlock both—bringing education, healthcare, and cultural support to those who need it most.
             </p>
           </div>
 
@@ -163,10 +163,10 @@ export default function HomePage() {
           <div className="max-w-3xl mb-12">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-1 h-8 bg-primary" />
-              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Stories of Impact</span>
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Real Stories, Real Impact</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-              From Beneficiary to Teacher
+              From Students to Teachers—A Story of Hope
             </h2>
           </div>
 
@@ -174,13 +174,13 @@ export default function HomePage() {
           <Card className="p-6 sm:p-8 md:p-12 bg-white" style={{ borderLeft: `4px solid #003D7A` }}>
             <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Pragada Suresh and Ch. Santosh</h3>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-              Two young men from the remote tribal school in Donkada village received educational support from MST. With the guidance of the Trust's founders and encouragement from donors, both successfully cleared the 2025 DSC (District Selection Committee) Teacher Recruitment Examination.
+              Two young men from a remote tribal village in Donkada once struggled to afford their education. With support from MST and encouragement from generous donors, they persevered—and in 2025, both passed the District Selection Committee Teacher Recruitment Examination.
             </p>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-              Today, they serve as SGT (Subject Grade Teacher) in the remote agency area of G. Madugula Mandal. Despite living among tribal communities with limited facilities and resources, they have served with remarkable dedication and commitment, earning deep respect from students and parents alike.
+              Today, they teach in the same remote tribal areas where they grew up, serving their communities with dedication and earning deep respect from students and parents. Despite limited facilities and challenging conditions, they show up every day—because they know firsthand how education can transform a life.
             </p>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Inspired by Vivekananda's philosophy and MST's service model, these teachers are utilizing their education to uplift their own communities—proving that education combined with service values creates lasting, generational change.
+              This is the ripple effect of your support: students become teachers, beneficiaries become change-makers, and communities grow stronger across generations.
             </p>
           </Card>
         </div>
@@ -200,13 +200,13 @@ export default function HomePage() {
                 Our Story
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-                Manav Sahayata Trust was established in 2004 and began serving communities in 2006. The organization was formally registered in 2023 with five founding members, building on nearly two decades of grassroots service.
+                Since 2004, Manav Sahayata Trust has been quietly serving rural and tribal communities—not with fanfare, but with steady commitment. What began as grassroots work became a formally registered organization in 2023, built on nearly two decades of trust and relationships.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
-                Our mission is rooted in Swami Vivekananda's principle: <em>"Service to others is the purpose of life."</em> We believe that assistance should be provided based on financial need, merit, dedication, and attitude—always with dignity and respect.
+                We believe in Swami Vivekananda's timeless truth: <em>"Service to others is the purpose of life."</em> That's why we support those who need it most, treating every person with dignity and recognizing that potential exists everywhere—it just needs opportunity.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                Every program is designed to recognize the inherent potential within each person and community, coordinated with local partners and volunteers committed to sustainable, community-led change.
+                Working alongside local partners and volunteers, we focus on sustainable, community-led change that lasts beyond our involvement.
               </p>
             </div>
 
@@ -242,13 +242,13 @@ export default function HomePage() {
                 <span className="text-sm font-semibold text-secondary uppercase tracking-wide">Healthcare Access</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Bringing Medical Care to Remote Communities
+                Healthcare Where It's Needed Most
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-                In tribal areas where poverty and isolation prevent access to healthcare, MST conducts medical camps, distributes essential medicines, and provides financial assistance for hospital treatment.
+                Imagine living in a village with no roads, no electricity, and no doctor for miles. For many tribal families, a simple infection or treatable illness becomes life-threatening because healthcare is out of reach.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
-                Through partnerships with organizations like Vema Netralaya, we perform cataract surgeries, distribute eyeglasses, and provide ongoing support to women, children, and the elderly who would otherwise suffer without care.
+                We bring healthcare directly to these communities—conducting medical camps, distributing medicines, and helping families afford hospital treatment. Through partnerships with organizations like Vema Netralaya, we've restored sight through cataract surgeries and provided glasses to those who've never seen clearly.
               </p>
             </div>
           </div>
@@ -266,13 +266,13 @@ export default function HomePage() {
                 <span className="text-sm font-semibold text-primary uppercase tracking-wide">Cultural Heritage</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Preserving Traditions & Spiritual Identity
+                Keeping Traditions Alive
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-                In tribal areas far from mainstream society, religious faith and cultural traditions serve as spiritual centers that strengthen community bonds and cultural identity.
+                Culture is what holds communities together—especially in remote tribal areas where traditions connect generations and give meaning to daily life.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
-                MST actively supports tribal traditions like Bhajans, Kolatam, and other cultural practices. We have renovated temples in tribal villages, providing spaces for spiritual gathering and community connection while ensuring that cultural and spiritual heritage remains strong and vibrant.
+                We support cultural practices like Bhajans and Kolatam, and we've renovated 18 temples in tribal villages, creating spaces where families can gather, celebrate, and pass their heritage to the next generation. Because preserving culture means preserving identity.
               </p>
             </div>
 
@@ -293,10 +293,10 @@ export default function HomePage() {
         <div className="container text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              Join Us in Serving Others
+              Be Part of Someone's Transformation
             </h2>
             <p className="text-base sm:text-lg mb-8 leading-relaxed opacity-95">
-              Your support—in any form—helps us expand education, healthcare, and cultural programs in rural and tribal communities. Together, we can create lasting change.
+              Your support—whether large or small—helps a student stay in school, restores sight to an elderly villager, or keeps cultural traditions alive. Every contribution creates real, lasting change in someone's life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">

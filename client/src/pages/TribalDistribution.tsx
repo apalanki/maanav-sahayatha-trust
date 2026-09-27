@@ -28,13 +28,13 @@ export default function TribalDistributionProgram() {
                 <span className="text-sm font-semibold text-primary uppercase tracking-wide">Community Service</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
-                Serving Tribal Communities with Dignity
+                Meeting Basic Needs with Dignity
               </h2>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-                Working in cooperation with religious and social service organizations, Manav Sahayata Trust conducts comprehensive welfare programs across tribal villages throughout Andhra Pradesh. These distribution services ensure that basic needs are met, allowing communities to focus on education, health, and development.
+                Imagine winter in a remote village with no warm clothing for your children. Imagine watching your elderly parents struggle without basic supplies. For thousands of tribal families across Andhra Pradesh, these aren't hypotheticals—they're everyday challenges.
               </p>
               <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-                Our approach combines immediate relief—clothing, essential supplies, and medical care—with long-term partnerships that respect tribal traditions and empower communities to thrive with dignity.
+                We provide warm sweaters for children, sarees and blankets for families, eye care camps, and essential supplies—delivered with respect and partnership with local communities. Because everyone deserves their basic needs met with dignity.
               </p>
             </div>
 
@@ -236,10 +236,10 @@ export default function TribalDistributionProgram() {
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
-            Support Tribal Communities
+            Bring Warmth and Hope to Remote Villages
           </h3>
           <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Your contribution helps us expand distribution programs to reach more tribal villages with clothing, essential supplies, and medical care. Every donation brings warmth and dignity to families in need.
+            Your support provides warm clothing for children before winter, essential supplies for families, and eye care that restores sight. Help us reach more tribal villages where basic needs often go unmet.
           </p>
           <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
             <Button
