@@ -142,11 +142,14 @@ projects, **desktop** (1440×900) and **mobile** (390×844):
   description, canonical URL, share image, and structured data; sitemap, robots.txt, 404 handling,
   and icons are correct.
 
-There are no unit tests. Run `pnpm test` before pushing; the deploy workflow does not run tests.
+There are no unit tests. The deploy workflow runs `pnpm test` before publishing: if any test fails,
+nothing is deployed and the HTML report is attached to the workflow run. Run it locally before pushing
+to catch problems sooner.
 
 ## Deployment
 
-Pushing to `main` deploys automatically in 1–2 minutes (see the repo's **Actions** tab). CI installs
+Pushing to `main` tests and then deploys automatically in about 2–3 minutes (see the repo's
+**Actions** tab). A failing test blocks the deploy. CI installs
 with `pnpm install --frozen-lockfile`, so commit `pnpm-lock.yaml` with any dependency change.
 
 Domain, DNS records, HTTPS, Search Console, and troubleshooting: **[DEPLOYMENT.md](DEPLOYMENT.md)**.

@@ -14,11 +14,11 @@ PW_CHANNEL=chrome pnpm test       # same, using installed Chrome (no Playwright 
 pnpm build                        # vite build → scripts/generate-seo.mjs → server bundle
 ```
 
-Pushing to `main` deploys to production in ~1 minute. There is no staging environment.
+Pushing to `main` runs the tests, then deploys to production (~2–3 minutes). There is no staging environment.
 
 ## Workflow
 
-- Run `pnpm test` before every commit. The deploy workflow does not run tests.
+- Run `pnpm test` before every commit. The deploy workflow also runs it and blocks the deploy on failure.
 - Any visual or layout change must be checked at **desktop (1440px) and mobile (390px)** widths.
 - After verifying, commit and push to `main` (the owner's standing preference). Use a descriptive
   commit message explaining *why*.

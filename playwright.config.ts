@@ -12,7 +12,10 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
-  reporter: process.env.CI ? "github" : "list",
+  // In CI: annotations on the workflow run + an HTML report uploaded when tests fail
+  reporter: process.env.CI
+    ? [["github"], ["html", { open: "never" }]]
+    : "list",
   use: {
     channel: process.env.PW_CHANNEL || undefined,
     trace: "retain-on-failure",
