@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,13 +23,11 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <div className="flex flex-col cursor-pointer leading-tight">
-              <div className="text-lg sm:text-xl font-bold">
-                <span className="text-primary">manav</span>
-                <span className="text-secondary"> sahayata</span>
-              </div>
-              <div className="text-xs sm:text-sm text-foreground font-semibold">trust</div>
-            </div>
+            <img
+              src={getAssetPath("/logo.png")}
+              alt="Manav Sahayata Trust"
+              className="h-12 sm:h-14 w-auto cursor-pointer"
+            />
           </Link>
 
           {/* Desktop Navigation */}
