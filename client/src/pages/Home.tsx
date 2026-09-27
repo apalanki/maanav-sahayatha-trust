@@ -131,7 +131,7 @@ export default function HomePage() {
                   }`}
                   style={{ border: style.border, backgroundColor: style.background }}
                 >
-                  <div className="flex items-start gap-4 mb-4">
+                  <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: style.iconBackground }}>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
