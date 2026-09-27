@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Home as HomeIcon, Users, Sparkles, Heart, MessageCircle } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -41,7 +42,7 @@ export default function ReligiousCulturalProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/images/religious/IMG-20260313-WA0045.jpg"
+                src={getAssetPath("/images/religious/IMG-20260313-WA0045.jpg")}
                 alt="Cultural and religious traditions in tribal communities"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -114,21 +115,21 @@ export default function ReligiousCulturalProgram() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/religious/IMG-20260313-WA0011.jpg"
+                src={getAssetPath("/images/religious/IMG-20260313-WA0011.jpg")}
                 alt="Religious celebration in tribal village"
                 className="w-full rounded-lg object-cover aspect-video"
               />
             </div>
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/religious/IMG20250126193413.jpg"
+                src={getAssetPath("/images/religious/IMG20250126193413.jpg")}
                 alt="Cultural program - community gathering"
                 className="w-full rounded-lg object-cover aspect-video"
               />
             </div>
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/religious/IMG-20260221-WA0105.jpg"
+                src={getAssetPath("/images/religious/IMG-20260221-WA0105.jpg")}
                 alt="Traditional cultural practices"
                 className="w-full rounded-lg object-cover aspect-video"
               />

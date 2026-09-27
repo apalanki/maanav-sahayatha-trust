@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Heart, Pill, Building2, Eye, MessageCircle } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -24,7 +25,7 @@ export default function MedicalServicesProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/images/tribal/IMG_20251207_123121544_HDR_AE.jpg"
+                src={getAssetPath("/images/tribal/IMG_20251207_123121544_HDR_AE.jpg")}
                 alt="Medical camp providing healthcare in tribal village"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -129,7 +130,7 @@ export default function MedicalServicesProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/images/tribal/IMG_5772.JPEG"
+                src={getAssetPath("/images/tribal/IMG_5772.JPEG")}
                 alt="Medical camp in tribal village"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -161,21 +162,21 @@ export default function MedicalServicesProgram() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/tribal/IMG_20251207_123010466_HDR_AE.jpg"
+                src={getAssetPath("/images/tribal/IMG_20251207_123010466_HDR_AE.jpg")}
                 alt="Community medical outreach"
                 className="w-full rounded-lg object-cover aspect-video"
               />
             </div>
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/tribal/IMG_20260104_192923.jpg"
+                src={getAssetPath("/images/tribal/IMG_20260104_192923.jpg")}
                 alt="Medical supplies distribution"
                 className="w-full rounded-lg object-cover aspect-video"
               />
             </div>
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/tribal/WhatsApp Image 2026-01-05 at 6.09.28 PM (1).jpeg"
+                src={getAssetPath("/images/tribal/WhatsApp Image 2026-01-05 at 6.09.28 PM (1).jpeg")}
                 alt="Healthcare support in tribal communities"
                 className="w-full rounded-lg object-cover aspect-video"
               />

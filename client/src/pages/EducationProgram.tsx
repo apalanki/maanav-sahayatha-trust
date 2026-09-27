@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BookOpen, Users, GraduationCap, Lightbulb, MessageCircle } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -24,7 +25,7 @@ export default function EducationProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/images/education/IMG_20241020_173824.jpg"
+                src={getAssetPath("/images/education/IMG_20241020_173824.jpg")}
                 alt="Educational support program - students learning"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -32,9 +33,9 @@ export default function EducationProgram() {
 
             {/* Content */}
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-8 bg-primary" />
-                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Our Mission</span>
+              <div className="flex items-center gap-2 sm:gap-3 mb-4">
+                <div className="w-1 h-6 sm:h-8 bg-primary flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wide">Our Mission</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
                 Education Changes Everything
@@ -130,7 +131,7 @@ export default function EducationProgram() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="/images/education/IMG_20241020_173824.jpg"
+                  src={getAssetPath("/images/education/IMG_20241020_173824.jpg")}
                   alt="Students receiving educational support"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
@@ -146,7 +147,7 @@ export default function EducationProgram() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="/images/education/WhatsApp Image 2024-09-24 at 10.53.59 AM(3).jpeg"
+                  src={getAssetPath("/images/education/WhatsApp Image 2024-09-24 at 10.53.59 AM(3).jpeg")}
                   alt="Student mentorship session"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
@@ -162,7 +163,7 @@ export default function EducationProgram() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="/images/education/WhatsApp Image 2024-09-24 at 10.54.00 AM (6).jpeg"
+                  src={getAssetPath("/images/education/WhatsApp Image 2024-09-24 at 10.54.00 AM (6).jpeg")}
                   alt="Educational guidance and support"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Users, BookOpen, Heart, Sparkles, MessageCircle } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -24,7 +25,7 @@ export default function BalaVikasProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/images/bala-vikas/IMG-20260311-WA0023.jpg"
+                src={getAssetPath("/images/bala-vikas/IMG-20260311-WA0023.jpg")}
                 alt="Bala Vikas school - children learning values and culture"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -129,14 +130,14 @@ export default function BalaVikasProgram() {
             <div className="space-y-4">
               <div className="bg-white p-3 rounded-lg shadow">
                 <img
-                  src="/images/bala-vikas/IMG-20260311-WA0023.jpg"
+                  src={getAssetPath("/images/bala-vikas/IMG-20260311-WA0023.jpg")}
                   alt="Bala Vikas school children learning"
                   className="w-full rounded-lg object-cover aspect-video"
                 />
               </div>
               <div className="bg-white p-3 rounded-lg shadow">
                 <img
-                  src="/images/bala-vikas/IMG-20260312-WA0014.jpg"
+                  src={getAssetPath("/images/bala-vikas/IMG-20260312-WA0014.jpg")}
                   alt="Children engaged in activities"
                   className="w-full rounded-lg object-cover aspect-video"
                 />
@@ -169,21 +170,21 @@ export default function BalaVikasProgram() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/bala-vikas/IMG-20251224-WA0036.jpg"
+                src={getAssetPath("/images/bala-vikas/IMG-20251224-WA0036.jpg")}
                 alt="Group activities at Bala Vikas center"
                 className="w-full rounded-lg object-cover aspect-video"
               />
             </div>
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/bala-vikas/IMG-20260215-WA0005.jpg"
+                src={getAssetPath("/images/bala-vikas/IMG-20260215-WA0005.jpg")}
                 alt="Cultural learning and traditions"
                 className="w-full rounded-lg object-cover aspect-video"
               />
             </div>
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/bala-vikas/IMG-20260325-WA0018.jpg"
+                src={getAssetPath("/images/bala-vikas/IMG-20260325-WA0018.jpg")}
                 alt="Children learning values through activities"
                 className="w-full rounded-lg object-cover aspect-video"
               />
@@ -222,7 +223,7 @@ export default function BalaVikasProgram() {
             </div>
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/bala-vikas/IMG-20260311-WA0015.jpg"
+                src={getAssetPath("/images/bala-vikas/IMG-20260311-WA0015.jpg")}
                 alt="Teachers and students at Bala Vikas center"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />

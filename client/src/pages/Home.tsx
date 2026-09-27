@@ -14,6 +14,7 @@ import { Card } from "@/components/ui/card";
 import { Heart, Users, BookOpen, Stethoscope, Home as HomeIcon, MapPin, MessageCircle } from "lucide-react";
 import { Link } from "wouter";
 import { getCardStyle } from "@/lib/branding";
+import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -64,9 +65,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Content */}
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-1 h-8 bg-primary" />
-                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Service to Others is the Purpose of Life</span>
+              <div className="flex items-center gap-2 sm:gap-3 mb-6">
+                <div className="w-1 h-6 sm:h-8 bg-primary flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wide">Service to Others is the Purpose of Life</span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Empowering Communities Through Education & Care
@@ -74,15 +75,15 @@ export default function HomePage() {
               <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
                 Since 2004, Manav Sahayata Trust has been bringing hope to rural and tribal communities through education, healthcare, and cultural support—treating every person with dignity and respect.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold flex items-center gap-2">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                  <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-semibold flex items-center justify-center gap-2">
                     <MessageCircle className="w-5 h-5" />
                     Support Our Mission
                   </Button>
                 </a>
-                <a href="#story">
-                  <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary/5">
+                <a href="#story" className="w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary/5">
                     Learn More
                   </Button>
                 </a>
@@ -92,7 +93,7 @@ export default function HomePage() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/images/tribal/IMG_20251207_123010466_HDR_AE.jpg"
+                src={getAssetPath("/images/tribal/IMG_20251207_123010466_HDR_AE.jpg")}
                 alt="MST community gathering - serving tribal communities"
                 className="w-full rounded-lg bg-white object-cover aspect-[4/3]"
               />
@@ -213,7 +214,7 @@ export default function HomePage() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/images/education/IMG_20241020_173824.jpg"
+                src={getAssetPath("/images/education/IMG_20241020_173824.jpg")}
                 alt="Educational support - students receiving guidance"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -229,7 +230,7 @@ export default function HomePage() {
             {/* Image */}
             <div className="order-2 md:order-1 bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/images/tribal/IMG_20251207_123121544_HDR_AE.jpg"
+                src={getAssetPath("/images/tribal/IMG_20251207_123121544_HDR_AE.jpg")}
                 alt="Medical camps and healthcare support in tribal areas"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -279,7 +280,7 @@ export default function HomePage() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/images/religious/IMG-20260313-WA0045.jpg"
+                src={getAssetPath("/images/religious/IMG-20260313-WA0045.jpg")}
                 alt="Cultural programs and religious traditions in tribal communities"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -298,26 +299,15 @@ export default function HomePage() {
             <p className="text-base sm:text-lg mb-8 leading-relaxed opacity-95">
               Your support—whether large or small—helps a student stay in school, restores sight to an elderly villager, or keeps cultural traditions alive. Every contribution creates real, lasting change in someone's life.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="w-full bg-primary-foreground hover:bg-primary-foreground/90 text-primary font-semibold flex items-center justify-center gap-2"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Contact Us to Donate
-                </Button>
-              </a>
-              <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
-                >
-                  Get In Touch
-                </Button>
-              </a>
-            </div>
+            <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer" className="inline-block">
+              <Button
+                size="lg"
+                className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary font-semibold flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Contact Us to Support
+              </Button>
+            </a>
           </div>
         </div>
       </section>

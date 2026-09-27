@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MapPin, Users, Package, Eye, MessageCircle } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -41,7 +42,7 @@ export default function TribalDistributionProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src="/images/tribal/11.jpg"
+                src={getAssetPath("/images/tribal/11.jpg")}
                 alt="Tribal distribution event - serving communities"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -141,14 +142,14 @@ export default function TribalDistributionProgram() {
             <div className="space-y-4">
               <div className="bg-white p-3 rounded-lg shadow">
                 <img
-                  src="/images/tribal/11.jpg"
+                  src={getAssetPath("/images/tribal/11.jpg")}
                   alt="Tribal distribution event - clothing distribution"
                   className="w-full rounded-lg object-cover aspect-video"
                 />
               </div>
               <div className="bg-white p-3 rounded-lg shadow">
                 <img
-                  src="/images/tribal/14.jpg"
+                  src={getAssetPath("/images/tribal/14.jpg")}
                   alt="Community gathering - essential supplies distribution"
                   className="w-full rounded-lg object-cover aspect-video"
                 />
@@ -181,21 +182,21 @@ export default function TribalDistributionProgram() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/tribal/IMG_20260104_192923.jpg"
+                src={getAssetPath("/images/tribal/IMG_20260104_192923.jpg")}
                 alt="Distribution event preparation"
                 className="w-full rounded-lg object-cover aspect-video"
               />
             </div>
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/tribal/IMG-20251227-WA0017.jpg"
+                src={getAssetPath("/images/tribal/IMG-20251227-WA0017.jpg")}
                 alt="Community members receiving supplies"
                 className="w-full rounded-lg object-cover aspect-video"
               />
             </div>
             <div className="bg-white p-3 rounded-lg shadow">
               <img
-                src="/images/tribal/WhatsApp Image 2025-12-04 at 8.34.50 AM (2).jpeg"
+                src={getAssetPath("/images/tribal/WhatsApp Image 2025-12-04 at 8.34.50 AM (2).jpeg")}
                 alt="Tribal outreach program"
                 className="w-full rounded-lg object-cover aspect-video"
               />
