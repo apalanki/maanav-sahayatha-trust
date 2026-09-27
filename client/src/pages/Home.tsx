@@ -132,8 +132,8 @@ export default function HomePage() {
                   style={{ border: style.border, backgroundColor: style.background }}
                 >
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 rounded-lg flex-shrink-0" style={{ backgroundColor: style.iconBackground }}>
-                      <Icon className="w-6 h-6 text-white" />
+                    <div className="p-2.5 rounded-lg flex-shrink-0" style={{ backgroundColor: style.iconBackground }}>
+                      <Icon className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-foreground">{program.title}</h3>
                   </div>
