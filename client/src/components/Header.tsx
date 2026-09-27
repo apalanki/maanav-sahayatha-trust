@@ -22,22 +22,22 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <div className="flex flex-col cursor-pointer leading-tight">
-              {/* Top line: ma(hand)av sahayata */}
-              <div className="flex items-center text-base sm:text-lg md:text-xl font-bold tracking-tight">
-                <span className="text-primary">ma</span>
-                <svg viewBox="0 0 20 24" className="w-3 h-5 sm:w-4 sm:h-6 mx-0.5 inline-block" style={{marginBottom: '-2px'}}>
-                  <path d="M10 2 Q7 6 5 12 L8 13 Q9 8 10 6 Z" fill="#003D7A"/>
+            <div className="flex items-center gap-2 cursor-pointer">
+              {/* Helping Hands Icon */}
+              <div className="relative w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0">
+                <svg viewBox="0 0 40 40" className="w-full h-full">
+                  <path d="M20 8 Q15 12 12 18 L16 20 Q18 15 20 12 Z" fill="#003D7A" opacity="0.9"/>
+                  <path d="M20 32 Q25 28 28 22 L24 20 Q22 25 20 28 Z" fill="#FF9900" opacity="0.9"/>
+                  <circle cx="20" cy="20" r="2.5" fill="#003D7A"/>
                 </svg>
-                <span className="text-primary">av </span>
-                <span className="text-secondary">sa</span>
-                <svg viewBox="0 0 20 24" className="w-3 h-5 sm:w-4 sm:h-6 mx-0.5 inline-block" style={{marginBottom: '-2px'}}>
-                  <path d="M10 22 Q13 18 15 12 L12 11 Q11 16 10 18 Z" fill="#FF9900"/>
-                </svg>
-                <span className="text-secondary">ayata</span>
               </div>
-              {/* Bottom line: trust */}
-              <div className="text-xs sm:text-sm font-bold text-foreground tracking-wide">trust</div>
+
+              {/* Text */}
+              <div className="flex flex-col leading-none -space-y-0.5">
+                <div className="text-base sm:text-lg md:text-xl font-bold text-primary">manav</div>
+                <div className="text-base sm:text-lg md:text-xl font-bold text-secondary">sahayata</div>
+                <div className="text-xs sm:text-sm font-semibold text-foreground">trust</div>
+              </div>
             </div>
           </Link>
 
