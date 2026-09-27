@@ -22,21 +22,32 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer">
+            <div className="flex items-center gap-2 sm:gap-3 cursor-pointer group">
               {/* Helping Hands Icon */}
-              <div className="relative w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0">
-                <svg viewBox="0 0 40 40" className="w-full h-full">
-                  <path d="M20 8 Q15 12 12 18 L16 20 Q18 15 20 12 Z" fill="#003D7A" opacity="0.9"/>
-                  <path d="M20 32 Q25 28 28 22 L24 20 Q22 25 20 28 Z" fill="#FF9900" opacity="0.9"/>
-                  <circle cx="20" cy="20" r="2.5" fill="#003D7A"/>
+              <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
+                <svg viewBox="0 0 50 50" className="w-full h-full" fill="none">
+                  {/* Blue hand reaching down from top */}
+                  <path
+                    d="M25 10 C22 12 20 14 18 17 L16 19 C15 21 14 23 15 25 L17 23 C18 21 20 19 22 17 C23 15 24 13 25 11 Z M22 17 L20 19 L22 21 L24 19 Z"
+                    fill="#003D7A"
+                  />
+                  {/* Orange hand reaching up from bottom */}
+                  <path
+                    d="M25 40 C28 38 30 36 32 33 L34 31 C35 29 36 27 35 25 L33 27 C32 29 30 31 28 33 C27 35 26 37 25 39 Z M28 33 L30 31 L28 29 L26 31 Z"
+                    fill="#E67E22"
+                  />
+                  {/* Connection point */}
+                  <circle cx="25" cy="25" r="2" fill="#003D7A"/>
                 </svg>
               </div>
 
-              {/* Text */}
-              <div className="flex flex-col leading-none -space-y-0.5">
-                <div className="text-base sm:text-lg md:text-xl font-bold text-primary">manav</div>
-                <div className="text-base sm:text-lg md:text-xl font-bold text-secondary">sahayata</div>
-                <div className="text-xs sm:text-sm font-semibold text-foreground">trust</div>
+              {/* Text Logo */}
+              <div className="flex flex-col leading-none">
+                <div className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight">
+                  <span className="text-primary">manav </span>
+                  <span className="text-secondary">sahayata</span>
+                </div>
+                <div className="text-xs sm:text-sm font-bold text-foreground tracking-wide">trust</div>
               </div>
             </div>
           </Link>
