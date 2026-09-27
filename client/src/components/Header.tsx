@@ -18,8 +18,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/">
+          {/* Logo - doubles as the Home link; always lands at the top of the home page */}
+          <Link
+            href="/"
+            aria-label="Manav Sahayata Trust home"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              window.scrollTo({ top: 0 });
+            }}
+          >
             <img
               src={getAssetPath("/logo.png")}
               alt="Manav Sahayata Trust"
@@ -29,12 +36,6 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6">
-            <Link
-              href="/"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Home
-            </Link>
             <a
               href={homeSectionHref("about")}
               className="text-sm font-medium hover:text-primary transition-colors"
@@ -104,13 +105,6 @@ export default function Header() {
         {mobileMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 border-t border-border pt-4">
             <div className="flex flex-col gap-4">
-              <Link
-                href="/"
-                className="block py-2 text-sm font-medium hover:text-primary transition-colors"
-                onClick={closeMobileMenu}
-              >
-                Home
-              </Link>
               <a
                 href={homeSectionHref("about")}
                 className="block py-2 text-sm font-medium hover:text-primary transition-colors"
