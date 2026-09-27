@@ -1,26 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Background circle - navy blue -->
-  <circle cx="32" cy="32" r="30" fill="#003D7A"/>
+  <!-- Based on the MST logo: a blue hand reaching down to an orange hand rising like a flame,
+       above the blue swoosh. Colors sampled from client/public/logo.png. -->
+  <rect width="64" height="64" rx="14" fill="#ffffff"/>
 
-  <!-- Inner circle - saffron orange -->
-  <circle cx="32" cy="32" r="20" fill="#FF9900"/>
+  <!-- Orange hand / flame (rising up) -->
+  <path d="M30 50 C15 46 9 33 17 20 C18 29 22 34 28 35 C25 25 29 17 35 12 C35 23 48 28 47 39 C46 46 39 50 30 50 Z" fill="#F17D00"/>
 
-  <!-- Heart symbol (representing service and care) - white -->
-  <path d="M32 45 L26 38 Q23 35 23 31 Q23 27 26 27 Q29 27 32 30 Q35 27 38 27 Q41 27 41 31 Q41 35 38 38 Z"
-        fill="#ffffff"
-        stroke="#003D7A"
-        stroke-width="1"/>
+  <!-- Blue hand (reaching down) -->
+  <path d="M41 5 C52 12 52 27 41 35 C32 27 31 13 41 5 Z" fill="#2D65AF"/>
 
-  <!-- Small hands reaching up (representing help) - white -->
-  <path d="M20 25 L18 20 M24 24 L23 19 M28 24 L28 19"
-        stroke="#ffffff"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        opacity="0.8"/>
-
-  <path d="M44 25 L46 20 M40 24 L41 19 M36 24 L36 19"
-        stroke="#ffffff"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        opacity="0.8"/>
+  <!-- Blue swoosh -->
+  <path d="M7 58 C21 51 42 50 57 54" fill="none" stroke="#2D65AF" stroke-width="5.5" stroke-linecap="round"/>
 </svg>

@@ -1,10 +1,7 @@
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { useEffect } from "react";
 import { Route, Router as WouterRouter, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { ThemeProvider } from "./contexts/ThemeContext";
 import seo from "./lib/seo-pages.json";
 import Home from "./pages/Home";
 import EducationProgram from "./pages/EducationProgram";
@@ -50,18 +47,10 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
-        <TooltipProvider>
-          <Toaster />
-          <WouterRouter base={basePath}>
-            <RouteMeta />
-            <Router />
-          </WouterRouter>
-        </TooltipProvider>
-      </ThemeProvider>
+      <WouterRouter base={basePath}>
+        <RouteMeta />
+        <Router />
+      </WouterRouter>
     </ErrorBoundary>
   );
 }

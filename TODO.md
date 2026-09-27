@@ -18,6 +18,10 @@
       robots.txt, real 404 page; sitemap submitted to Google Search Console
 - [x] Performance: photos resized (36 MB → 9.3 MB) and below-the-fold images lazy-loaded
 - [x] Dependencies upgraded (Vite 8, Express 5, TypeScript 6); 0 known vulnerabilities
+- [x] Removed Manus template code, 49 unused UI components, and 49 unused packages
+      (deployment 11 MB → 6.7 MB, CSS 107 KB → 40 KB, node_modules 1.4 GB → 180 MB)
+- [x] Favicon and iOS home-screen icon in the logo's colors
+- [x] Playwright end-to-end tests (`pnpm test`) for layout, navigation, and SEO
 
 ## Next Steps
 
