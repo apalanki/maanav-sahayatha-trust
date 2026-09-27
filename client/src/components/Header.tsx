@@ -59,7 +59,7 @@ export default function Header() {
             >
               <Button size="sm" className="bg-primary hover:bg-primary/90 flex items-center gap-2">
                 <MessageCircle className="w-4 h-4" />
-                Support Us
+                Donate
               </Button>
             </a>
           </nav>
@@ -109,7 +109,7 @@ export default function Header() {
               >
                 <Button size="sm" className="w-full bg-primary hover:bg-primary/90 flex items-center justify-center gap-2">
                   <MessageCircle className="w-4 h-4" />
-                  Support Us
+                  Donate
                 </Button>
               </a>
             </div>

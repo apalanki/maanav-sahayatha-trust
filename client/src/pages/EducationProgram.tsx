@@ -65,7 +65,7 @@ export default function EducationProgram() {
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground">Scholarships & Financial Aid</h3>
               </div>
               <p className="text-base text-foreground/80 leading-relaxed">
-                Full and partial scholarships cover school and college fees for students who demonstrate merit and dedication but lack financial resources. Every scholarship is awarded based on need, ensuring support reaches those who need it most.
+                Full and partial scholarships cover school and college fees for students who show merit and dedication but lack the means to continue. Each scholarship goes to a student with genuine financial need, so your support reaches those who need it most.
               </p>
             </Card>
 
@@ -154,7 +154,7 @@ export default function EducationProgram() {
               </div>
               <div className="p-4">
                 <p className="text-sm text-foreground/80 leading-relaxed">
-                  Regular mentorship sessions provide academic guidance, exam preparation support, and career counseling. Building confidence and helping students navigate their educational journey with dignity and purpose.
+                  Regular mentorship sessions provide academic guidance, exam preparation support, and career counseling, building students' confidence and helping them navigate their educational journey with dignity and purpose.
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function EducationProgram() {
             Help a Student Stay in School
           </h3>
           <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Your support keeps talented students in school who would otherwise drop out due to financial hardship. Give a deserving student the chance to learn, grow, and transform their community.
+            Your support keeps talented students in school when financial hardship would otherwise force them to drop out. Give a deserving student the chance to learn, grow, and transform their community.
           </p>
           <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
             <Button
@@ -191,7 +191,7 @@ export default function EducationProgram() {
               className="bg-primary hover:bg-primary/90 flex items-center gap-2 mx-auto"
             >
               <MessageCircle className="w-5 h-5" />
-              Contact Us to Support
+              Chat With Us to Donate
             </Button>
           </a>
         </div>

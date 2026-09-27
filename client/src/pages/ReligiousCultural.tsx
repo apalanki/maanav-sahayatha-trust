@@ -35,7 +35,7 @@ export default function ReligiousCulturalProgram() {
                 In remote tribal villages, temples aren't just places of worship—they're where communities gather, celebrate, and connect across generations. Cultural traditions like Bhajans and Kolatam aren't just performances—they're living links to heritage and identity.
               </p>
               <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-                We've renovated 18 temples and built spaces where tribal families can practice their faith and pass traditions to their children. Because as these communities face modernization, preserving spiritual and cultural identity matters more than ever.
+                We've renovated 18 temples, built a new one, and created spaces where tribal families can practice their faith and pass traditions on to their children. As these communities face rapid change, preserving their spiritual and cultural identity matters more than ever.
               </p>
             </div>
 
@@ -89,7 +89,7 @@ export default function ReligiousCulturalProgram() {
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground">Spiritual Gathering Spaces</h3>
               </div>
               <p className="text-base text-foreground/80 leading-relaxed">
-                Creating and maintaining spaces where tribal communities can gather for prayer, festivals, and cultural celebrations. These spaces strengthen bonds, pass traditions to younger generations, and provide spiritual comfort.
+                We create and maintain spaces where tribal communities can gather for prayer, festivals, and cultural celebrations. These spaces strengthen bonds, pass traditions to younger generations, and provide spiritual comfort.
               </p>
             </Card>
 
@@ -101,7 +101,7 @@ export default function ReligiousCulturalProgram() {
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground">Cultural Identity Preservation</h3>
               </div>
               <p className="text-base text-foreground/80 leading-relaxed">
-                Ensuring that tribal cultural and spiritual heritage remains strong and vibrant as communities develop. Supporting traditional practices and ceremonies that define tribal identity and connect generations.
+                We help tribal cultural and spiritual heritage stay strong and vibrant as communities develop, supporting the traditional practices and ceremonies that define tribal identity and connect generations.
               </p>
             </Card>
           </div>
@@ -143,7 +143,7 @@ export default function ReligiousCulturalProgram() {
             Preserving Heritage for Future Generations
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-            As tribal communities face modernization and external influences, maintaining strong cultural and spiritual identity becomes increasingly important. MST's religious and cultural services ensure that traditions, values, and practices are not lost but instead celebrated and passed to younger generations.
+            As tribal communities face modernization and external influences, maintaining strong cultural and spiritual identity becomes increasingly important. MST's religious and cultural services ensure that traditions, values, and practices are celebrated and passed on to younger generations rather than lost.
           </p>
           <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
             Temples and cultural spaces become focal points for community life—places where elders share wisdom, children learn traditions, and families celebrate festivals together. This work ensures tribal culture remains vibrant, respected, and integral to community identity for decades to come.
@@ -156,7 +156,7 @@ export default function ReligiousCulturalProgram() {
             Help Keep Culture and Traditions Alive
           </h3>
           <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Your support helps renovate temples, fund cultural programs, and create spaces where communities gather and traditions thrive. Ensure tribal heritage lives on for generations to come.
+            Your support helps renovate temples, fund cultural programs, and create spaces where communities gather and traditions thrive. Help ensure tribal heritage lives on for generations to come.
           </p>
           <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
             <Button
@@ -164,7 +164,7 @@ export default function ReligiousCulturalProgram() {
               className="bg-primary hover:bg-primary/90 flex items-center gap-2 mx-auto"
             >
               <MessageCircle className="w-5 h-5" />
-              Contact Us to Support
+              Chat With Us to Donate
             </Button>
           </a>
         </div>

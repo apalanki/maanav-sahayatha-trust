@@ -35,7 +35,7 @@ export default function HomePage() {
     {
       icon: Users,
       title: "Bala Vikas Schools",
-      desc: "After-school centers teaching values, culture, and moral development through games and activities. Nurturing the next generation with dignity and purpose.",
+      desc: "After-school centers where children learn values, culture, and good character through games and activities—and receive a nutritious meal every day.",
       link: "/programs/bala-vikas",
     },
     {
@@ -70,21 +70,21 @@ export default function HomePage() {
                 <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wide">Service to Others is the Purpose of Life</span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Empowering Communities Through Education & Care
+                Together, We Bring Education, Healthcare & Hope to Tribal Villages
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
-                Since 2004, Manav Sahayata Trust has been bringing hope to rural and tribal communities through education, healthcare, and cultural support—treating every person with dignity and respect.
+                Since 2004, Manav Sahayata Trust has been bringing hope to rural and tribal communities through education, healthcare, and cultural support—treating every person with dignity and respect. With your help, we can reach even more families.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-semibold flex items-center justify-center gap-2">
                     <MessageCircle className="w-5 h-5" />
-                    Support Our Mission
+                    Donate Today
                   </Button>
                 </a>
                 <a href="#story" className="w-full sm:w-auto">
                   <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary/5">
-                    Learn More
+                    Read Their Story
                   </Button>
                 </a>
               </div>
@@ -114,7 +114,7 @@ export default function HomePage() {
               Five Ways We Create Change
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground">
-              Every person has potential. Every community has strength. Our programs help unlock both—bringing education, healthcare, and cultural support to those who need it most.
+              Every person has potential. Every community has strength. Our programs help unlock both—bringing education, healthcare, and cultural support to those who need it most. Your generosity makes every one of them possible.
             </p>
           </div>
 
@@ -249,7 +249,7 @@ export default function HomePage() {
                 Imagine living in a village with no roads, no electricity, and no doctor for miles. For many tribal families, a simple infection or treatable illness becomes life-threatening because healthcare is out of reach.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
-                We bring healthcare directly to these communities—conducting medical camps, distributing medicines, and helping families afford hospital treatment. Through partnerships with organizations like Vema Netralaya, we've restored sight through cataract surgeries and provided glasses to those who've never seen clearly.
+                We bring healthcare directly to these communities—conducting medical camps, distributing medicines, and helping families afford hospital treatment. Through partnerships with organizations like Vema Netralaya, we've restored sight through cataract surgeries and provided eyeglasses to villagers who could no longer see clearly.
               </p>
             </div>
           </div>
@@ -297,7 +297,7 @@ export default function HomePage() {
               Be Part of Someone's Transformation
             </h2>
             <p className="text-base sm:text-lg mb-8 leading-relaxed opacity-95">
-              Your support—whether large or small—helps a student stay in school, restores sight to an elderly villager, or keeps cultural traditions alive. Every contribution creates real, lasting change in someone's life.
+              Your support—whether large or small—helps a student stay in school, restores sight to an elderly villager, or keeps cultural traditions alive. Every contribution creates real, lasting change in someone's life. Message us on WhatsApp, and we'll personally guide you on how to give.
             </p>
             <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer" className="inline-block">
               <Button
@@ -305,7 +305,7 @@ export default function HomePage() {
                 className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary font-semibold flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-5 h-5" />
-                Contact Us to Support
+                Chat With Us to Donate
               </Button>
             </a>
           </div>

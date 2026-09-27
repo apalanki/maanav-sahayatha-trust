@@ -56,10 +56,10 @@ export default function BalaVikasProgram() {
             Our Educational Philosophy
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-            The main objective of Bala Vikas schools is to inculcate <strong>values, culture, moral discipline, and good conduct</strong> among boys and girls while supporting their overall development. We believe that education is not just about academic knowledge—it's about building character, fostering positive thinking, and creating value-based individuals who contribute meaningfully to their communities.
+            At Bala Vikas, our goal is to instill <strong>values, culture, moral discipline, and good conduct</strong> in boys and girls while supporting their overall development. We believe that education is not just about academic knowledge—it's about building character, fostering positive thinking, and creating value-based individuals who contribute meaningfully to their communities.
           </p>
           <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-            Each child enrolled receives <strong>nutritious food along with quality education</strong> to ensure their holistic development. We honor dedicated teachers who teach selflessly with recognition and incentives, while continuously providing required teaching and learning materials.
+            Every enrolled child receives <strong>nutritious food along with quality education</strong> to support their all-round development. We recognize and reward the dedicated teachers who serve selflessly, and we keep every center supplied with the teaching and learning materials it needs.
           </p>
         </div>
 
@@ -213,7 +213,7 @@ export default function BalaVikasProgram() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
-                  <span>Continuous provision of teaching and learning materials</span>
+                  <span>A steady supply of teaching and learning materials</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
@@ -240,7 +240,7 @@ export default function BalaVikasProgram() {
             Bala Vikas schools are creating lasting change in tribal communities. Children who grow up with strong moral values, cultural pride, and academic skills become leaders, teachers, and role models in their villages. They carry forward traditions while embracing progress, ensuring that tribal culture remains vibrant across generations.
           </p>
           <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-            Parents see the positive transformation in their children—improved behavior, academic performance, and respect for elders. Communities become stronger as value-based youth take on responsibilities and contribute to collective wellbeing. This is education with purpose, creating change that extends far beyond the classroom.
+            Parents see the positive transformation in their children—improved behavior, academic performance, and respect for elders. Communities become stronger as value-based youth take on responsibilities and contribute to collective well-being. This is education with purpose, creating change that extends far beyond the classroom.
           </p>
         </div>
 
@@ -250,7 +250,7 @@ export default function BalaVikasProgram() {
             Invest in Tomorrow's Leaders
           </h3>
           <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Your support helps children develop into compassionate, value-driven individuals who will lead their communities with integrity. Fund nutritious meals, teaching materials, and the expansion of Bala Vikas centers to reach more children.
+            Your support helps children develop into compassionate, value-driven individuals who will lead their communities with integrity. Your gift funds nutritious meals and teaching materials, and helps us open new Bala Vikas centers to reach more children.
           </p>
           <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
             <Button
@@ -258,7 +258,7 @@ export default function BalaVikasProgram() {
               className="bg-primary hover:bg-primary/90 flex items-center gap-2 mx-auto"
             >
               <MessageCircle className="w-5 h-5" />
-              Contact Us to Support
+              Chat With Us to Donate
             </Button>
           </a>
         </div>

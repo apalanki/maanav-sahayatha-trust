@@ -123,7 +123,7 @@ export default function MedicalServicesProgram() {
         {/* Impact Story */}
         <div className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
-            Communities We Serve
+            Where We Work
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -145,10 +145,10 @@ export default function MedicalServicesProgram() {
                 In remote villages like Donkada, where there are no roads or basic facilities, MST has provided comprehensive healthcare support to women, children, and elderly patients. These communities face extreme poverty and isolation, making access to medical care nearly impossible without intervention.
               </p>
               <p className="text-base text-foreground/80 mb-4 leading-relaxed">
-                Our medical camps bring immediate relief—treating infections, providing prenatal care, addressing chronic conditions, and performing life-changing surgeries. For many families, this is their only access to professional medical care.
+                Our medical camps bring immediate relief—treating infections, providing prenatal care, addressing chronic conditions, and arranging life-changing surgeries. For many families, this is their only access to professional medical care.
               </p>
               <p className="text-base text-foreground/80 leading-relaxed">
-                The integration of medical support with our other programs (education, distribution, cultural services) ensures holistic community development where healthcare is not isolated but part of comprehensive support.
+                Healthcare doesn't stand alone. Our medical work goes hand in hand with our education, distribution, and cultural programs, so families receive care for the whole person and the whole community.
               </p>
             </div>
           </div>
@@ -225,7 +225,7 @@ export default function MedicalServicesProgram() {
               className="bg-primary hover:bg-primary/90 flex items-center gap-2 mx-auto"
             >
               <MessageCircle className="w-5 h-5" />
-              Contact Us to Support
+              Chat With Us to Donate
             </Button>
           </a>
         </div>

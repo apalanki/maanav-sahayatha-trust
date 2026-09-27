@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Manav Sahayata Trust</h3>
             <p className="text-sm opacity-90 leading-relaxed">
-              Serving rural and tribal communities through education, healthcare, and cultural development since 2004.
+              Serving rural and tribal communities through education, healthcare, and cultural development since 2004. Every contribution, large or small, helps us reach one more family.
             </p>
           </div>
           <div>
@@ -22,7 +22,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Contact</h4>
+            <h4 className="font-bold mb-4">Get in Touch</h4>
             <p className="text-sm opacity-90 mb-4">
               1416, MK Gold Coast, Yendada-530045<br />
               Visakhapatnam, Andhra Pradesh, India

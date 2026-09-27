@@ -35,7 +35,7 @@ export default function TribalDistributionProgram() {
                 Imagine winter in a remote village with no warm clothing for your children. Imagine watching your elderly parents struggle without basic supplies. For thousands of tribal families across Andhra Pradesh, these aren't hypotheticals—they're everyday challenges.
               </p>
               <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-                We provide warm sweaters for children, sarees and blankets for families, eye care camps, and essential supplies—delivered with respect and partnership with local communities. Because everyone deserves their basic needs met with dignity.
+                We provide warm sweaters for children, sarees and blankets for families, eye care camps, and essential supplies—delivered with respect and in partnership with local communities. Because everyone deserves their basic needs met with dignity.
               </p>
             </div>
 
@@ -78,7 +78,7 @@ export default function TribalDistributionProgram() {
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground">Clothing Distribution</h3>
               </div>
               <p className="text-base text-foreground/80 mb-4 leading-relaxed">
-                Sweaters for children, sarees and dhothis for adults, and warm blankets for families—distributed annually before winter to ensure tribal communities stay warm and healthy during cold months.
+                Sweaters for children, sarees and dhotis for adults, and warm blankets for families—distributed annually before winter to ensure tribal communities stay warm and healthy during cold months.
               </p>
               <p className="text-sm text-muted-foreground italic">
                 Thousands of families across remote villages receive essential clothing and winter supplies through our distribution events.
@@ -96,7 +96,7 @@ export default function TribalDistributionProgram() {
                 Specialized eye camps bring ophthalmologists to tribal villages. Cataract surgeries restore sight to elderly community members, and eyeglasses are distributed to those with vision impairments.
               </p>
               <p className="text-sm text-muted-foreground italic">
-                Conducted in partnership with local doctors and medical organizations, transforming lives through restored vision.
+                Run in partnership with local doctors and medical organizations, these camps transform lives by restoring sight.
               </p>
             </Card>
 
@@ -111,7 +111,7 @@ export default function TribalDistributionProgram() {
                 Beyond clothing, we distribute essential household items, school supplies for children, and other necessities based on community needs and priorities identified through local partnerships.
               </p>
               <p className="text-sm text-muted-foreground italic">
-                Addressing immediate needs while building relationships that lead to sustainable development.
+                We meet immediate needs while building relationships that lead to lasting development.
               </p>
             </Card>
 
@@ -210,7 +210,7 @@ export default function TribalDistributionProgram() {
             A Holistic, Community-Centered Approach
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-            Our tribal distribution services are not isolated charity—they are integrated with MST's comprehensive community development model. Distribution events are coordinated with medical camps, educational outreach, and cultural programs.
+            Our distribution work is more than one-time relief—it's part of MST's wider commitment to community development. We coordinate distribution events with medical camps, educational outreach, and cultural programs.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <div>
@@ -248,7 +248,7 @@ export default function TribalDistributionProgram() {
               className="bg-primary hover:bg-primary/90 flex items-center gap-2 mx-auto"
             >
               <MessageCircle className="w-5 h-5" />
-              Contact Us to Support
+              Chat With Us to Donate
             </Button>
           </a>
         </div>
