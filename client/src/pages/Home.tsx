@@ -60,7 +60,7 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-12 sm:py-20 md:py-28 bg-gradient-to-b from-background via-background to-secondary/5">
+      <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-background via-background to-secondary/5">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Content */}
@@ -103,7 +103,7 @@ export default function HomePage() {
       </section>
 
       {/* Programs Section */}
-      <section id="programs" className="py-12 sm:py-16 md:py-20 bg-white">
+      <section id="programs" className="py-8 sm:py-12 md:py-14 bg-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
             <div className="flex items-center gap-3 mb-4">
@@ -159,7 +159,7 @@ export default function HomePage() {
       </section>
 
       {/* Success Story Section */}
-      <section id="story" className="py-12 sm:py-16 md:py-20 section-textured">
+      <section id="story" className="py-8 sm:py-12 md:py-14 section-textured">
         <div className="container">
           <div className="max-w-3xl mb-12">
             <div className="flex items-center gap-3 mb-4">
@@ -188,7 +188,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <section className="py-8 sm:py-12 md:py-14 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Content */}
@@ -224,7 +224,7 @@ export default function HomePage() {
       </section>
 
       {/* Medical Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <section className="py-8 sm:py-12 md:py-14 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Image */}
@@ -257,7 +257,7 @@ export default function HomePage() {
       </section>
 
       {/* Cultural Preservation Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <section className="py-8 sm:py-12 md:py-14 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Content */}

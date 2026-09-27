@@ -18,7 +18,7 @@ export default function ReligiousCulturalProgram() {
       <Header />
 
       {/* Main Content */}
-      <main className="container py-12">
+      <main className="container py-8">
         {/* Program Overview */}
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
