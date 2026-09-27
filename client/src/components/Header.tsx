@@ -43,9 +43,16 @@ export default function Header() {
 
               {/* Text Logo */}
               <div className="flex flex-col leading-none">
-                <div className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight">
-                  <span className="text-primary">manav </span>
-                  <span className="text-secondary">sahayata</span>
+                <div className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight relative">
+                  <span className="text-primary relative inline-block">
+                    <span className="absolute top-0 left-0 w-3 h-0.5 bg-primary -translate-y-1"></span>
+                    manav
+                  </span>
+                  <span className="text-secondary relative inline-block">
+                    <span className="absolute top-0 left-0 w-3 h-0.5 bg-secondary -translate-y-1"></span>
+                    sahayata
+                    <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-secondary translate-y-1"></span>
+                  </span>
                 </div>
                 <div className="text-xs sm:text-sm font-bold text-foreground tracking-wide">trust</div>
               </div>
