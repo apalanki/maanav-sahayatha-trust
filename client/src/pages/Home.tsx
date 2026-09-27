@@ -9,6 +9,7 @@
  * - Emphasizes stories and mission over metrics
  */
 
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Heart, Users, BookOpen, Stethoscope, Home as HomeIcon, MapPin, MessageCircle } from "lucide-react";
@@ -19,6 +20,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
+  // Scroll to a section when arriving from another page via a link like /#about
+  useEffect(() => {
+    if (window.location.hash) {
+      document.getElementById(window.location.hash.slice(1))?.scrollIntoView();
+    }
+  }, []);
+
   const programs = [
     {
       icon: BookOpen,
@@ -27,16 +35,16 @@ export default function HomePage() {
       link: "/programs/education",
     },
     {
-      icon: Stethoscope,
-      title: "Medical Services",
-      desc: "Medical camps in tribal villages, medicine distribution, and financial assistance for hospital treatment—bringing healthcare to those who need it most.",
-      link: "/programs/medical",
-    },
-    {
       icon: Users,
       title: "Bala Vikas Schools",
       desc: "After-school centers where children learn values, culture, and good character through games and activities—and receive a nutritious meal every day.",
       link: "/programs/bala-vikas",
+    },
+    {
+      icon: Stethoscope,
+      title: "Medical Services",
+      desc: "Medical camps in tribal villages, medicine distribution, and financial assistance for hospital treatment—bringing healthcare to those who need it most.",
+      link: "/programs/medical",
     },
     {
       icon: MapPin,
@@ -102,8 +110,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about" className="py-8 sm:py-12 md:py-14 section-textured scroll-mt-24">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Content */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-1 h-8 bg-primary" />
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Founded on Service</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Our Story
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
+                Since 2004, Manav Sahayata Trust has been quietly serving rural and tribal communities—not with fanfare, but with steady commitment. What began as grassroots work became a formally registered organization in 2023, built on nearly two decades of trust and relationships.
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
+                We believe in Swami Vivekananda's timeless truth: <em>"Service to others is the purpose of life."</em> That's why we support those who need it most, treating every person with dignity and recognizing that potential exists everywhere—it just needs opportunity.
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                Working alongside local partners and volunteers, we focus on sustainable, community-led change that lasts beyond our involvement.
+              </p>
+            </div>
+
+            {/* Image */}
+            <div className="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                src={getAssetPath("/images/education/IMG_20241020_173824.jpg")}
+                alt="Educational support - students receiving guidance"
+                className="w-full rounded-lg object-cover aspect-[4/3]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Programs Section */}
-      <section id="programs" className="py-8 sm:py-12 md:py-14 bg-white">
+      <section id="programs" className="py-8 sm:py-12 md:py-14 bg-white scroll-mt-24">
         <div className="container">
           <div className="max-w-3xl mb-12">
             <div className="flex items-center gap-3 mb-4">
@@ -159,7 +203,7 @@ export default function HomePage() {
       </section>
 
       {/* Success Story Section */}
-      <section id="story" className="py-8 sm:py-12 md:py-14 section-textured">
+      <section id="story" className="py-8 sm:py-12 md:py-14 section-textured scroll-mt-24">
         <div className="container">
           <div className="max-w-3xl mb-12">
             <div className="flex items-center gap-3 mb-4">
@@ -184,108 +228,6 @@ export default function HomePage() {
               This is the ripple effect of your support: students become teachers, beneficiaries become change-makers, and communities grow stronger across generations.
             </p>
           </Card>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="py-8 sm:py-12 md:py-14 bg-white">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Content */}
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-8 bg-primary" />
-                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Founded on Service</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Our Story
-              </h2>
-              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-                Since 2004, Manav Sahayata Trust has been quietly serving rural and tribal communities—not with fanfare, but with steady commitment. What began as grassroots work became a formally registered organization in 2023, built on nearly two decades of trust and relationships.
-              </p>
-              <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
-                We believe in Swami Vivekananda's timeless truth: <em>"Service to others is the purpose of life."</em> That's why we support those who need it most, treating every person with dignity and recognizing that potential exists everywhere—it just needs opportunity.
-              </p>
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                Working alongside local partners and volunteers, we focus on sustainable, community-led change that lasts beyond our involvement.
-              </p>
-            </div>
-
-            {/* Image */}
-            <div className="bg-white p-4 rounded-lg shadow-lg">
-              <img
-                src={getAssetPath("/images/education/IMG_20241020_173824.jpg")}
-                alt="Educational support - students receiving guidance"
-                className="w-full rounded-lg object-cover aspect-[4/3]"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Medical Section */}
-      <section className="py-8 sm:py-12 md:py-14 bg-white">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Image */}
-            <div className="order-2 md:order-1 bg-white p-4 rounded-lg shadow-lg">
-              <img
-                src={getAssetPath("/images/tribal/IMG_20251207_123121544_HDR_AE.jpg")}
-                alt="Medical camps and healthcare support in tribal areas"
-                className="w-full rounded-lg object-cover aspect-[4/3]"
-              />
-            </div>
-
-            {/* Content */}
-            <div className="order-1 md:order-2">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-8 bg-secondary" />
-                <span className="text-sm font-semibold text-secondary uppercase tracking-wide">Healthcare Access</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Healthcare Where It's Needed Most
-              </h2>
-              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-                Imagine living in a village with no roads, no electricity, and no doctor for miles. For many tribal families, a simple infection or treatable illness becomes life-threatening because healthcare is out of reach.
-              </p>
-              <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
-                We bring healthcare directly to these communities—conducting medical camps, distributing medicines, and helping families afford hospital treatment. Through partnerships with organizations like Vema Netralaya, we've restored sight through cataract surgeries and provided eyeglasses to villagers who could no longer see clearly.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Cultural Preservation Section */}
-      <section className="py-8 sm:py-12 md:py-14 bg-white">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Content */}
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-8 bg-primary" />
-                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Cultural Heritage</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Keeping Traditions Alive
-              </h2>
-              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-                Culture is what holds communities together—especially in remote tribal areas where traditions connect generations and give meaning to daily life.
-              </p>
-              <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
-                We support cultural practices like Bhajans and Kolatam, and we've renovated 18 temples in tribal villages, creating spaces where families can gather, celebrate, and pass their heritage to the next generation. Because preserving culture means preserving identity.
-              </p>
-            </div>
-
-            {/* Image */}
-            <div className="bg-white p-4 rounded-lg shadow-lg">
-              <img
-                src={getAssetPath("/images/religious/IMG-20260313-WA0045.jpg")}
-                alt="Cultural programs and religious traditions in tribal communities"
-                className="w-full rounded-lg object-cover aspect-[4/3]"
-              />
-            </div>
-          </div>
         </div>
       </section>
 

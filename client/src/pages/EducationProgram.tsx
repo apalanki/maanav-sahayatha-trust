@@ -5,6 +5,7 @@ import { BookOpen, Users, GraduationCap, Lightbulb, MessageCircle } from "lucide
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
 
 export default function EducationProgram() {
   useEffect(() => {
@@ -19,6 +20,8 @@ export default function EducationProgram() {
 
       {/* Main Content */}
       <main className="container py-8">
+        <ProgramBreadcrumb current="/programs/education" />
+
         {/* Program Overview */}
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -37,9 +40,9 @@ export default function EducationProgram() {
                 <div className="w-1 h-6 sm:h-8 bg-primary flex-shrink-0" />
                 <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wide">Our Mission</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+              <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
                 Education Changes Everything
-              </h2>
+              </h1>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
                 A talented student shouldn't have to drop out of school because their family can't afford fees. Education isn't just about learning—it's about breaking cycles of poverty and creating community leaders who give back.
               </p>
@@ -195,6 +198,8 @@ export default function EducationProgram() {
             </Button>
           </a>
         </div>
+
+        <OtherPrograms current="/programs/education" />
       </main>
 
       <Footer />

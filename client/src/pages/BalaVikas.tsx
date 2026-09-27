@@ -5,6 +5,7 @@ import { Users, BookOpen, Heart, Sparkles, MessageCircle } from "lucide-react";
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
 
 export default function BalaVikasProgram() {
   useEffect(() => {
@@ -19,6 +20,8 @@ export default function BalaVikasProgram() {
 
       {/* Main Content */}
       <main className="container py-8">
+        <ProgramBreadcrumb current="/programs/bala-vikas" />
+
         {/* Program Overview */}
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -37,9 +40,9 @@ export default function BalaVikasProgram() {
                 <div className="w-1 h-8 bg-secondary" />
                 <span className="text-sm font-semibold text-secondary uppercase tracking-wide">After-School Centers</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+              <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
                 Nurturing the Next Generation
-              </h2>
+              </h1>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
                 Children need more than textbooks to thrive—they need values, confidence, and connection to their heritage. Our Bala Vikas after-school centers give tribal children exactly that: two hours each evening of games, songs, cultural learning, and character building.
               </p>
@@ -162,36 +165,6 @@ export default function BalaVikasProgram() {
           </div>
         </div>
 
-        {/* Additional Images */}
-        <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
-            Learning Through Joy & Engagement
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white p-3 rounded-lg shadow">
-              <img
-                src={getAssetPath("/images/bala-vikas/IMG-20251224-WA0036.jpg")}
-                alt="Group activities at Bala Vikas center"
-                className="w-full rounded-lg object-cover aspect-video"
-              />
-            </div>
-            <div className="bg-white p-3 rounded-lg shadow">
-              <img
-                src={getAssetPath("/images/bala-vikas/IMG-20260215-WA0005.jpg")}
-                alt="Cultural learning and traditions"
-                className="w-full rounded-lg object-cover aspect-video"
-              />
-            </div>
-            <div className="bg-white p-3 rounded-lg shadow">
-              <img
-                src={getAssetPath("/images/bala-vikas/IMG-20260325-WA0018.jpg")}
-                alt="Children learning values through activities"
-                className="w-full rounded-lg object-cover aspect-video"
-              />
-            </div>
-          </div>
-        </div>
-
         {/* Supporting Teachers */}
         <div className="mb-12 bg-accent/5 border border-border rounded-lg p-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-6 text-primary">
@@ -244,6 +217,36 @@ export default function BalaVikasProgram() {
           </p>
         </div>
 
+        {/* Additional Images */}
+        <div className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+            Learning Through Joy & Engagement
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src={getAssetPath("/images/bala-vikas/IMG-20251224-WA0036.jpg")}
+                alt="Group activities at Bala Vikas center"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src={getAssetPath("/images/bala-vikas/IMG-20260215-WA0005.jpg")}
+                alt="Cultural learning and traditions"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src={getAssetPath("/images/bala-vikas/IMG-20260325-WA0018.jpg")}
+                alt="Children learning values through activities"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
@@ -262,6 +265,8 @@ export default function BalaVikasProgram() {
             </Button>
           </a>
         </div>
+
+        <OtherPrograms current="/programs/bala-vikas" />
       </main>
 
       <Footer />

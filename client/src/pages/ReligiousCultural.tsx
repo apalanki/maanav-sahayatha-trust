@@ -5,6 +5,7 @@ import { Home as HomeIcon, Users, Sparkles, Heart, MessageCircle } from "lucide-
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
 
 export default function ReligiousCulturalProgram() {
   useEffect(() => {
@@ -19,6 +20,8 @@ export default function ReligiousCulturalProgram() {
 
       {/* Main Content */}
       <main className="container py-8">
+        <ProgramBreadcrumb current="/programs/religious-cultural" />
+
         {/* Program Overview */}
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -28,9 +31,9 @@ export default function ReligiousCulturalProgram() {
                 <div className="w-1 h-8 bg-secondary" />
                 <span className="text-sm font-semibold text-secondary uppercase tracking-wide">Cultural Heritage</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+              <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
                 Where Culture and Faith Unite Communities
-              </h2>
+              </h1>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
                 In remote tribal villages, temples aren't just places of worship—they're where communities gather, celebrate, and connect across generations. Cultural traditions like Bhajans and Kolatam aren't just performances—they're living links to heritage and identity.
               </p>
@@ -107,6 +110,19 @@ export default function ReligiousCulturalProgram() {
           </div>
         </div>
 
+        {/* Long-Term Impact */}
+        <div className="mb-12 bg-gradient-to-br from-secondary/5 to-primary/5 border border-secondary/20 rounded-lg p-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-foreground">
+            Preserving Heritage for Future Generations
+          </h2>
+          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+            As tribal communities face modernization and external influences, maintaining strong cultural and spiritual identity becomes increasingly important. MST's religious and cultural services ensure that traditions, values, and practices are celebrated and passed on to younger generations rather than lost.
+          </p>
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+            Temples and cultural spaces become focal points for community life—places where elders share wisdom, children learn traditions, and families celebrate festivals together. This work ensures tribal culture remains vibrant, respected, and integral to community identity for decades to come.
+          </p>
+        </div>
+
         {/* Visual Impact */}
         <div className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
@@ -137,19 +153,6 @@ export default function ReligiousCulturalProgram() {
           </div>
         </div>
 
-        {/* Long-Term Impact */}
-        <div className="mb-12 bg-gradient-to-br from-secondary/5 to-primary/5 border border-secondary/20 rounded-lg p-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-foreground">
-            Preserving Heritage for Future Generations
-          </h2>
-          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-            As tribal communities face modernization and external influences, maintaining strong cultural and spiritual identity becomes increasingly important. MST's religious and cultural services ensure that traditions, values, and practices are celebrated and passed on to younger generations rather than lost.
-          </p>
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-            Temples and cultural spaces become focal points for community life—places where elders share wisdom, children learn traditions, and families celebrate festivals together. This work ensures tribal culture remains vibrant, respected, and integral to community identity for decades to come.
-          </p>
-        </div>
-
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
@@ -168,6 +171,8 @@ export default function ReligiousCulturalProgram() {
             </Button>
           </a>
         </div>
+
+        <OtherPrograms current="/programs/religious-cultural" />
       </main>
 
       <Footer />

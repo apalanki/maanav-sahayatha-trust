@@ -5,6 +5,7 @@ import { MapPin, Users, Package, Eye, MessageCircle } from "lucide-react";
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
 
 export default function TribalDistributionProgram() {
   useEffect(() => {
@@ -19,6 +20,8 @@ export default function TribalDistributionProgram() {
 
       {/* Main Content */}
       <main className="container py-8">
+        <ProgramBreadcrumb current="/programs/tribal" />
+
         {/* Program Overview */}
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -28,9 +31,9 @@ export default function TribalDistributionProgram() {
                 <div className="w-1 h-8 bg-primary" />
                 <span className="text-sm font-semibold text-primary uppercase tracking-wide">Community Service</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+              <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
                 Meeting Basic Needs with Dignity
-              </h2>
+              </h1>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
                 Imagine winter in a remote village with no warm clothing for your children. Imagine watching your elderly parents struggle without basic supplies. For thousands of tribal families across Andhra Pradesh, these aren't hypotheticals—they're everyday challenges.
               </p>
@@ -48,19 +51,6 @@ export default function TribalDistributionProgram() {
               />
             </div>
           </div>
-        </div>
-
-        {/* Partnership Highlight */}
-        <div className="mb-12 bg-gradient-to-br from-secondary/5 to-primary/5 border border-secondary/20 rounded-lg p-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-foreground">
-            Partnership with Bhagavan Sri Sathya Sai Seva Trust
-          </h2>
-          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-            Through our collaboration with <strong>Bhagavan Sri Sathya Sai Seva Trust</strong> in Visakhapatnam, we have significantly expanded our reach and impact. This partnership enables us to conduct large-scale distribution events that serve thousands of families across remote tribal regions.
-          </p>
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-            Together, we coordinate logistics, mobilize volunteers, and ensure that essential supplies reach even the most isolated villages—bringing warmth, dignity, and hope to communities that are often overlooked.
-          </p>
         </div>
 
         {/* Distribution Programs */}
@@ -174,36 +164,6 @@ export default function TribalDistributionProgram() {
           </div>
         </div>
 
-        {/* Additional Images */}
-        <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
-            Distribution Events
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white p-3 rounded-lg shadow">
-              <img
-                src={getAssetPath("/images/tribal/IMG_20260104_192923.jpg")}
-                alt="Distribution event preparation"
-                className="w-full rounded-lg object-cover aspect-video"
-              />
-            </div>
-            <div className="bg-white p-3 rounded-lg shadow">
-              <img
-                src={getAssetPath("/images/tribal/IMG-20251227-WA0017.jpg")}
-                alt="Community members receiving supplies"
-                className="w-full rounded-lg object-cover aspect-video"
-              />
-            </div>
-            <div className="bg-white p-3 rounded-lg shadow">
-              <img
-                src={getAssetPath("/images/tribal/WhatsApp Image 2025-12-04 at 8.34.50 AM (2).jpeg")}
-                alt="Tribal outreach program"
-                className="w-full rounded-lg object-cover aspect-video"
-              />
-            </div>
-          </div>
-        </div>
-
         {/* Community-Centered Approach */}
         <div className="mb-12 bg-accent/5 border border-border rounded-lg p-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-6 text-primary">
@@ -234,6 +194,49 @@ export default function TribalDistributionProgram() {
           </div>
         </div>
 
+        {/* Partnership Highlight */}
+        <div className="mb-12 bg-gradient-to-br from-secondary/5 to-primary/5 border border-secondary/20 rounded-lg p-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-foreground">
+            Partnership with Bhagavan Sri Sathya Sai Seva Trust
+          </h2>
+          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+            Through our collaboration with <strong>Bhagavan Sri Sathya Sai Seva Trust</strong> in Visakhapatnam, we have significantly expanded our reach and impact. This partnership enables us to conduct large-scale distribution events that serve thousands of families across remote tribal regions.
+          </p>
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+            Together, we coordinate logistics, mobilize volunteers, and ensure that essential supplies reach even the most isolated villages—bringing warmth, dignity, and hope to communities that are often overlooked.
+          </p>
+        </div>
+
+        {/* Additional Images */}
+        <div className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+            Distribution Events
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src={getAssetPath("/images/tribal/IMG_20260104_192923.jpg")}
+                alt="Distribution event preparation"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src={getAssetPath("/images/tribal/IMG-20251227-WA0017.jpg")}
+                alt="Community members receiving supplies"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                src={getAssetPath("/images/tribal/WhatsApp Image 2025-12-04 at 8.34.50 AM (2).jpeg")}
+                alt="Tribal outreach program"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
@@ -252,6 +255,8 @@ export default function TribalDistributionProgram() {
             </Button>
           </a>
         </div>
+
+        <OtherPrograms current="/programs/tribal" />
       </main>
 
       <Footer />

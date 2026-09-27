@@ -1,21 +1,14 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Menu, X } from "lucide-react";
+import { MessageCircle, Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { getAssetPath } from "@/lib/utils";
+import { PROGRAMS, homeSectionHref } from "@/lib/programs";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const whatsappDonationLink = "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20Manav%20Sahayata%20Trust";
-
-  const programs = [
-    { name: "Education", path: "/programs/education" },
-    { name: "Medical Services", path: "/programs/medical" },
-    { name: "Tribal Distribution", path: "/programs/tribal" },
-    { name: "Bala Vikas", path: "/programs/bala-vikas" },
-    { name: "Religious & Cultural", path: "/programs/religious-cultural" },
-  ];
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -35,23 +28,30 @@ export default function Header() {
             <Link href="/">
               <a className="text-sm font-medium hover:text-primary transition-colors">Home</a>
             </Link>
+            <a href={homeSectionHref("about")} className="text-sm font-medium hover:text-primary transition-colors">
+              About Us
+            </a>
             <div className="relative group">
-              <button className="text-sm font-medium hover:text-primary transition-colors">
+              <button className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors" aria-haspopup="true">
                 Programs
+                <ChevronDown className="w-4 h-4" aria-hidden="true" />
               </button>
-              {/* Dropdown */}
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              {/* Dropdown - opens on hover and on keyboard focus */}
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
                 <div className="py-2">
-                  {programs.map((program) => (
+                  {PROGRAMS.map((program) => (
                     <Link key={program.path} href={program.path}>
                       <a className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors">
-                        {program.name}
+                        {program.shortName}
                       </a>
                     </Link>
                   ))}
                 </div>
               </div>
             </div>
+            <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+              Contact
+            </a>
             <a
               href={whatsappDonationLink}
               target="_blank"
@@ -90,17 +90,31 @@ export default function Header() {
                   Home
                 </a>
               </Link>
+              <a
+                href={homeSectionHref("about")}
+                className="block py-2 text-sm font-medium hover:text-primary transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About Us
+              </a>
               <div className="text-sm font-semibold text-muted-foreground">Programs</div>
-              {programs.map((program) => (
+              {PROGRAMS.map((program) => (
                 <Link key={program.path} href={program.path}>
                   <a
                     className="block pl-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors rounded"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {program.name}
+                    {program.shortName}
                   </a>
                 </Link>
               ))}
+              <a
+                href="#contact"
+                className="block py-2 text-sm font-medium hover:text-primary transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
               <a
                 href={whatsappDonationLink}
                 target="_blank"

@@ -5,6 +5,7 @@ import { Heart, Pill, Building2, Eye, MessageCircle } from "lucide-react";
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
 
 export default function MedicalServicesProgram() {
   useEffect(() => {
@@ -19,6 +20,8 @@ export default function MedicalServicesProgram() {
 
       {/* Main Content */}
       <main className="container py-8">
+        <ProgramBreadcrumb current="/programs/medical" />
+
         {/* Program Overview */}
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -37,9 +40,9 @@ export default function MedicalServicesProgram() {
                 <div className="w-1 h-8 bg-secondary" />
                 <span className="text-sm font-semibold text-secondary uppercase tracking-wide">Healthcare Access</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+              <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
                 No One Should Suffer Without Care
-              </h2>
+              </h1>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
                 In remote tribal villages, a simple infection can become life-threatening. Mothers give birth without prenatal care. The elderly go blind from cataracts that could easily be treated. These aren't rare tragedies—they're daily realities when healthcare is hours away and unaffordable.
               </p>
@@ -107,17 +110,31 @@ export default function MedicalServicesProgram() {
           </div>
         </div>
 
-        {/* Partnership Highlight */}
-        <div className="mb-12 bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 rounded-lg p-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-primary">
-            Partnerships for Greater Impact
+        {/* Focus Areas */}
+        <div className="mb-12 bg-accent/5 border border-border rounded-lg p-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-6 text-primary">
+            Who We Serve
           </h2>
-          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-            MST collaborates with medical professionals, hospitals, and organizations to maximize our impact. Our partnership with <strong>Vema Netralaya</strong> has enabled us to conduct specialized eye camps and cataract surgeries in tribal villages, transforming the lives of elderly community members who had lost their sight.
-          </p>
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-            Local doctors volunteer their time to conduct health camps, and nearby hospitals provide discounted or subsidized care to patients referred by the Trust. These collaborations ensure that quality healthcare reaches even the most remote areas.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <h4 className="font-bold text-lg mb-2 text-foreground">Women & Mothers</h4>
+              <p className="text-foreground/80 leading-relaxed">
+                Prenatal care, maternal health services, and treatment for conditions that disproportionately affect women in remote areas.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-lg mb-2 text-foreground">Children</h4>
+              <p className="text-foreground/80 leading-relaxed">
+                Pediatric care, vaccinations, treatment for common childhood illnesses, and nutritional support for healthy development.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-lg mb-2 text-foreground">Elderly</h4>
+              <p className="text-foreground/80 leading-relaxed">
+                Chronic disease management, cataract surgeries, mobility support, and specialized care for age-related health conditions.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Impact Story */}
@@ -154,6 +171,19 @@ export default function MedicalServicesProgram() {
           </div>
         </div>
 
+        {/* Partnership Highlight */}
+        <div className="mb-12 bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 rounded-lg p-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-primary">
+            Partnerships for Greater Impact
+          </h2>
+          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+            MST collaborates with medical professionals, hospitals, and organizations to maximize our impact. Our partnership with <strong>Vema Netralaya</strong> has enabled us to conduct specialized eye camps and cataract surgeries in tribal villages, transforming the lives of elderly community members who had lost their sight.
+          </p>
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+            Local doctors volunteer their time to conduct health camps, and nearby hospitals provide discounted or subsidized care to patients referred by the Trust. These collaborations ensure that quality healthcare reaches even the most remote areas.
+          </p>
+        </div>
+
         {/* Additional Images */}
         <div className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
@@ -184,33 +214,6 @@ export default function MedicalServicesProgram() {
           </div>
         </div>
 
-        {/* Focus Areas */}
-        <div className="mb-12 bg-accent/5 border border-border rounded-lg p-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-6 text-primary">
-            Who We Serve
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">Women & Mothers</h4>
-              <p className="text-foreground/80 leading-relaxed">
-                Prenatal care, maternal health services, and treatment for conditions that disproportionately affect women in remote areas.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">Children</h4>
-              <p className="text-foreground/80 leading-relaxed">
-                Pediatric care, vaccinations, treatment for common childhood illnesses, and nutritional support for healthy development.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">Elderly</h4>
-              <p className="text-foreground/80 leading-relaxed">
-                Chronic disease management, cataract surgeries, mobility support, and specialized care for age-related health conditions.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
@@ -229,6 +232,8 @@ export default function MedicalServicesProgram() {
             </Button>
           </a>
         </div>
+
+        <OtherPrograms current="/programs/medical" />
       </main>
 
       <Footer />

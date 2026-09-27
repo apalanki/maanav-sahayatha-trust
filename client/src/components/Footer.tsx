@@ -1,8 +1,9 @@
 import { Link } from "wouter";
+import { PROGRAMS } from "@/lib/programs";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground py-12 sm:py-16">
+    <footer id="contact" className="bg-primary text-primary-foreground py-12 sm:py-16 scroll-mt-24">
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -14,11 +15,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Programs</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/programs/education" className="hover:text-secondary transition-colors">Educational Support</Link></li>
-              <li><Link href="/programs/medical" className="hover:text-secondary transition-colors">Medical Services</Link></li>
-              <li><Link href="/programs/tribal" className="hover:text-secondary transition-colors">Tribal Distribution</Link></li>
-              <li><Link href="/programs/bala-vikas" className="hover:text-secondary transition-colors">Bala Vikas Schools</Link></li>
-              <li><Link href="/programs/religious-cultural" className="hover:text-secondary transition-colors">Religious & Cultural Services</Link></li>
+              {PROGRAMS.map((program) => (
+                <li key={program.path}>
+                  <Link href={program.path} className="hover:text-secondary transition-colors">{program.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
