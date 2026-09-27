@@ -44,7 +44,7 @@ export default function Header() {
                 <div className="py-2">
                   {programs.map((program) => (
                     <Link key={program.path} href={program.path}>
-                      <a className="block px-4 py-2 text-sm hover:bg-accent transition-colors">
+                      <a className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors">
                         {program.name}
                       </a>
                     </Link>
@@ -89,7 +89,7 @@ export default function Header() {
               {programs.map((program) => (
                 <Link key={program.path} href={program.path}>
                   <a
-                    className="block pl-4 py-2 text-sm hover:text-primary transition-colors"
+                    className="block pl-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors rounded"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {program.name}
