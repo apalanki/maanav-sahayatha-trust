@@ -130,7 +130,7 @@ export default function BalaVikasProgram() {
             <div className="space-y-4">
               <div className="bg-white p-3 rounded-lg shadow">
                 <img
-                  src={getAssetPath("/images/bala-vikas/IMG-20260311-WA0023.jpg")}
+                  src={getAssetPath("/images/bala-vikas/IMG-20260312-WA0016.jpg")}
                   alt="Bala Vikas school children learning"
                   className="w-full rounded-lg object-cover aspect-video"
                 />
