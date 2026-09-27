@@ -35,6 +35,9 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6">
+            <Link href="/">
+              <a className="text-sm font-medium hover:text-primary transition-colors">Home</a>
+            </Link>
             <div className="relative group">
               <button className="text-sm font-medium hover:text-primary transition-colors">
                 Programs
@@ -52,9 +55,6 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <Link href="/#story">
-              <a className="text-sm font-medium hover:text-primary transition-colors">Our Story</a>
-            </Link>
             <a
               href={whatsappDonationLink}
               target="_blank"
@@ -85,6 +85,14 @@ export default function Header() {
         {mobileMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 border-t border-border pt-4">
             <div className="flex flex-col gap-4">
+              <Link href="/">
+                <a
+                  className="block py-2 text-sm font-medium hover:text-primary transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Home
+                </a>
+              </Link>
               <div className="text-sm font-semibold text-muted-foreground">Programs</div>
               {programs.map((program) => (
                 <Link key={program.path} href={program.path}>
@@ -96,14 +104,6 @@ export default function Header() {
                   </a>
                 </Link>
               ))}
-              <Link href="/#story">
-                <a
-                  className="block py-2 text-sm font-medium hover:text-primary transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Our Story
-                </a>
-              </Link>
               <a
                 href={whatsappDonationLink}
                 target="_blank"
