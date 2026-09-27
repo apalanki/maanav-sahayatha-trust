@@ -22,13 +22,26 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-3 cursor-pointer">
+            <div className="flex items-center gap-2 cursor-pointer group">
+              {/* Helping Hands Icon */}
+              <div className="relative w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0">
+                <svg viewBox="0 0 40 40" className="w-full h-full">
+                  {/* Blue hand reaching down */}
+                  <path d="M20 8 Q15 12 12 18 L16 20 Q18 15 20 12 Z" fill="#003D7A" opacity="0.9"/>
+                  {/* Orange hand reaching up */}
+                  <path d="M20 32 Q25 28 28 22 L24 20 Q22 25 20 28 Z" fill="#E67E22" opacity="0.9"/>
+                  {/* Connecting point */}
+                  <circle cx="20" cy="20" r="2.5" fill="#003D7A"/>
+                </svg>
+              </div>
+
+              {/* Text Logo */}
               <div className="flex flex-col leading-none">
-                <div className="text-lg sm:text-xl font-bold">
-                  <span className="text-primary">manav</span>
-                  <span className="text-secondary"> sahayata</span>
+                <div className="text-base sm:text-lg md:text-xl font-bold tracking-tight">
+                  <span className="text-primary">manav </span>
+                  <span className="text-secondary">sahayata</span>
                 </div>
-                <p className="text-xs sm:text-sm text-foreground font-semibold">trust</p>
+                <div className="text-xs sm:text-sm font-bold text-foreground tracking-wide">trust</div>
               </div>
             </div>
           </Link>
