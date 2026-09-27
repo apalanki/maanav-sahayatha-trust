@@ -188,7 +188,7 @@
   /* Textured section background */
   .section-textured {
     background-color: oklch(0.97 0.001 0);
-    background-image: 
+    background-image:
       repeating-linear-gradient(
         90deg,
         transparent,
@@ -196,6 +196,16 @@
         rgba(69, 39, 160, 0.02) 2px,
         rgba(69, 39, 160, 0.02) 4px
       );
+  }
+
+  /* Image normalization for consistent appearance */
+  img {
+    filter: brightness(1.05) contrast(1.08) saturate(1.02);
+    transition: filter 0.3s ease;
+  }
+
+  img:hover {
+    filter: brightness(1.08) contrast(1.1) saturate(1.05);
   }
 
   @media (min-width: 640px) {
