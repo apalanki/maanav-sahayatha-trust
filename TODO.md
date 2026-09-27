@@ -1,7 +1,7 @@
 # Manav Sahayata Trust Website - Roadmap
 
 **Live site:** https://manavsahayata.org · **Deployment guide:** [DEPLOYMENT.md](DEPLOYMENT.md) ·
-**Placeholder data to replace:** [DUMMY_DATA_TODO.md](DUMMY_DATA_TODO.md)
+**Facts to confirm:** [CONTENT_TO_VERIFY.md](CONTENT_TO_VERIFY.md)
 
 ## Completed ✅
 
@@ -36,7 +36,7 @@
       (free forwarding to Gmail)
 
 ### Donor trust & giving (High Priority)
-- [ ] Replace placeholder statistics and stories (see [DUMMY_DATA_TODO.md](DUMMY_DATA_TODO.md))
+- [ ] Confirm the facts on the site and gather current statistics (see [CONTENT_TO_VERIFY.md](CONTENT_TO_VERIFY.md))
 - [ ] Show registration details (trust registration number, year) and, if available, **80G tax
       exemption** status — Indian donors look for this before giving
 - [ ] Add a direct way to give without chatting first: a UPI QR code / UPI ID and bank details, or

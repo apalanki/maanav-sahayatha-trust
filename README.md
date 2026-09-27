@@ -68,6 +68,17 @@ client-side navigation.
 `vite.config.ts`, `scripts/generate-seo.mjs`, `scripts/serve-dist.mjs`, and the tests all read it, so
 there is nothing else to change. Overrides: `VITE_BASE_PATH`, `SITE_URL`.
 
+## Design
+
+"Humanitarian editorial": documentary, dignified, and warm rather than flashy.
+
+- **Type:** Cormorant Garamond for headings, Manrope for body text (Google Fonts, `client/index.html`).
+- **Color:** navy `#003D7A` and saffron `#FF9900` in the UI (`lib/branding.ts`, CSS variables in
+  `index.css`); the logo and favicon use blue `#2D65AF` and orange `#F17D00`.
+- **Patterns:** small uppercase "eyebrow" labels with a vertical rule, alternating photo/text rows,
+  textured backgrounds (`.section-textured`) alternating with white sections, restrained hover effects.
+- **Copy:** donor-focused and specific, never guilt-driven; every page ends with a donate call to action.
+
 ## Project structure
 
 ```
@@ -159,6 +170,7 @@ Domain, DNS records, HTTPS, Search Console, and troubleshooting: **[DEPLOYMENT.m
 
 ## Project docs
 
+- **[CLAUDE.md](CLAUDE.md)** – working rules, content rules, and settled decisions for coding agents
 - **[DEPLOYMENT.md](DEPLOYMENT.md)** – hosting, DNS, HTTPS, updating, troubleshooting
 - **[TODO.md](TODO.md)** – roadmap and open questions for the trust
-- **[DUMMY_DATA_TODO.md](DUMMY_DATA_TODO.md)** – placeholder statistics and stories still to replace
+- **[CONTENT_TO_VERIFY.md](CONTENT_TO_VERIFY.md)** – facts on the site awaiting confirmation from the trust
