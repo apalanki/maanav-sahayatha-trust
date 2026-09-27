@@ -1,115 +1,71 @@
-# Manav Sahayata Trust Website - Development Roadmap
+# Manav Sahayata Trust Website - Roadmap
 
-## Completed Features ✅
-- [x] Landing page with hero section and program overview
-- [x] Official MST branding (navy blue #003D7A and saffron orange #FF9900)
-- [x] Educational Support program page with timeline activities
-- [x] Year-by-year statistics and impact metrics
-- [x] Mobile-first responsive design
-- [x] Dynamic footer with current year
-- [x] Reusable branding constants system
-- [x] GitHub Pages deployment
+**Live site:** https://manavsahayata.org · **Deployment guide:** [DEPLOYMENT.md](DEPLOYMENT.md) ·
+**Placeholder data to replace:** [DUMMY_DATA_TODO.md](DUMMY_DATA_TODO.md)
 
-## Next Steps - Priority Order
+## Completed ✅
 
-### Phase 1: Expand Program Pages (Medium Priority)
-- [ ] Create Medical Services program page with timeline activities
-  - Include medical camps, medicine distribution, and hospital assistance data
-  - Add year-by-year statistics for patients served
-  - Link from landing page programs section
+- [x] Home page: hero, Our Story, programs, success story, donate call to action
+- [x] Program pages: Educational Support, Bala Vikas Schools, Medical Services, Tribal Distribution,
+      Religious & Cultural Services
+- [x] Official MST branding (navy blue `#003D7A` and saffron orange `#FF9900`)
+- [x] Donor-focused copy; WhatsApp "Donate" / "Chat With Us to Donate" buttons
+- [x] Navigation: About Us and Contact links, keyboard-accessible Programs menu, breadcrumbs, and
+      "Explore Our Other Programs" links; logo returns to the top of the home page
+- [x] Mobile-first responsive design (checked at phone and desktop widths)
+- [x] Custom domain `manavsahayata.org` with HTTPS (Cloudflare Registrar + GitHub Pages)
+- [x] SEO: per-page titles/descriptions, social share previews, NGO structured data, sitemap,
+      robots.txt, real 404 page; sitemap submitted to Google Search Console
+- [x] Performance: photos resized (36 MB → 9.3 MB) and below-the-fold images lazy-loaded
+- [x] Dependencies upgraded (Vite 8, Express 5, TypeScript 6); 0 known vulnerabilities
 
-- [ ] Create Tribal Distribution program page
-  - Timeline of clothing distribution and eye camps
-  - Statistics on villages served and beneficiaries
-  - Partnership information with organizations like Vema Netralaya
+## Next Steps
 
-- [ ] Create Bala Vikas Schools program page
-  - Timeline of school activities and student achievements
-  - Statistics on children enrolled and centers established
-  - Curriculum and values taught
+### Get found (High Priority, no code needed)
+- [ ] Create a **Google Business Profile** for the trust (Visakhapatnam address, website link) so it
+      appears on Google Maps and local searches
+- [ ] Use Search Console **URL Inspection → Request indexing** for each page; review the **Pages**
+      report after a week
+- [ ] List the trust on donation platforms (e.g. GiveIndia) and link the website from any social
+      media profiles; share profile links so they can be added to the site and structured data
+- [ ] Set up a domain email address (e.g. `contact@manavsahayata.org`) with Cloudflare Email Routing
+      (free forwarding to Gmail)
 
-### Phase 2: Donor Engagement (High Priority)
-- [ ] Add Contact Form to landing page
-  - Fields: Name, Email, Phone, Message, Inquiry Type
-  - Consider upgrading to web-db-user for backend form handling
-  - Add form submission confirmation
+### Donor trust & giving (High Priority)
+- [ ] Replace placeholder statistics and stories (see [DUMMY_DATA_TODO.md](DUMMY_DATA_TODO.md))
+- [ ] Show registration details (trust registration number, year) and, if available, **80G tax
+      exemption** status — Indian donors look for this before giving
+- [ ] Add a direct way to give without chatting first: a UPI QR code / UPI ID and bank details, or
+      Razorpay payment links (supports one-time and recurring donations in INR)
+- [ ] Add a simple contact form (e.g. Formspree or Web3Forms, free tiers work with static hosting)
 
-- [ ] Add Email Newsletter Signup
-  - Section on landing page footer or dedicated section
-  - Collect emails for donor communications
-  - Requires backend integration (web-db-user feature)
+### Content (Medium Priority)
+- [ ] News / updates page for recent camps, distributions, and events
+- [ ] Team / leadership page introducing the founder, trustees, and key volunteers
+- [ ] Photo gallery organized by program
+- [ ] More success stories and testimonials (with permission from the people featured)
 
-- [ ] Enable Online Donations
-  - Integrate Stripe payment processing (requires web-db-user upgrade)
-  - Add donation buttons on landing page and each program page
-  - Support one-time and recurring donations
-
-### Phase 3: Content & SEO (Medium Priority)
-- [ ] Create Blog/News Section
-  - Add page for program updates and success stories
-  - Timeline of recent activities and achievements
-  - Improve search engine visibility
-
-- [ ] Add Team/Leadership Page
-  - Introduce founding members and key volunteers
-  - Build trust and credibility with donors
-
-- [ ] Optimize for Search Engines
-  - Add meta descriptions and keywords
-  - Create sitemap.xml
-  - Implement Open Graph tags for social sharing
-
-### Phase 4: Advanced Features (Lower Priority)
-- [ ] Add Photo Gallery
-  - Showcase program activities and community impact
-  - Organize by program area
-
-- [ ] Add Testimonials Section
-  - Success stories from beneficiaries
-  - Quotes from community members and partners
-
-- [ ] Add Event Calendar
-  - Upcoming medical camps, distribution events, etc.
-  - Allow supporters to register or volunteer
-
-- [ ] Implement Analytics
-  - Track visitor engagement
-  - Monitor donation conversion rates
+### Measurement (Lower Priority)
+- [ ] Add privacy-friendly analytics (e.g. Cloudflare Web Analytics, free) to see visits and which
+      pages lead to donation chats
 
 ## Technical Notes
 
-### Branding System
-- All colors are managed in `/client/src/lib/branding.ts`
-- Update `MST_COLORS` object to change brand colors globally
-- Use `getCardStyle()` function for consistent card styling
-
-### Image Management
-- Store images in `/home/ubuntu/webdev-static-assets/` (outside project)
-- Upload using: `manus-upload-file --webdev path/to/image.png`
-- Use returned CDN URLs in code
-
-### Deployment
-- GitHub Pages deployment is automatic on push to main branch
-- Site available at: https://apalanki.github.io/maanav-sahayatha-trust/
-- Base path configured in `vite.config.ts`
-
-## Feature Upgrade Requirements
-
-### To Enable Contact Forms & Donations:
-- Run: `webdev_add_feature web-db-user`
-- This adds: Backend server, database, authentication, Stripe integration
-
-### To Enable Email Notifications:
-- Requires web-db-user upgrade
-- Configure in Settings → Secrets panel
+- **Deploy:** push to `main`; GitHub Actions builds and publishes in 1–2 minutes.
+- **Branding:** colors live in `client/src/lib/branding.ts` (`MST_COLORS`, `getCardStyle()`).
+- **Programs list:** `client/src/lib/programs.ts` drives the header, footer, and program navigation.
+- **Page titles/descriptions:** `client/src/lib/seo-pages.json`.
+- **Images:** store in `client/public/images/<program>/`, resize to 1280px before committing (see
+  [DEPLOYMENT.md](DEPLOYMENT.md#adding-photos)), reference with `getAssetPath()`.
 
 ## Questions for Stakeholders
 
-1. What is the priority for online donations vs. contact forms?
-2. Do you want to collect donor information for follow-up communications?
-3. Should the blog section be editable by non-technical team members?
-4. What metrics are most important to showcase on program pages?
+1. Does the trust have 80G / 12A registration, and can the certificate details be shown on the site?
+2. Which donation method is preferred: UPI/bank transfer, Razorpay, or continuing via WhatsApp?
+3. Who will provide regular updates (photos, events, statistics), and how often?
+4. Which metrics matter most to show donors on the program pages?
 
-## Contact & Support
-- GitHub Repository: https://github.com/apalanki/maanav-sahayatha-trust
-- Live Site: https://apalanki.github.io/maanav-sahayatha-trust/
+## Links
+
+- Live site: https://manavsahayata.org
+- GitHub repository: https://github.com/apalanki/maanav-sahayatha-trust

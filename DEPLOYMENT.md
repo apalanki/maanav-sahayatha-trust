@@ -1,185 +1,133 @@
 # Deployment Guide
 
-This guide explains how to deploy the MST website to different environments (GitHub Pages, S3, custom domains, etc.) without code changes.
+**Live site:** https://manavsahayata.org
 
-## Overview
+## How the site is hosted
 
-The website is configured to work with different deployment scenarios through environment variables. The base path is automatically set based on the deployment environment.
+| Piece | Provider | Cost | Notes |
+|---|---|---|---|
+| Domain (`manavsahayata.org`) | Cloudflare Registrar | ~$10–11/year | Renews at cost; DNS managed in the Cloudflare dashboard |
+| Hosting | GitHub Pages (via GitHub Actions) | Free | Global CDN, free HTTPS |
+| HTTPS certificate | Let's Encrypt, issued by GitHub Pages | Free | Renews automatically |
 
-## Deployment Scenarios
+## Updating the site
 
-### 1. GitHub Pages (Current Setup)
-
-**URL**: `https://apalanki.github.io/maanav-sahayatha-trust/`
-
-**How it works:**
-- The GitHub Actions workflow automatically builds and deploys to GitHub Pages
-- Base path is set to `/maanav-sahayatha-trust/`
-- No configuration needed
-
-**To deploy:**
 ```bash
 git push origin main
 ```
 
-### 2. AWS S3 + CloudFront
+That's it. `.github/workflows/deploy.yml` installs dependencies, runs `pnpm run build`, and publishes
+`dist/public` to GitHub Pages. The change is live in 1–2 minutes; progress is visible in the repo's
+**Actions** tab.
 
-**URL**: `https://yourdomain.com/` (or any custom domain)
+## Local development
 
-**Setup:**
-1. Create an S3 bucket (e.g., `mst-nonprofit-site`)
-2. Enable static website hosting
-3. Set up CloudFront distribution pointing to the S3 bucket
-4. Configure your domain to point to CloudFront
-
-**Build and deploy:**
 ```bash
-# Build with root base path for S3
-VITE_BASE_PATH=/ npm run build
-
-# Deploy to S3
-aws s3 sync dist/public/ s3://mst-nonprofit-site/ --delete
-
-# Invalidate CloudFront cache (optional)
-aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"
+pnpm install          # install dependencies
+pnpm dev              # dev server at http://localhost:3000 (or the port Vite prints)
+pnpm check            # TypeScript type-check
+pnpm build            # production build into dist/public
+pnpm start            # serve the production build with the Node server (dist/index.js)
 ```
 
-### 3. Custom Domain (Root URL)
+CI installs with `pnpm install --frozen-lockfile`, so always commit `pnpm-lock.yaml` along with any
+`package.json` change.
 
-**URL**: `https://mst.org/` or any custom domain
+## What the build does
 
-**Setup:**
-1. Register domain
-2. Point domain to your hosting (S3, Vercel, Netlify, etc.)
-3. Set up SSL certificate (free with Let's Encrypt or AWS Certificate Manager)
+`pnpm run build` runs three steps:
 
-**Build and deploy:**
+1. **`vite build`** – bundles the React app into `dist/public`.
+2. **`node scripts/generate-seo.mjs`** – for every page listed in `client/src/lib/seo-pages.json`:
+   - writes a real HTML file (e.g. `dist/public/programs/medical.html`) with that page's title,
+     description, canonical URL, Open Graph/Twitter tags, and NGO structured data (JSON-LD), so each
+     URL returns HTTP 200 and shows a proper preview when shared on WhatsApp/social media
+   - generates `sitemap.xml`, `robots.txt`, and a `noindex` `404.html`
+3. **`esbuild server/index.ts`** – bundles the optional Node/Express server used by `pnpm start`.
+
+### Base path and site URL
+
+These are derived automatically from `client/public/CNAME`:
+
+| `client/public/CNAME` | Base path | Site URL used for canonical/sitemap |
+|---|---|---|
+| Present (currently `manavsahayata.org`) | `/` | `https://<domain in CNAME>` |
+| Absent | `/maanav-sahayatha-trust/` | `https://apalanki.github.io/maanav-sahayatha-trust` |
+
+Overrides, if ever needed: `VITE_BASE_PATH=/ pnpm run build` and `SITE_URL=https://example.org pnpm run build`.
+
+## Adding or renaming a page
+
+1. Add the route in `client/src/App.tsx`.
+2. Add its title, description, and share image in `client/src/lib/seo-pages.json`
+   (keep titles under ~60 characters and descriptions under ~160).
+3. For a program page, also add it to `PROGRAMS` in `client/src/lib/programs.ts` so it appears in the
+   header, footer, and "Explore Our Other Programs" links.
+
+## Adding photos
+
+Photos straight from a phone are 3–7 MB, which makes pages slow on mobile data. Resize before
+committing (macOS):
+
 ```bash
-# Build with root base path
-VITE_BASE_PATH=/ npm run build
-
-# Deploy to your hosting provider
-# (Instructions vary by provider)
+sips -Z 1280 -s formatOptions 75 client/public/images/<folder>/<photo>.jpg
 ```
 
-### 4. Subdirectory on Existing Domain
+Then reference it with `getAssetPath("/images/<folder>/<photo>.jpg")`. Add `loading="lazy"` to any
+image that isn't in the first screen of the page.
 
-**URL**: `https://yourorganization.com/mst/`
+## Domain and DNS (Cloudflare)
 
-**Build and deploy:**
-```bash
-# Build with custom base path
-VITE_BASE_PATH=/mst/ npm run build
+All records must be **DNS only (grey cloud)**. The Cloudflare proxy (orange cloud) stops GitHub from
+verifying the domain and renewing the HTTPS certificate.
 
-# Deploy to your hosting provider
-```
+| Type | Name | Content |
+|---|---|---|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `apalanki.github.io` |
+| TXT | `_github-pages-challenge-apalanki` | GitHub domain-verification code |
 
-### 5. Vercel Deployment
+GitHub repo settings (**Settings → Pages**): custom domain `manavsahayata.org`, **Enforce HTTPS** on.
+The domain is also verified at the account level (**Profile → Settings → Pages**), which prevents
+anyone else from using it for a GitHub Pages site.
 
-**URL**: `https://mst-nonprofit.vercel.app/` or custom domain
+`www.manavsahayata.org`, `http://`, and old `apalanki.github.io/maanav-sahayatha-trust/...` links all
+redirect to `https://manavsahayata.org`.
 
-**Setup:**
-1. Connect GitHub repository to Vercel
-2. Vercel automatically detects Vite configuration
-3. Set environment variable in Vercel dashboard: `VITE_BASE_PATH=/`
+## Search engines
 
-**Deploy:**
-```bash
-git push origin main
-# Vercel automatically builds and deploys
-```
+- **Google Search Console:** `manavsahayata.org` is verified as a Domain property and
+  `https://manavsahayata.org/sitemap.xml` is submitted. Check the **Pages** and **Performance**
+  reports periodically; use **URL Inspection → Request indexing** after adding a new page.
+- The sitemap is regenerated on every build, so no manual updates are needed.
 
-### 6. Netlify Deployment
+## Moving to another host (if ever needed)
 
-**URL**: `https://mst-nonprofit.netlify.app/` or custom domain
+Any static host works (Cloudflare Pages, Netlify, S3 + CloudFront). Use:
 
-**Setup:**
-1. Connect GitHub repository to Netlify
-2. Build command: `npm run build`
-3. Publish directory: `dist/public`
-4. Set environment variable: `VITE_BASE_PATH=/`
+- Build command: `pnpm run build`
+- Output directory: `dist/public`
+- Keep `client/public/CNAME` so the build uses the root base path and correct site URL.
 
-**Deploy:**
-```bash
-git push origin main
-# Netlify automatically builds and deploys
-```
-
-## Environment Variables
-
-### VITE_BASE_PATH
-
-Controls the base path for all routes and assets.
-
-**Examples:**
-- `VITE_BASE_PATH=/` - Root URL (default for custom domains)
-- `VITE_BASE_PATH=/maanav-sahayatha-trust/` - GitHub Pages subdirectory
-- `VITE_BASE_PATH=/mst/` - Custom subdirectory
-
-**Default behavior:**
-- Development: `/`
-- Production (GitHub Pages): `/maanav-sahayatha-trust/`
-- Production (other): Use `VITE_BASE_PATH` if set, otherwise `/maanav-sahayatha-trust/`
-
-## Build Commands
-
-### Development
-```bash
-npm run dev
-```
-
-### Production Build
-```bash
-# Default (GitHub Pages)
-npm run build
-
-# Custom base path
-VITE_BASE_PATH=/ npm run build
-```
-
-### Preview Production Build
-```bash
-npm run preview
-```
-
-## Deployment Checklist
-
-Before deploying to production:
-
-- [ ] Update contact information in footer (phone, address, email)
-- [ ] Replace all dummy data with real MST data (see DUMMY_DATA_TODO.md)
-- [ ] Replace placeholder images with real MST photos
-- [ ] Update success stories with real beneficiary stories
-- [ ] Test all links and navigation
-- [ ] Test on mobile devices
-- [ ] Set up SSL/HTTPS
-- [ ] Configure domain DNS records
-- [ ] Set up email for contact form (if implemented)
-- [ ] Enable analytics (if desired)
-- [ ] Set up backups
+Then point the DNS records above at the new host instead of GitHub.
 
 ## Troubleshooting
 
-### Assets not loading
-- Check that `VITE_BASE_PATH` matches your deployment URL
-- Verify all image URLs are correct
-- Check browser console for 404 errors
+**"DNS check unsuccessful" / HTTPS unavailable in GitHub Pages settings**
+- Make sure every DNS record is grey (DNS only), then click **Check again**.
+- DNS caches can take up to ~30 minutes to update. If it's still failing after an hour, click
+  **Remove** and re-save the custom domain to restart the check and certificate request.
 
-### Routes not working
-- Ensure `404.html` is deployed (for GitHub Pages)
-- Check that back button uses `window.history.back()` (not hardcoded paths)
-- Verify Wouter routing configuration
+**Site works for others but not on your machine**
+- Your computer may have an old DNS answer cached. On macOS:
+  `sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder`
 
-### Build errors
-- Clear `node_modules` and reinstall: `rm -rf node_modules && npm install`
-- Clear build cache: `rm -rf dist/`
-- Check for TypeScript errors: `npm run check`
+**Deploy failed in the Actions tab**
+- `ERR_PNPM_OUTDATED_LOCKFILE`: run `pnpm install` locally and commit `pnpm-lock.yaml`.
+- Type or build errors: run `pnpm check` and `pnpm build` locally to reproduce.
 
-## Support
-
-For deployment issues or questions, refer to:
-- [Vite Documentation](https://vitejs.dev/)
-- [GitHub Pages Documentation](https://pages.github.com/)
-- [AWS S3 Static Website Hosting](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
-- [Vercel Documentation](https://vercel.com/docs)
-- [Netlify Documentation](https://docs.netlify.com/)
+**Page shows "404" or the wrong title**
+- Check the route exists in `client/src/App.tsx` and the page is listed in `seo-pages.json`.
