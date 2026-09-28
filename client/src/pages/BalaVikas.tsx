@@ -332,7 +332,7 @@ export default function BalaVikasProgram() {
 
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-4 text-foreground">
             Invest in Tomorrow's Leaders
           </h3>
           <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">

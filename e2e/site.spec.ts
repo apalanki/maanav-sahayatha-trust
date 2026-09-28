@@ -65,7 +65,7 @@ test.describe("navigation", () => {
     page,
   }) => {
     await page.goto(url("/"));
-    await page.getByRole("link", { name: "Learn More" }).first().click();
+    await page.getByRole("link", { name: "Explore Education" }).click();
     await expect(page).toHaveURL(url("/programs/education"));
     await expect(page).toHaveTitle(PAGES["/programs/education"].title);
 

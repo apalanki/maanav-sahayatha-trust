@@ -39,32 +39,37 @@ export default function HomePage() {
     {
       icon: BookOpen,
       title: "Educational Support",
-      desc: "Scholarships for deserving students, exam preparation support, and special focus on girls facing financial barriers. Breaking the cycle of poverty through education.",
+      desc: "Scholarships, exam preparation, and mentoring for deserving students, with a special focus on girls facing financial barriers.",
       link: "/programs/education",
+      cta: "Explore Education",
     },
     {
       icon: Users,
       title: "Bala Vikas Schools",
-      desc: "After-school centers where children learn values, culture, and good character through games and activities—and receive a nutritious meal every day.",
+      desc: "After-school centers where children learn values and culture through play, with a nutritious meal every day.",
       link: "/programs/bala-vikas",
+      cta: "Explore Bala Vikas",
     },
     {
       icon: Stethoscope,
       title: "Medical Services",
-      desc: "Medical camps in tribal villages, medicine distribution, and financial assistance for hospital treatment—bringing healthcare to those who need it most.",
+      desc: "Medical camps in tribal villages, medicine distribution, and help with hospital costs for families in need.",
       link: "/programs/medical",
+      cta: "Explore Medical Care",
     },
     {
       icon: MapPin,
       title: "Tribal Distribution",
-      desc: "Clothing distribution, eye camps with cataract surgeries, and essential supplies to remote villages in partnership with community organizations.",
+      desc: "Clothing, eye camps with cataract surgeries, and essential supplies for remote villages, delivered with community partners.",
       link: "/programs/tribal",
+      cta: "Explore Tribal Outreach",
     },
     {
       icon: HomeIcon,
-      title: "Religious & Cultural Services",
-      desc: "Temple renovation, promotion of tribal traditions like Bhajans and Kolatam, and spiritual programs that strengthen community bonds and cultural identity.",
+      title: "Religious & Cultural",
+      desc: "Temple renovation and support for traditions like Bhajans and Kolatam that keep communities and their culture strong.",
       link: "/programs/religious-cultural",
+      cta: "Explore Culture & Faith",
     },
   ];
 
@@ -161,7 +166,8 @@ export default function HomePage() {
                 Our journey began in 2004 as quiet, grassroots service to rural
                 and tribal communities—not with fanfare, but with steady
                 commitment. After nearly two decades of building trust and
-                relationships, we became a formally registered trust in 2023 (Reg. No. 32/2023).
+                relationships, we became a formally registered trust in 2023
+                (Reg. No. 32/2023).
               </p>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
                 We believe in Swami Vivekananda's timeless truth:{" "}
@@ -216,33 +222,35 @@ export default function HomePage() {
           </div>
 
           {/* Programs Grid - Mobile First */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {programs.map((program, index) => {
               const style = getCardStyle(index);
               const Icon = program.icon;
               return (
                 <Card
                   key={index}
-                  className={`p-6 sm:p-8 hover:shadow-lg transition-shadow h-full flex flex-col ${
-                    index === 4 ? "md:col-span-2 md:max-w-md md:mx-auto" : ""
+                  className={`p-6 lg:p-5 hover:shadow-lg transition-shadow h-full flex flex-col ${
+                    index === 4
+                      ? "sm:col-span-2 sm:w-full sm:max-w-md sm:mx-auto lg:col-span-1 lg:max-w-none"
+                      : ""
                   }`}
                   style={{
                     border: style.border,
                     backgroundColor: style.background,
                   }}
                 >
-                  <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center gap-3 mb-4 lg:min-h-[3.5rem]">
                     <div
                       className="p-2.5 rounded-lg flex-shrink-0"
                       style={{ backgroundColor: style.iconBackground }}
                     >
                       <Icon className="w-5 h-5 text-white" />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                    <h3 className="text-xl lg:text-lg leading-snug font-bold text-foreground">
                       {program.title}
                     </h3>
                   </div>
-                  <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed flex-grow">
+                  <p className="text-base text-muted-foreground mb-6 lg:mb-5 leading-relaxed flex-grow">
                     {program.desc}
                   </p>
                   {program.link && (
@@ -252,7 +260,7 @@ export default function HomePage() {
                         className="w-full text-white font-semibold"
                         style={{ backgroundColor: style.text }}
                       >
-                        Learn More
+                        {program.cta}
                       </Button>
                     </Link>
                   )}
@@ -286,7 +294,7 @@ export default function HomePage() {
             className="p-6 sm:p-8 md:p-12 bg-white"
             style={{ borderLeft: `4px solid #003D7A` }}
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-4">
               Pragada Suresh and Ch. Santosh
             </h3>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">

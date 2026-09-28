@@ -74,7 +74,9 @@ there is nothing else to change. Overrides: `VITE_BASE_PATH`, `SITE_URL`.
 
 "Humanitarian editorial": documentary, dignified, and warm rather than flashy.
 
-- **Type:** Cormorant Garamond for headings, Manrope for body text (Google Fonts, `client/index.html`).
+- **Type:** Cormorant Garamond (`font-serif`) for display headings (`h1`, `h2`, and large CTA `h3`s);
+  Manrope (`font-sans`) for body text and small headings such as card titles (`h3`–`h6`). Both are
+  loaded from Google Fonts in `client/index.html` and mapped in the `@theme` block of `index.css`.
 - **Color:** navy `#003D7A` and saffron `#FF9900` in the UI (`lib/branding.ts`, CSS variables in
   `index.css`); the logo and favicon use blue `#2D65AF` and orange `#F17D00`.
 - **Patterns:** small uppercase "eyebrow" labels with a vertical rule, alternating photo/text rows,

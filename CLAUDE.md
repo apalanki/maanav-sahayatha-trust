@@ -64,6 +64,10 @@ Pushing to `main` runs the tests, then deploys to production (~2–3 minutes). T
 
 ## Gotchas
 
+- Fonts: `font-serif` = Cormorant Garamond, `font-sans` = Manrope (mapped in `index.css` `@theme`).
+  `h1`/`h2` default to serif, `h3`–`h6` to sans; add `font-serif` only to large display `h3`s.
+- `Card` has no built-in gap between children; set spacing on the children (`mb-4`, `space-y-*`).
+
 - wouter v3 `<Link>` renders its own `<a>`: pass `className`/`onClick` to it; never nest an `<a>`.
 - The mobile menu closes via `setTimeout` so in-page anchors (`#about`, `#contact`) still scroll.
 - Express 5 wildcard route is `"/{*splat}"` (not `"*"`).
