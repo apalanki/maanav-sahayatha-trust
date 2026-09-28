@@ -1,12 +1,12 @@
 # Deployment Guide
 
-**Live site:** https://manavsahayata.org
+**Live site:** https://maanavsahayata.org
 
 ## How the site is hosted
 
 | Piece | Provider | Cost | Notes |
 |---|---|---|---|
-| Domain (`manavsahayata.org`) | Cloudflare Registrar | ~$10–11/year | Renews at cost; DNS managed in the Cloudflare dashboard |
+| Domain (`maanavsahayata.org`) | Cloudflare Registrar | ~$10–11/year | Renews at cost; DNS managed in the Cloudflare dashboard |
 | Hosting | GitHub Pages (via GitHub Actions) | Free | Global CDN, free HTTPS |
 | HTTPS certificate | Let's Encrypt, issued by GitHub Pages | Free | Renews automatically |
 
@@ -52,7 +52,7 @@ These are derived automatically from `client/public/CNAME`:
 
 | `client/public/CNAME` | Base path | Site URL used for canonical/sitemap |
 |---|---|---|
-| Present (currently `manavsahayata.org`) | `/` | `https://<domain in CNAME>` |
+| Present (currently `maanavsahayata.org`) | `/` | `https://<domain in CNAME>` |
 | Absent | `/maanav-sahayatha-trust/` | `https://apalanki.github.io/maanav-sahayatha-trust` |
 
 Overrides, if ever needed: `VITE_BASE_PATH=/ pnpm run build` and `SITE_URL=https://example.org pnpm run build`.
@@ -91,17 +91,25 @@ verifying the domain and renewing the HTTPS certificate.
 | CNAME | `www` | `apalanki.github.io` |
 | TXT | `_github-pages-challenge-apalanki` | GitHub domain-verification code |
 
-GitHub repo settings (**Settings → Pages**): custom domain `manavsahayata.org`, **Enforce HTTPS** on.
+GitHub repo settings (**Settings → Pages**): custom domain `maanavsahayata.org`, **Enforce HTTPS** on.
 The domain is also verified at the account level (**Profile → Settings → Pages**), which prevents
 anyone else from using it for a GitHub Pages site.
 
-`www.manavsahayata.org`, `http://`, and old `apalanki.github.io/maanav-sahayatha-trust/...` links all
-redirect to `https://manavsahayata.org`.
+`www.maanavsahayata.org`, `http://`, and old `apalanki.github.io/maanav-sahayatha-trust/...` links all
+redirect to `https://maanavsahayata.org`.
+
+### Previous domain (`manavsahayata.org`)
+
+The site moved from `manavsahayata.org` (single "a") to `maanavsahayata.org` on 2026-09-28 to match
+the trust's name. The old domain stays registered and redirects every URL to the same path on the new
+one: in Cloudflare its records are **proxied** (`A @ 192.0.2.1`, `CNAME www → manavsahayata.org`) and a
+Redirect Rule sends `https://maanavsahayata.org` + path with a 301. Keep its
+`_github-pages-challenge-apalanki` TXT record so nobody else can claim it on GitHub Pages.
 
 ## Search engines
 
-- **Google Search Console:** `manavsahayata.org` is verified as a Domain property and
-  `https://manavsahayata.org/sitemap.xml` is submitted. Check the **Pages** and **Performance**
+- **Google Search Console:** `maanavsahayata.org` is verified as a Domain property and
+  `https://maanavsahayata.org/sitemap.xml` is submitted. Check the **Pages** and **Performance**
   reports periodically; use **URL Inspection → Request indexing** after adding a new page.
 - The sitemap is regenerated on every build, so no manual updates are needed.
 

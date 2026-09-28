@@ -4,7 +4,7 @@ Website for **Maanav Sahayata Trust (MST)**, a charity serving rural and tribal 
 Visakhapatnam, Andhra Pradesh since 2004 (education, healthcare, Bala Vikas after-school centers,
 tribal outreach, and religious & cultural programs).
 
-**Live:** https://manavsahayata.org
+**Live:** https://maanavsahayata.org
 
 ## Quick start
 
@@ -21,7 +21,7 @@ git push origin main                      # deploy (GitHub Actions → GitHub Pa
 ## How it works
 
 A static, client-rendered **React** site. There is no backend or database; every page is built to
-static files and hosted on **GitHub Pages** with the custom domain `manavsahayata.org`
+static files and hosted on **GitHub Pages** with the custom domain `maanavsahayata.org`
 (domain registered at Cloudflare). Donations are made by **UPI** on the Donate page (QR code + UPI ID); WhatsApp is offered for questions
 and for sharing transaction details. The contact
 form posts to **Web3Forms**, which emails each message to `manavsahayata@gmail.com`.
@@ -66,7 +66,7 @@ client-side navigation.
 
 `client/public/CNAME` controls where the site lives:
 
-- **Present** (currently `manavsahayata.org`): base path `/`, canonical URLs on that domain.
+- **Present** (currently `maanavsahayata.org`): base path `/`, canonical URLs on that domain.
 - **Absent**: base path `/maanav-sahayatha-trust/` for `https://apalanki.github.io/maanav-sahayatha-trust`.
 
 `vite.config.ts`, `scripts/generate-seo.mjs`, `scripts/serve-dist.mjs`, and the tests all read it, so

@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 Static React site for **Maanav Sahayata Trust**, a charity serving tribal communities near
-Visakhapatnam. Live at **https://manavsahayata.org** (GitHub Pages; domain/DNS on Cloudflare).
+Visakhapatnam. Live at **https://maanavsahayata.org** (GitHub Pages; domain/DNS on Cloudflare).
 Read **README.md** for architecture and file layout; this file holds the working rules.
 
 ## Commands
@@ -76,4 +76,4 @@ Pushing to `main` runs the tests, then deploys to production (~2–3 minutes). T
 - The mobile menu closes via `setTimeout` so in-page anchors (`#about`, `#contact`) still scroll.
 - Express 5 wildcard route is `"/{*splat}"` (not `"*"`).
 - `pnpm install --frozen-lockfile` runs in CI: commit `pnpm-lock.yaml` with dependency changes.
-- If `manavsahayata.org` doesn't resolve locally but works elsewhere, it's a stale local DNS cache.
+- If `maanavsahayata.org` doesn't resolve locally but works elsewhere, it's a stale local DNS cache.

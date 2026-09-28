@@ -1,6 +1,6 @@
 # Maanav Sahayata Trust Website - Roadmap
 
-**Live site:** https://manavsahayata.org · **Deployment guide:** [DEPLOYMENT.md](DEPLOYMENT.md) ·
+**Live site:** https://maanavsahayata.org · **Deployment guide:** [DEPLOYMENT.md](DEPLOYMENT.md) ·
 **Facts to confirm:** [CONTENT_TO_VERIFY.md](CONTENT_TO_VERIFY.md)
 
 ## Completed ✅
@@ -13,7 +13,7 @@
 - [x] Navigation: About Us and Contact links, keyboard-accessible Programs menu, breadcrumbs, and
       "Explore Our Other Programs" links; logo returns to the top of the home page
 - [x] Mobile-first responsive design (checked at phone and desktop widths)
-- [x] Custom domain `manavsahayata.org` with HTTPS (Cloudflare Registrar + GitHub Pages)
+- [x] Custom domain `maanavsahayata.org` with HTTPS (Cloudflare Registrar + GitHub Pages)
 - [x] SEO: per-page titles/descriptions, social share previews, NGO structured data, sitemap,
       robots.txt, real 404 page; sitemap submitted to Google Search Console
 - [x] Performance: photos resized (36 MB → 9.3 MB) and below-the-fold images lazy-loaded
@@ -32,15 +32,15 @@
       report after a week
 - [ ] List the trust on donation platforms (e.g. GiveIndia) and link the website from any social
       media profiles; share profile links so they can be added to the site and structured data
-- [ ] Set up a domain email address (e.g. `contact@manavsahayata.org`) with Cloudflare Email Routing
+- [ ] Set up a domain email address (e.g. `contact@maanavsahayata.org`) with Cloudflare Email Routing
       (free forwarding to Gmail)
 
-### Domain matching the trust's name (planned)
-- [ ] Register a domain with the correct spelling (e.g. `maanavsahayata.org`), then: add DNS records
-      (DNS only), put the new domain in `client/public/CNAME`, set it in GitHub → Settings → Pages,
-      enforce HTTPS, and add it to Google Search Console (keep the old property to watch the move)
-- [ ] Keep `manavsahayata.org` redirecting to the new domain (Cloudflare redirect rule), so existing
-      links and search results keep working
+### Domain move to maanavsahayata.org (2026-09-28)
+- [x] New domain live on GitHub Pages with HTTPS; site, sitemap, and canonical URLs use it
+- [ ] Old `manavsahayata.org`: proxied placeholder records + Cloudflare 301 redirect to the new domain
+      (see DEPLOYMENT.md → Previous domain)
+- [ ] Search Console: add `maanavsahayata.org`, submit its sitemap, then **Change of address** from the
+      old property; update the website link on the Google Business Profile
 
 ### Donor trust & giving (High Priority)
 - [ ] Confirm the facts on the site and gather current statistics (see [CONTENT_TO_VERIFY.md](CONTENT_TO_VERIFY.md))
@@ -81,5 +81,5 @@
 
 ## Links
 
-- Live site: https://manavsahayata.org
+- Live site: https://maanavsahayata.org
 - GitHub repository: https://github.com/apalanki/maanav-sahayatha-trust
