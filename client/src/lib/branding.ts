@@ -6,27 +6,27 @@
 
 export const MST_COLORS = {
   // Primary Brand Colors
-  primary: '#003D7A',      // Navy Blue
-  primaryLight: '#E6F0FF', // Light Navy (10% opacity)
-  primaryDark: '#002856',  // Dark Navy
-  
+  primary: "#003D7A", // Navy Blue
+  primaryLight: "#E6F0FF", // Light Navy (10% opacity)
+  primaryDark: "#002856", // Dark Navy
+
   // Secondary Brand Colors
-  secondary: '#FF9900',    // Saffron Orange
-  secondaryLight: '#FFF4E6', // Light Saffron (10% opacity)
-  secondaryDark: '#CC7A00', // Dark Saffron
-  
+  secondary: "#FF9900", // Saffron Orange
+  secondaryLight: "#FFF4E6", // Light Saffron (10% opacity)
+  secondaryDark: "#CC7A00", // Dark Saffron
+
   // Neutral Colors
-  white: '#FFFFFF',
-  black: '#000000',
-  foreground: '#1F2937',   // Dark gray for text
-  background: '#F9FAFB',   // Light gray for backgrounds
-  border: '#E5E7EB',       // Light border color
-  
+  white: "#FFFFFF",
+  black: "#000000",
+  foreground: "#1F2937", // Dark gray for text
+  background: "#F9FAFB", // Light gray for backgrounds
+  border: "#E5E7EB", // Light border color
+
   // Semantic Colors
-  success: '#10B981',
-  warning: '#F59E0B',
-  error: '#EF4444',
-  info: '#3B82F6',
+  success: "#10B981",
+  warning: "#F59E0B",
+  error: "#EF4444",
+  info: "#3B82F6",
 } as const;
 
 export const MST_CARD_STYLES = {

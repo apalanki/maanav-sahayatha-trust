@@ -35,6 +35,11 @@
       "title": "Contact Us | Manav Sahayata Trust",
       "description": "Get in touch with Manav Sahayata Trust in Visakhapatnam to donate, volunteer, partner with us, or ask about our programs. Send a message or reach us on WhatsApp.",
       "image": "/images/tribal/IMG_20251207_123010466_HDR_AE.jpg"
+    },
+    "/donate": {
+      "title": "Donate | Manav Sahayata Trust",
+      "description": "Donate to Manav Sahayata Trust in seconds with UPI: Google Pay, PhonePe, or Paytm. Your gift supports education, healthcare, and tribal families.",
+      "image": "/images/tribal/IMG_20251207_123010466_HDR_AE.jpg"
     }
   }
 }

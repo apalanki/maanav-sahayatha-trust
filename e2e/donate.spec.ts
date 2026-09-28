@@ -1,0 +1,97 @@
+/**
+ * Donate page. Money goes wherever the QR code and UPI ID point, so these tests pin both
+ * to the trust's verified UPI ID.
+ */
+import { createRequire } from "node:module";
+import { expect, test } from "@playwright/test";
+import { headerLink, url } from "./helpers";
+
+const require = createRequire(import.meta.url);
+const UPI_ID = "maanavsahayata@okhdfcbank";
+
+test("the QR code on the page pays the trust's UPI ID", async ({ page }) => {
+  await page.goto(url("/donate"));
+  await page.addScriptTag({ path: require.resolve("jsqr/dist/jsQR.js") });
+  const decoded = await page.getByAltText(/UPI QR code/).evaluate(async el => {
+    const img = el as HTMLImageElement;
+    await img.decode();
+    const canvas = document.createElement("canvas");
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    const ctx = canvas.getContext("2d")!;
+    ctx.drawImage(img, 0, 0);
+    const data = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    // @ts-expect-error jsQR is injected as a global script
+    return jsQR(data.data, data.width, data.height)?.data ?? null;
+  });
+  expect(decoded).toContain(`upi://pay?pa=${UPI_ID}&`);
+  expect(decoded).toContain("pn=Maanav%20Sahayata");
+});
+
+test("shows the UPI ID and copies it", async ({
+  page,
+  context,
+  browserName,
+}) => {
+  test.skip(
+    browserName !== "chromium",
+    "clipboard permissions are Chromium-only"
+  );
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  await page.goto(url("/donate"));
+  await expect(page.locator("#upi-id")).toHaveText(UPI_ID);
+  await page.getByRole("button", { name: "Copy" }).click();
+  await expect(page.getByRole("button", { name: "Copied" })).toBeVisible();
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
+    UPI_ID
+  );
+});
+
+test("phones get a button that opens a UPI app with the trust's details", async ({
+  page,
+  isMobile,
+}) => {
+  await page.goto(url("/donate"));
+  const pay = page.getByRole("link", { name: "Pay with a UPI App" });
+  if (isMobile) {
+    await expect(pay).toBeVisible();
+    await expect(pay).toHaveAttribute(
+      "href",
+      `upi://pay?pa=${UPI_ID}&pn=Maanav%20Sahayata&cu=INR`
+    );
+  } else {
+    await expect(pay).toBeHidden();
+  }
+});
+
+test("donors can share their transaction details afterwards", async ({
+  page,
+}) => {
+  await page.goto(url("/donate"));
+  const share = page.getByRole("link", { name: "Share Details on WhatsApp" });
+  await expect(share).toHaveAttribute(
+    "href",
+    /wa\.me\/919533843636\?text=.*transaction%20ID/
+  );
+  await expect(
+    page.getByRole("link", { name: "Or send us a message" })
+  ).toHaveAttribute("href", /\/contact\?interest=donate$/);
+});
+
+test("Donate buttons across the site lead to the donate page", async ({
+  page,
+  isMobile,
+}) => {
+  await page.goto(url("/programs/medical"));
+  await page.getByRole("link", { name: "Donate Now" }).click();
+  await expect(page).toHaveURL(url("/donate"));
+
+  await page.goto(url("/"));
+  await page.getByRole("link", { name: "Donate Today" }).click();
+  await expect(page).toHaveURL(url("/donate"));
+
+  await page.goto(url("/programs/tribal"));
+  await (await headerLink(page, isMobile, "Donate")).click();
+  await expect(page).toHaveURL(url("/donate"));
+  await expect(page.locator("h1")).toHaveText("Your Gift Changes Lives");
+});

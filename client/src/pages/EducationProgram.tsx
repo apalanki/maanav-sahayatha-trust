@@ -1,20 +1,23 @@
 import { useEffect } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { BookOpen, Users, GraduationCap, Lightbulb } from "lucide-react";
+import {
+  HandHeart,
+  BookOpen,
+  Users,
+  GraduationCap,
+  Lightbulb,
+} from "lucide-react";
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
-import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function EducationProgram() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const whatsappDonationLink =
-    "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20MST's%20Educational%20Support%20program";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -222,19 +225,15 @@ export default function EducationProgram() {
             hardship would otherwise force them to drop out. Give a deserving
             student the chance to learn, grow, and transform their community.
           </p>
-          <a
-            href={whatsappDonationLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/donate">
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 flex items-center gap-2 mx-auto"
             >
-              <WhatsAppIcon className="w-5 h-5" />
-              Chat With Us to Donate
+              <HandHeart className="w-5 h-5" />
+              Donate Now
             </Button>
-          </a>
+          </Link>
         </div>
 
         <OtherPrograms current="/programs/education" />

@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
+  HandHeart,
   Heart,
   Users,
   BookOpen,
@@ -25,7 +26,6 @@ import { getCardStyle } from "@/lib/branding";
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function HomePage() {
   // Arriving from another page via a link like /#about: scroll to the section,
@@ -83,8 +83,6 @@ export default function HomePage() {
   ];
 
   // WhatsApp donation link - opens chat with pre-filled message
-  const whatsappDonationLink =
-    "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20Manav%20Sahayata%20Trust";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -113,20 +111,15 @@ export default function HomePage() {
                 With your help, we can reach even more families.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <a
-                  href={whatsappDonationLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto"
-                >
+                <Link href="/donate" className="w-full sm:w-auto">
                   <Button
                     size="lg"
                     className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-semibold flex items-center justify-center gap-2"
                   >
-                    <WhatsAppIcon className="w-5 h-5" />
+                    <HandHeart className="w-5 h-5" />
                     Donate Today
                   </Button>
-                </a>
+                </Link>
                 <a href="#story" className="w-full sm:w-auto">
                   <Button
                     size="lg"
@@ -346,27 +339,31 @@ export default function HomePage() {
               in someone's life. Message us on WhatsApp, and we'll personally
               guide you on how to give.
             </p>
-            <a
-              href={whatsappDonationLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
+            <Link href="/donate" className="inline-block">
               <Button
                 size="lg"
                 className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary font-semibold flex items-center justify-center gap-2"
               >
-                <WhatsAppIcon className="w-5 h-5" />
-                Chat With Us to Donate
+                <HandHeart className="w-5 h-5" />
+                Donate Now
               </Button>
-            </a>
+            </Link>
             <p className="mt-6 text-sm opacity-90">
-              Prefer email?{" "}
+              Prefer to talk first?{" "}
+              <a
+                href="https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20Manav%20Sahayata%20Trust"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline underline-offset-4"
+              >
+                Chat on WhatsApp
+              </a>{" "}
+              or{" "}
               <Link
                 href="/contact?interest=donate"
                 className="font-semibold underline underline-offset-4"
               >
-                Send us a message
+                send us a message
               </Link>
             </p>
           </div>

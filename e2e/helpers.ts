@@ -22,7 +22,9 @@ type PageMeta = { title: string; description: string; image: string };
 export const PAGES: Record<string, PageMeta> = JSON.parse(
   readFileSync("client/src/lib/seo-pages.json", "utf8")
 ).pages;
-export const PROGRAM_ROUTES = Object.keys(PAGES).filter(route => route.startsWith("/programs/"));
+export const PROGRAM_ROUTES = Object.keys(PAGES).filter(route =>
+  route.startsWith("/programs/")
+);
 
 /** Collect page errors, console errors, and failed requests for later assertion */
 export function trackErrors(page: Page): string[] {

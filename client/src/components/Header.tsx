@@ -1,19 +1,15 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { HandHeart, Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { getAssetPath } from "@/lib/utils";
 import { PROGRAMS, homeSectionHref } from "@/lib/programs";
-import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Defer closing so the link is still in the DOM when the browser follows it
   const closeMobileMenu = () => setTimeout(() => setMobileMenuOpen(false), 0);
-
-  const whatsappDonationLink =
-    "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20Manav%20Sahayata%20Trust";
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -73,19 +69,15 @@ export default function Header() {
             >
               Contact
             </Link>
-            <a
-              href={whatsappDonationLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/donate">
               <Button
                 size="sm"
                 className="bg-primary hover:bg-primary/90 flex items-center gap-2"
               >
-                <WhatsAppIcon className="w-4 h-4" />
+                <HandHeart className="w-4 h-4" />
                 Donate
               </Button>
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -133,20 +125,15 @@ export default function Header() {
               >
                 Contact
               </Link>
-              <a
-                href={whatsappDonationLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full"
-              >
+              <Link href="/donate" className="w-full">
                 <Button
                   size="sm"
                   className="w-full bg-primary hover:bg-primary/90 flex items-center justify-center gap-2"
                 >
-                  <WhatsAppIcon className="w-4 h-4" />
+                  <HandHeart className="w-4 h-4" />
                   Donate
                 </Button>
-              </a>
+              </Link>
             </div>
           </nav>
         )}

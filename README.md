@@ -22,7 +22,8 @@ git push origin main                      # deploy (GitHub Actions → GitHub Pa
 
 A static, client-rendered **React** site. There is no backend or database; every page is built to
 static files and hosted on **GitHub Pages** with the custom domain `manavsahayata.org`
-(domain registered at Cloudflare). Donations are handled by opening a **WhatsApp** chat. The contact
+(domain registered at Cloudflare). Donations are made by **UPI** on the Donate page (QR code + UPI ID); WhatsApp is offered for questions
+and for sharing transaction details. The contact
 form posts to **Web3Forms**, which emails each message to `manavsahayata@gmail.com`.
 
 | Area | Tech |
@@ -44,6 +45,7 @@ form posts to **Web3Forms**, which emails each message to `manavsahayata@gmail.c
 | `/programs/tribal` | `client/src/pages/TribalDistribution.tsx` |
 | `/programs/religious-cultural` | `client/src/pages/ReligiousCultural.tsx` |
 | `/contact` | `client/src/pages/Contact.tsx` (contact form + other ways to reach the trust) |
+| `/donate` | `client/src/pages/Donate.tsx` (UPI QR code and ID, how to share transaction details, where gifts go) |
 | anything else | `client/src/pages/NotFound.tsx` |
 
 Routes are declared in `client/src/App.tsx`, which also updates the page title/description on
