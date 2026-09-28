@@ -24,6 +24,7 @@ for (const [route, meta] of Object.entries(PAGES)) {
       `<meta property="og:image" content="${SITE_URL}${encodeURI(meta.image)}" />`
     );
     expect(html).toContain('"@type":"NGO"');
+    expect(html).toContain('"value":"32/2023"');
     expect(html).not.toContain('content="noindex"');
   });
 }

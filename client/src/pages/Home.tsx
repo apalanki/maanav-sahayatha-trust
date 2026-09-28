@@ -161,7 +161,7 @@ export default function HomePage() {
                 Our journey began in 2004 as quiet, grassroots service to rural
                 and tribal communities—not with fanfare, but with steady
                 commitment. After nearly two decades of building trust and
-                relationships, we became a formally registered trust in 2023.
+                relationships, we became a formally registered trust in 2023 (Reg. No. 32/2023).
               </p>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
                 We believe in Swami Vivekananda's timeless truth:{" "}

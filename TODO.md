@@ -39,7 +39,9 @@
 - [ ] Confirm the facts on the site and gather current statistics (see [CONTENT_TO_VERIFY.md](CONTENT_TO_VERIFY.md))
 - [ ] Show registration details (trust registration number, year) and, if available, **80G tax
       exemption** status — Indian donors look for this before giving
-- [ ] Add a direct way to give without chatting first: a UPI QR code / UPI ID and bank details, or
+- [ ] **Donate page (`/donate`)** — details requested from the trust on 2026-09-27: UPI ID/QR,
+      bank details, 80G/12A status, "what your gift does" figures. Then point every Donate button to it.
+      Original idea: a direct way to give without chatting first: a UPI QR code / UPI ID and bank details, or
       Razorpay payment links (supports one-time and recurring donations in INR)
 - [x] Contact page with a form (Web3Forms → manavsahayata@gmail.com)
 
