@@ -47,21 +47,46 @@ test("shows the UPI ID and copies it", async ({
   );
 });
 
-test("phones get a button that opens a UPI app with the trust's details", async ({
+const PARAMS =
+  `pa=${UPI_ID}&pn=Maanav%20Sahayata&cu=INR` +
+  "&tn=Donation%20to%20Manav%20Sahayata%20Trust";
+
+test("phones get Google Pay, PhonePe, and Paytm buttons for the trust's UPI ID", async ({
   page,
   isMobile,
 }) => {
   await page.goto(url("/donate"));
-  const pay = page.getByRole("link", { name: "Pay with a UPI App" });
-  if (isMobile) {
-    await expect(pay).toBeVisible();
-    await expect(pay).toHaveAttribute(
-      "href",
-      `upi://pay?pa=${UPI_ID}&pn=Maanav%20Sahayata&cu=INR`
-    );
-  } else {
-    await expect(pay).toBeHidden();
+  const buttons = {
+    "Pay with Google Pay": `tez://upi/pay?${PARAMS}`,
+    "Pay with PhonePe": `phonepe://pay?${PARAMS}`,
+    "Pay with Paytm": `paytmmp://pay?${PARAMS}`,
+    "Other UPI App": `upi://pay?${PARAMS}`,
+  };
+  for (const [name, href] of Object.entries(buttons)) {
+    const link = page.getByRole("link", { name });
+    if (isMobile) {
+      await expect(link).toBeVisible();
+      await expect(link).toHaveAttribute("href", href);
+    } else {
+      await expect(link).toBeHidden();
+    }
   }
+});
+
+test.describe("on iPhone", () => {
+  test.use({
+    userAgent:
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
+    viewport: { width: 390, height: 844 },
+    isMobile: true,
+  });
+
+  test("Google Pay uses the iPhone link format", async ({ page }) => {
+    await page.goto(url("/donate"));
+    await expect(
+      page.getByRole("link", { name: "Pay with Google Pay" })
+    ).toHaveAttribute("href", `gpay://upi/pay?${PARAMS}`);
+  });
 });
 
 test("donors can share their transaction details afterwards", async ({

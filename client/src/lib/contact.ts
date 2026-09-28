@@ -28,8 +28,29 @@ export const INQUIRY_TYPES = [
  */
 export const UPI_ID = "maanavsahayata@okhdfcbank";
 export const UPI_PAYEE_NAME = "Maanav Sahayata";
-/** Opens the visitor's UPI app (GPay, PhonePe, Paytm, BHIM…) on phones */
-export const UPI_PAY_LINK = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(UPI_PAYEE_NAME)}&cu=INR`;
+const UPI_PARAMS =
+  `pa=${UPI_ID}&pn=${encodeURIComponent(UPI_PAYEE_NAME)}&cu=INR` +
+  `&tn=${encodeURIComponent("Donation to Manav Sahayata Trust")}`;
+
+/** Generic UPI link: the phone asks which UPI app to use (BHIM, bank apps, …) */
+export const UPI_PAY_LINK = `upi://pay?${UPI_PARAMS}`;
+
+/**
+ * Links that open a specific UPI app straight to the payment screen (phones only).
+ * Google Pay uses a different scheme on iPhone (gpay://) and Android (tez://).
+ * Apps may decline link-started payments to non-merchant accounts, so the page keeps the
+ * QR code and UPI ID as a fallback.
+ */
+export function upiAppLinks(isIOS: boolean) {
+  return [
+    {
+      app: "Google Pay",
+      href: `${isIOS ? "gpay" : "tez"}://upi/pay?${UPI_PARAMS}`,
+    },
+    { app: "PhonePe", href: `phonepe://pay?${UPI_PARAMS}` },
+    { app: "Paytm", href: `paytmmp://pay?${UPI_PARAMS}` },
+  ];
+}
 
 /** WhatsApp message for donors sharing their transaction details after giving */
 export const WHATSAPP_DONATED_LINK =

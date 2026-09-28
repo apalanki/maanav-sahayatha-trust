@@ -12,6 +12,7 @@ import {
   UPI_ID,
   UPI_PAYEE_NAME,
   UPI_PAY_LINK,
+  upiAppLinks,
   WHATSAPP_DONATED_LINK,
   WHATSAPP_LINK,
 } from "@/lib/contact";
@@ -31,6 +32,10 @@ const GIFT_USES: Record<string, string> = {
 
 export default function DonatePage() {
   const [copied, setCopied] = useState(false);
+  // iPhones/iPads use a different Google Pay link than Android
+  const isIOS =
+    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -81,9 +86,9 @@ export default function DonatePage() {
               <img
                 src={getAssetPath("/images/donate/upi-qr.png")}
                 alt={`UPI QR code for ${UPI_PAYEE_NAME}, UPI ID ${UPI_ID}`}
-                className="w-72 max-w-full h-auto rounded-lg border border-border flex-shrink-0"
+                className="order-last md:order-none w-72 max-w-full h-auto rounded-lg border border-border flex-shrink-0"
               />
-              <div className="w-full space-y-5">
+              <div className="w-full flex flex-col gap-5">
                 <ol className="space-y-2 text-base text-muted-foreground list-decimal pl-5">
                   <li>
                     Open any UPI app: Google Pay, PhonePe, Paytm, or BHIM.
@@ -99,7 +104,7 @@ export default function DonatePage() {
                   <div className="flex items-stretch gap-2">
                     <span
                       id="upi-id"
-                      className="flex-1 min-w-0 break-words rounded-md border border-border bg-background px-3 py-2.5 text-sm sm:text-base font-semibold text-foreground"
+                      className="flex-1 min-w-0 break-words rounded-md border border-border bg-background px-3 py-2.5 text-sm font-semibold text-foreground"
                     >
                       {/* Allow a line break only after the "@" */}
                       {UPI_ID.split("@")[0]}@<wbr />
@@ -132,16 +137,34 @@ export default function DonatePage() {
                   </p>
                 </div>
 
-                {/* Phones: open the UPI app directly */}
-                <a href={UPI_PAY_LINK} className="block md:hidden">
-                  <Button
-                    size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 flex items-center justify-center gap-2"
-                  >
-                    <Smartphone className="w-5 h-5" />
-                    Pay with a UPI App
-                  </Button>
-                </a>
+                {/* Phones: open a UPI app straight to the payment */}
+                <div className="md:hidden order-first space-y-3">
+                  <p className="text-sm font-semibold text-foreground">
+                    Pay with your UPI app
+                  </p>
+                  <div className="grid grid-cols-1 gap-2">
+                    {upiAppLinks(isIOS).map(({ app, href }) => (
+                      <a key={app} href={href}>
+                        <Button
+                          size="lg"
+                          className="w-full bg-primary hover:bg-primary/90 flex items-center justify-center gap-2"
+                        >
+                          <Smartphone className="w-5 h-5" />
+                          Pay with {app}
+                        </Button>
+                      </a>
+                    ))}
+                    <a href={UPI_PAY_LINK}>
+                      <Button size="lg" variant="outline" className="w-full">
+                        Other UPI App
+                      </Button>
+                    </a>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    If your app doesn't open or declines the payment, copy the
+                    UPI ID below and pay to it from your UPI app.
+                  </p>
+                </div>
               </div>
             </div>
           </Card>
