@@ -36,6 +36,7 @@ export const MST_CARD_STYLES = {
     icon: MST_COLORS.primary,
     iconBackground: MST_COLORS.primary,
     text: MST_COLORS.primary,
+    buttonText: MST_COLORS.white,
   },
   secondary: {
     border: `2px solid ${MST_COLORS.secondary}`,
@@ -43,6 +44,8 @@ export const MST_CARD_STYLES = {
     icon: MST_COLORS.secondary,
     iconBackground: MST_COLORS.secondary,
     text: MST_COLORS.secondary,
+    // White on saffron is only 2.1:1 contrast; dark text is 6.6:1
+    buttonText: MST_COLORS.foreground,
   },
 } as const;
 

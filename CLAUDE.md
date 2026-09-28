@@ -45,8 +45,9 @@ Pushing to `main` runs the tests, then deploys to production (~2–3 minutes). T
 - Contact form → `client/src/pages/Contact.tsx`; Web3Forms key + inquiry options → `client/src/lib/contact.ts`.
   Link to it with `/contact?interest=donate|volunteer|program|partner|other` to preselect the inquiry type.
 - New page → route in `client/src/App.tsx` + `seo-pages.json` (+ `programs.ts` for a program)
-- Photos → resize first (`sips -Z 1280 -s formatOptions 75 <file>`), put in `client/public/images/`,
-  reference via `getAssetPath()`, `loading="lazy"` below the first screen
+- Photos → resize to 1280px and save as **WebP** (e.g. `npx sharp-cli -i photo.jpg -o photo.webp resize 1280 --quality 72`,
+  or any converter), put in `client/public/images/`, reference via `getAssetPath()`, `loading="lazy"` below the
+  first screen. Keep a JPEG copy only if the photo is a page's share image in `seo-pages.json` (WhatsApp previews)
 
 ## Decisions already made (don't revisit without a reason)
 

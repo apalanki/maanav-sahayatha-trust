@@ -33,7 +33,8 @@ export default function ReligiousCulturalProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src={getAssetPath("/images/religious/IMG-20260313-WA0045.jpg")}
+                fetchPriority="high"
+                src={getAssetPath("/images/religious/IMG-20260313-WA0045.webp")}
                 alt="Cultural and religious traditions in tribal communities"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -157,7 +158,7 @@ export default function ReligiousCulturalProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/religious/IMG_5777.JPEG")}
+                src={getAssetPath("/images/religious/IMG_5777.webp")}
                 alt="Women performing a traditional group dance at a village celebration"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -197,7 +198,7 @@ export default function ReligiousCulturalProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/religious/IMG-20260313-WA0011.jpg")}
+                src={getAssetPath("/images/religious/IMG-20260313-WA0011.webp")}
                 alt="Religious celebration in tribal village"
                 className="w-full rounded-lg object-cover aspect-video"
               />
@@ -206,7 +207,7 @@ export default function ReligiousCulturalProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/religious/IMG20250126193413.jpg")}
+                src={getAssetPath("/images/religious/IMG20250126193413.webp")}
                 alt="Cultural program - community gathering"
                 className="w-full rounded-lg object-cover aspect-video"
               />
@@ -215,7 +216,7 @@ export default function ReligiousCulturalProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/religious/IMG-20260221-WA0105.jpg")}
+                src={getAssetPath("/images/religious/IMG-20260221-WA0105.webp")}
                 alt="Traditional cultural practices"
                 className="w-full rounded-lg object-cover aspect-video"
               />

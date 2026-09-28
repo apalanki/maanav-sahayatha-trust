@@ -27,8 +27,9 @@ export default function MedicalServicesProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
+                fetchPriority="high"
                 src={getAssetPath(
-                  "/images/tribal/IMG_20251207_123121544_HDR_AE.jpg"
+                  "/images/tribal/IMG_20251207_123121544_HDR_AE.webp"
                 )}
                 alt="Medical camp providing healthcare in tribal village"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
@@ -147,27 +148,27 @@ export default function MedicalServicesProgram() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">
+              <h3 className="font-bold text-lg mb-2 text-foreground">
                 Women & Mothers
-              </h4>
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Prenatal care, maternal health services, and treatment for
                 conditions that disproportionately affect women in remote areas.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">
+              <h3 className="font-bold text-lg mb-2 text-foreground">
                 Children
-              </h4>
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Pediatric care, vaccinations, treatment for common childhood
                 illnesses, and nutritional support for healthy development.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">
+              <h3 className="font-bold text-lg mb-2 text-foreground">
                 Elderly
-              </h4>
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Chronic disease management, cataract surgeries, mobility
                 support, and specialized care for age-related health conditions.
@@ -188,7 +189,7 @@ export default function MedicalServicesProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/tribal/IMG_5772.JPEG")}
+                src={getAssetPath("/images/tribal/IMG_5772.webp")}
                 alt="Medical camp in tribal village"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -254,7 +255,7 @@ export default function MedicalServicesProgram() {
                 loading="lazy"
                 decoding="async"
                 src={getAssetPath(
-                  "/images/tribal/IMG_20251207_123010466_HDR_AE.jpg"
+                  "/images/tribal/IMG_20251207_123010466_HDR_AE.webp"
                 )}
                 alt="Community medical outreach"
                 className="w-full rounded-lg object-cover aspect-video"
@@ -264,7 +265,7 @@ export default function MedicalServicesProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/tribal/IMG_20260104_192923.jpg")}
+                src={getAssetPath("/images/tribal/IMG_20260104_192923.webp")}
                 alt="Medical supplies distribution"
                 className="w-full rounded-lg object-cover aspect-video"
               />
@@ -274,7 +275,7 @@ export default function MedicalServicesProgram() {
                 loading="lazy"
                 decoding="async"
                 src={getAssetPath(
-                  "/images/tribal/WhatsApp Image 2026-01-05 at 6.09.28 PM (1).jpeg"
+                  "/images/tribal/WhatsApp Image 2026-01-05 at 6.09.28 PM (1).webp"
                 )}
                 alt="Healthcare support in tribal communities"
                 className="w-full rounded-lg object-cover aspect-video"

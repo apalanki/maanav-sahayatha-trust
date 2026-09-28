@@ -125,6 +125,7 @@ export default function DonatePage() {
               </h2>
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <img
+                  fetchPriority="high"
                   src={getAssetPath("/images/donate/upi-qr.png")}
                   alt={`UPI QR code for ${UPI_PAYEE_NAME}, UPI ID ${UPI_ID}`}
                   className="order-last md:order-none w-72 max-w-full h-auto rounded-lg border border-border flex-shrink-0"
@@ -176,10 +177,9 @@ export default function DonatePage() {
                         <a
                           key={app}
                           href={href}
-                          aria-label={`Pay with ${app}`}
                           className="flex h-12 w-full items-center justify-center gap-2 overflow-hidden rounded-md border-2 border-border bg-white text-base font-semibold text-foreground hover:border-primary transition-colors"
                         >
-                          <span>Pay with</span>
+                          <span>Pay with</span>{" "}
                           {app === "PhonePe" ? (
                             <>
                               <UpiAppLogo app="PhonePe" className="w-6 h-6" />
@@ -188,10 +188,14 @@ export default function DonatePage() {
                               </span>
                             </>
                           ) : (
-                            <UpiAppLogo
-                              app={app as UpiApp}
-                              className="w-14 h-14"
-                            />
+                            <>
+                              <UpiAppLogo
+                                app={app as UpiApp}
+                                className="w-14 h-14"
+                              />
+                              {/* The logo is a wordmark; give screen readers the name */}
+                              <span className="sr-only">{app}</span>
+                            </>
                           )}
                         </a>
                       ))}

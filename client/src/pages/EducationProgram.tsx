@@ -33,7 +33,8 @@ export default function EducationProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src={getAssetPath("/images/education/IMG_20241020_173824.jpg")}
+                fetchPriority="high"
+                src={getAssetPath("/images/education/IMG_20241020_173824.webp")}
                 alt="Educational support program - students learning"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -176,7 +177,7 @@ export default function EducationProgram() {
                   loading="lazy"
                   decoding="async"
                   src={getAssetPath(
-                    "/images/education/WhatsApp Image 2024-09-24 at 10.53.59 AM(3).jpeg"
+                    "/images/education/WhatsApp Image 2024-09-24 at 10.53.59 AM(3).webp"
                   )}
                   alt="A student receives her scholarship from trust members"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
@@ -198,7 +199,7 @@ export default function EducationProgram() {
                   loading="lazy"
                   decoding="async"
                   src={getAssetPath(
-                    "/images/education/WhatsApp Image 2024-09-24 at 10.54.00 AM (6).jpeg"
+                    "/images/education/WhatsApp Image 2024-09-24 at 10.54.00 AM (6).webp"
                   )}
                   alt="Scholarship recipients with trust members"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"

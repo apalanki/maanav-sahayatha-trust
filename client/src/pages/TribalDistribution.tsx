@@ -27,7 +27,8 @@ export default function TribalDistributionProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src={getAssetPath("/images/tribal/11.jpg")}
+                fetchPriority="high"
+                src={getAssetPath("/images/tribal/11.webp")}
                 alt="Tribal distribution event - serving communities"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -166,7 +167,7 @@ export default function TribalDistributionProgram() {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src={getAssetPath("/images/tribal/IMG-20260129-WA0008.jpg")}
+                  src={getAssetPath("/images/tribal/IMG-20260129-WA0008.webp")}
                   alt="Villagers holding the blankets they received at a distribution event"
                   className="w-full rounded-lg object-cover aspect-video"
                 />
@@ -175,7 +176,7 @@ export default function TribalDistributionProgram() {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src={getAssetPath("/images/tribal/14.jpg")}
+                  src={getAssetPath("/images/tribal/14.webp")}
                   alt="Community gathering - essential supplies distribution"
                   className="w-full rounded-lg object-cover aspect-video"
                 />
@@ -223,9 +224,9 @@ export default function TribalDistributionProgram() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">
+              <h3 className="font-bold text-lg mb-2 text-foreground">
                 Integration with Medical Care
-              </h4>
+              </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Distribution events often include medical camps, allowing us to
                 address both immediate material needs and health concerns in a
@@ -233,9 +234,9 @@ export default function TribalDistributionProgram() {
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">
+              <h3 className="font-bold text-lg mb-2 text-foreground">
                 Partnership with Local Leaders
-              </h4>
+              </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 We work closely with village elders, community leaders, and
                 local organizations to ensure support reaches those who need it
@@ -243,9 +244,9 @@ export default function TribalDistributionProgram() {
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">
+              <h3 className="font-bold text-lg mb-2 text-foreground">
                 Respect for Tribal Culture
-              </h4>
+              </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 All programs are conducted with deep respect for tribal
                 traditions, customs, and decision-making processes.
@@ -285,7 +286,7 @@ export default function TribalDistributionProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/tribal/IMG_20260104_192923.jpg")}
+                src={getAssetPath("/images/tribal/IMG_20260104_192923.webp")}
                 alt="Distribution event preparation"
                 className="w-full rounded-lg object-cover aspect-video"
               />
@@ -294,7 +295,7 @@ export default function TribalDistributionProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/tribal/IMG-20251227-WA0017.jpg")}
+                src={getAssetPath("/images/tribal/IMG-20251227-WA0017.webp")}
                 alt="Community members receiving supplies"
                 className="w-full rounded-lg object-cover aspect-video"
               />
@@ -304,7 +305,7 @@ export default function TribalDistributionProgram() {
                 loading="lazy"
                 decoding="async"
                 src={getAssetPath(
-                  "/images/tribal/WhatsApp Image 2025-12-04 at 8.34.50 AM (2).jpeg"
+                  "/images/tribal/WhatsApp Image 2025-12-04 at 8.34.50 AM (2).webp"
                 )}
                 alt="Tribal outreach program"
                 className="w-full rounded-lg object-cover aspect-video"
@@ -315,7 +316,7 @@ export default function TribalDistributionProgram() {
                 loading="lazy"
                 decoding="async"
                 src={getAssetPath(
-                  "/images/tribal/clothing-distribution-2025-11-23.jpg"
+                  "/images/tribal/clothing-distribution-2025-11-23.webp"
                 )}
                 alt="A young woman receives new clothing from trust volunteers at a distribution event"
                 className="w-full rounded-lg object-cover aspect-video"

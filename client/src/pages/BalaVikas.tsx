@@ -27,7 +27,8 @@ export default function BalaVikasProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src={getAssetPath("/images/bala-vikas/IMG-20260311-WA0023.jpg")}
+                fetchPriority="high"
+                src={getAssetPath("/images/bala-vikas/IMG-20260311-WA0023.webp")}
                 alt="Bala Vikas school - children learning values and culture"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -175,7 +176,7 @@ export default function BalaVikasProgram() {
                   loading="lazy"
                   decoding="async"
                   src={getAssetPath(
-                    "/images/bala-vikas/IMG-20260312-WA0016.jpg"
+                    "/images/bala-vikas/IMG-20260312-WA0016.webp"
                   )}
                   alt="Bala Vikas school children learning"
                   className="w-full rounded-lg object-cover aspect-video"
@@ -186,7 +187,7 @@ export default function BalaVikasProgram() {
                   loading="lazy"
                   decoding="async"
                   src={getAssetPath(
-                    "/images/bala-vikas/IMG-20260312-WA0014.jpg"
+                    "/images/bala-vikas/IMG-20260312-WA0014.webp"
                   )}
                   alt="Children engaged in activities"
                   className="w-full rounded-lg object-cover aspect-video"
@@ -261,7 +262,7 @@ export default function BalaVikasProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/bala-vikas/IMG-20260311-WA0015.jpg")}
+                src={getAssetPath("/images/bala-vikas/IMG-20260311-WA0015.webp")}
                 alt="Teachers and students at Bala Vikas center"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -301,7 +302,7 @@ export default function BalaVikasProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/bala-vikas/IMG-20251224-WA0036.jpg")}
+                src={getAssetPath("/images/bala-vikas/IMG-20251224-WA0036.webp")}
                 alt="Group activities at Bala Vikas center"
                 className="w-full rounded-lg object-cover aspect-video"
               />
@@ -310,7 +311,7 @@ export default function BalaVikasProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/bala-vikas/IMG-20260215-WA0005.jpg")}
+                src={getAssetPath("/images/bala-vikas/IMG-20260215-WA0005.webp")}
                 alt="Cultural learning and traditions"
                 className="w-full rounded-lg object-cover aspect-video"
               />
@@ -319,7 +320,7 @@ export default function BalaVikasProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/bala-vikas/IMG-20260325-WA0018.jpg")}
+                src={getAssetPath("/images/bala-vikas/IMG-20260325-WA0018.webp")}
                 alt="Children learning values through activities"
                 className="w-full rounded-lg object-cover aspect-video"
               />
