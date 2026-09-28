@@ -165,30 +165,7 @@ export default function EducationProgram() {
             Our Educational Programs in Action
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Image 1 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src={getAssetPath(
-                    "/images/education/IMG_20241020_173824.jpg"
-                  )}
-                  alt="Students receiving educational support"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-4">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Students from rural and tribal communities receiving
-                  comprehensive educational support—scholarships, learning
-                  materials, and mentorship to help them succeed academically
-                  and pursue their dreams.
-                </p>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Image 2 */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
@@ -198,16 +175,15 @@ export default function EducationProgram() {
                   src={getAssetPath(
                     "/images/education/WhatsApp Image 2024-09-24 at 10.53.59 AM(3).jpeg"
                   )}
-                  alt="Student mentorship session"
+                  alt="A student receives her scholarship from trust members"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-4">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Regular mentorship sessions provide academic guidance, exam
-                  preparation support, and career counseling, building students'
-                  confidence and helping them navigate their educational journey
-                  with dignity and purpose.
+                  A student receives her scholarship. For many families, this
+                  support is what makes it possible to stay in school and
+                  prepare for the exams that open doors.
                 </p>
               </div>
             </div>
@@ -221,16 +197,15 @@ export default function EducationProgram() {
                   src={getAssetPath(
                     "/images/education/WhatsApp Image 2024-09-24 at 10.54.00 AM (6).jpeg"
                   )}
-                  alt="Educational guidance and support"
+                  alt="Scholarship recipients with trust members"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-4">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Through personalized attention and guidance, students develop
-                  academic skills, gain confidence, and prepare for competitive
-                  examinations that open doors to better opportunities and
-                  brighter futures.
+                  Scholarship recipients with members of the trust. Alongside
+                  financial help, students receive mentoring and encouragement
+                  to keep going.
                 </p>
               </div>
             </div>

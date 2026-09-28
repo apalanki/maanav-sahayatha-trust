@@ -167,8 +167,8 @@ export default function TribalDistributionProgram() {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src={getAssetPath("/images/tribal/11.jpg")}
-                  alt="Tribal distribution event - clothing distribution"
+                  src={getAssetPath("/images/tribal/IMG-20260129-WA0008.jpg")}
+                  alt="Villagers holding the blankets they received at a distribution event"
                   className="w-full rounded-lg object-cover aspect-video"
                 />
               </div>

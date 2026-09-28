@@ -37,6 +37,19 @@ for (const route of Object.keys(PAGES)) {
   });
 }
 
+for (const route of Object.keys(PAGES)) {
+  test(`${route} doesn't show the same photo twice`, async ({ page }) => {
+    await page.goto(url(route));
+    const photos = await page
+      .locator("main img, section img")
+      .evaluateAll(imgs =>
+        imgs.map(img => (img as HTMLImageElement).getAttribute("src"))
+      );
+    const repeated = photos.filter((src, i) => photos.indexOf(src) !== i);
+    expect(repeated, "photos used more than once").toEqual([]);
+  });
+}
+
 test("home page sections appear in the intended order", async ({ page }) => {
   await page.goto(url("/"));
   const sectionIds = await page
