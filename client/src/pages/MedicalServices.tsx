@@ -6,6 +6,7 @@ import { HandHeart, Heart, Pill, Building2, Eye } from "lucide-react";
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LatestUpdates from "@/components/LatestUpdates";
 import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
 
 export default function MedicalServicesProgram() {
@@ -282,6 +283,10 @@ export default function MedicalServicesProgram() {
               />
             </div>
           </div>
+        </div>
+
+        <div className="mb-12 empty:hidden">
+          <LatestUpdates program="medical" title="Recent Updates" />
         </div>
 
         {/* Call to Action */}

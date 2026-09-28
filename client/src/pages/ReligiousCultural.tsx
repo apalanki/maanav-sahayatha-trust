@@ -12,6 +12,7 @@ import {
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LatestUpdates from "@/components/LatestUpdates";
 import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
 
 export default function ReligiousCulturalProgram() {
@@ -222,6 +223,10 @@ export default function ReligiousCulturalProgram() {
               />
             </div>
           </div>
+        </div>
+
+        <div className="mb-12 empty:hidden">
+          <LatestUpdates program="religious-cultural" title="Recent Updates" />
         </div>
 
         {/* Call to Action */}

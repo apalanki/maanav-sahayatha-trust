@@ -12,6 +12,7 @@ import {
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LatestUpdates from "@/components/LatestUpdates";
 import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
 
 export default function EducationProgram() {
@@ -214,6 +215,10 @@ export default function EducationProgram() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mb-12 empty:hidden">
+          <LatestUpdates program="education" title="Recent Updates" />
         </div>
 
         {/* Call to Action */}

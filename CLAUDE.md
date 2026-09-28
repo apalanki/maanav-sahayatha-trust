@@ -49,6 +49,16 @@ Pushing to `main` runs the tests, then deploys to production (~2–3 minutes). T
   or any converter), put in `client/public/images/`, reference via `getAssetPath()`, `loading="lazy"` below the
   first screen. Keep a JPEG copy only if the photo is a page's share image in `seo-pages.json` (WhatsApp previews)
 
+## Activity updates
+
+The owner sends photos + a few lines; I post them:
+1. Save the photos locally, then `pnpm new-update --date YYYY-MM-DD --program <key> --title "..." [--location "..."] <1-4 photos>`
+   (resizes to WebP, strips GPS/camera data, creates `share.jpg` and a stub in `client/src/content/updates/`).
+2. Write the `description` and each photo's `alt` from what the owner said (no invented facts), `pnpm test`,
+   check the post at desktop and phone widths, then commit and push.
+The build (`scripts/generate-seo.mjs`) rejects incomplete posts. With zero posts, the Updates link and sections
+stay hidden; sample posts in `update-fixtures/` exist only for tests.
+
 ## Decisions already made (don't revisit without a reason)
 
 - **Hosting:** GitHub Pages + Cloudflare Registrar/DNS. All DNS records stay **DNS only (grey

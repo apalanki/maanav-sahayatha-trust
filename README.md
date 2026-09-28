@@ -45,6 +45,8 @@ form posts to **Web3Forms**, which emails each message to `manavsahayata@gmail.c
 | `/programs/tribal` | `client/src/pages/TribalDistribution.tsx` |
 | `/programs/religious-cultural` | `client/src/pages/ReligiousCultural.tsx` |
 | `/contact` | `client/src/pages/Contact.tsx` (contact form + other ways to reach the trust) |
+| `/updates` | `client/src/pages/Updates.tsx` (activity timeline, newest first; hidden until the first post exists) |
+| `/updates/<post>` | `client/src/pages/UpdateDetail.tsx` (one post, shareable on WhatsApp) |
 | `/donate` | `client/src/pages/Donate.tsx` (UPI QR code and ID, how to share transaction details, where gifts go) |
 | anything else | `client/src/pages/NotFound.tsx` |
 
@@ -131,6 +133,7 @@ server/index.ts              Optional Express server for non-GitHub hosting
 |---|---|
 | Edit page text | The page component in `client/src/pages/` |
 | Change a page's Google title/description or share image | `client/src/lib/seo-pages.json` |
+| Post an activity update | `pnpm new-update --date … --program … --title … photo1.jpg …`, then fill in the new file in `client/src/content/updates/` (format: that folder's README) |
 | Add a page | Route in `App.tsx` + entry in `seo-pages.json` (+ `PROGRAMS` in `lib/programs.ts` for a program page) |
 | Contact form (fields, key) | `client/src/pages/Contact.tsx`; options and Web3Forms key in `client/src/lib/contact.ts`. Without a key, the page shows WhatsApp instead of the form |
 | Contact details / WhatsApp number | `components/Footer.tsx`, and the `wa.me` links in `Header.tsx` and the pages |
@@ -164,6 +167,9 @@ projects, **desktop** (1440×900) and **mobile** (390×844):
 - **`e2e/contact.spec.ts`** – the contact form sends the right fields to Web3Forms (the API call is
   intercepted, so no email is sent; the test build uses a fake key), shows success and error states,
   validates required fields, and preselects the inquiry type from `?interest=`.
+- **`e2e/updates.spec.ts`** – timeline order, program filters, photo viewer, post pages (tags, sitemap),
+  home and program sections, header link. Runs on sample posts from `client/src/content/update-fixtures/`,
+  included only in test builds (`VITE_INCLUDE_TEST_UPDATES=1`).
 - **`e2e/seo.spec.ts`** – raw HTML (no JavaScript) of every page has HTTP 200 and its own title,
   description, canonical URL, share image, and structured data; sitemap, robots.txt, 404 handling,
   and icons are correct.

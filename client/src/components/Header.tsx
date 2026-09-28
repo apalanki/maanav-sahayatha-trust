@@ -4,6 +4,7 @@ import { HandHeart, Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { getAssetPath } from "@/lib/utils";
 import { PROGRAMS, homeSectionHref } from "@/lib/programs";
+import { UPDATES } from "@/lib/updates";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -63,6 +64,14 @@ export default function Header() {
                 </div>
               </div>
             </div>
+            {UPDATES.length > 0 && (
+              <Link
+                href="/updates"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                Updates
+              </Link>
+            )}
             <Link
               href="/contact"
               className="text-sm font-medium hover:text-primary transition-colors"
@@ -118,6 +127,15 @@ export default function Header() {
                   {program.shortName}
                 </Link>
               ))}
+              {UPDATES.length > 0 && (
+                <Link
+                  href="/updates"
+                  className="block py-2 text-sm font-medium hover:text-primary transition-colors"
+                  onClick={closeMobileMenu}
+                >
+                  Updates
+                </Link>
+              )}
               <Link
                 href="/contact"
                 className="block py-2 text-sm font-medium hover:text-primary transition-colors"

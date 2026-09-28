@@ -1,0 +1,12 @@
+{
+  "date": "2024-10-20",
+  "title": "Sample: Scholarship handover",
+  "program": "education",
+  "description": "Sample post used only by automated tests. Students received scholarships for the new academic year.",
+  "photos": [
+    {
+      "src": "/images/tribal/IMG_20260104_192923.webp",
+      "alt": "Sample photo 1"
+    }
+  ]
+}

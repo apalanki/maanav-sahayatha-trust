@@ -6,6 +6,7 @@ import { HandHeart, MapPin, Users, Package, Eye } from "lucide-react";
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LatestUpdates from "@/components/LatestUpdates";
 import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
 
 export default function TribalDistributionProgram() {
@@ -323,6 +324,10 @@ export default function TribalDistributionProgram() {
               />
             </div>
           </div>
+        </div>
+
+        <div className="mb-12 empty:hidden">
+          <LatestUpdates program="tribal" title="Recent Updates" />
         </div>
 
         {/* Call to Action */}

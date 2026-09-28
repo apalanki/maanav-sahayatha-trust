@@ -24,7 +24,10 @@ export default defineConfig({
     command: "pnpm run build && node scripts/serve-dist.mjs",
     url: url("/robots.txt"),
     // Fake Web3Forms key so the contact form renders; e2e/contact.spec.ts intercepts the API call
-    env: { PORT: String(PORT), VITE_WEB3FORMS_ACCESS_KEY: "e2e-test-key" },
+    env: { PORT: String(PORT), VITE_WEB3FORMS_ACCESS_KEY: "e2e-test-key",
+      // Sample activity updates (client/src/content/update-fixtures), never in production
+      VITE_INCLUDE_TEST_UPDATES: "1",
+    },
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,
   },

@@ -26,6 +26,8 @@ import { getCardStyle } from "@/lib/branding";
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LatestUpdates from "@/components/LatestUpdates";
+import { UPDATES } from "@/lib/updates";
 
 export default function HomePage() {
   // Arriving from another page via a link like /#about: scroll to the section,
@@ -329,6 +331,18 @@ export default function HomePage() {
             </Card>
           </div>
         </section>
+
+        {/* Latest updates (appears once posts exist) */}
+        {UPDATES.length > 0 && (
+          <section
+            id="updates"
+            className="py-8 sm:py-12 md:py-14 bg-white scroll-mt-24"
+          >
+            <div className="container">
+              <LatestUpdates />
+            </div>
+          </section>
+        )}
 
         {/* Call to Action */}
         <section

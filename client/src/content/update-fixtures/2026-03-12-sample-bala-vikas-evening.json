@@ -1,0 +1,25 @@
+{
+  "date": "2026-03-12",
+  "title": "Sample: Evening session at a Bala Vikas center",
+  "program": "bala-vikas",
+  "location": "Valasarajupadu",
+  "description": "Sample post used only by automated tests. Children gathered for songs, stories, and a shared meal.\n\nA second paragraph checks that paragraphs render separately.",
+  "photos": [
+    {
+      "src": "/images/religious/IMG20250126193413.webp",
+      "alt": "Sample photo 1"
+    },
+    {
+      "src": "/images/religious/IMG-20260221-WA0105.webp",
+      "alt": "Sample photo 2"
+    },
+    {
+      "src": "/images/religious/IMG-20260313-WA0011.webp",
+      "alt": "Sample photo 3"
+    },
+    {
+      "src": "/images/religious/IMG_5777.webp",
+      "alt": "Sample photo 4"
+    }
+  ]
+}

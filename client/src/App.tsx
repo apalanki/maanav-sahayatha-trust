@@ -11,6 +11,9 @@ import BalaVikas from "./pages/BalaVikas";
 import ReligiousCultural from "./pages/ReligiousCultural";
 import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
+import Updates from "./pages/Updates";
+import UpdateDetail from "./pages/UpdateDetail";
+import { getUpdate, summary } from "./lib/updates";
 
 // Deploy base path without the trailing slash ("" at a domain root)
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -22,7 +25,18 @@ function RouteMeta() {
   useEffect(() => {
     const pages: Record<string, { title: string; description: string }> =
       seo.pages;
-    const page = pages[location.replace(/(.)\/$/, "$1")];
+    const path = location.replace(/(.)\/$/, "$1");
+    const post = path.startsWith("/updates/")
+      ? getUpdate(path.slice("/updates/".length))
+      : undefined;
+    const page = post
+      ? {
+          title: `${post.title} | ${seo.siteName}`,
+          description: summary(post),
+        }
+      : path === "/updates"
+        ? seo.updatesPage
+        : pages[path];
     document.title = page?.title ?? `Page Not Found | ${seo.siteName}`;
     document
       .querySelector('meta[name="description"]')
@@ -81,6 +95,8 @@ function Router() {
       />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/donate"} component={Donate} />
+      <Route path={"/updates"} component={Updates} />
+      <Route path={"/updates/:slug"} component={UpdateDetail} />
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>

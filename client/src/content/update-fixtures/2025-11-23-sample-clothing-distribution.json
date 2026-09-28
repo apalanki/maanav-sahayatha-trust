@@ -1,0 +1,17 @@
+{
+  "date": "2025-11-23",
+  "title": "Sample: Winter clothing distribution",
+  "program": "tribal",
+  "location": "Visakhapatnam district",
+  "description": "Sample post used only by automated tests. Blankets and sweaters were handed out ahead of winter.",
+  "photos": [
+    {
+      "src": "/images/bala-vikas/IMG-20251224-WA0036.webp",
+      "alt": "Sample photo 1"
+    },
+    {
+      "src": "/images/bala-vikas/IMG-20260215-WA0005.webp",
+      "alt": "Sample photo 2"
+    }
+  ]
+}

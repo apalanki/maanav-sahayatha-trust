@@ -54,7 +54,8 @@
 - [x] Contact page with a form (Web3Forms → manavsahayata@gmail.com)
 
 ### Content (Medium Priority)
-- [ ] News / updates page for recent camps, distributions, and events
+- [x] Activity updates timeline (`/updates`), post pages, home/program sections, `pnpm new-update` helper
+- [ ] First real updates: send photos + date, program, place, and a few lines per activity
 - [ ] Team / leadership page introducing the founder, trustees, and key volunteers
 - [ ] Photo gallery organized by program
 - [ ] More success stories and testimonials (with permission from the people featured)

@@ -55,7 +55,14 @@ test("home page sections appear in the intended order", async ({ page }) => {
   const sectionIds = await page
     .locator("section[id]")
     .evaluateAll(els => els.map(el => el.id));
-  expect(sectionIds).toEqual(["about", "programs", "story", "donate"]);
+  // "updates" appears once posts exist (the test build includes sample posts)
+  expect(sectionIds).toEqual([
+    "about",
+    "programs",
+    "story",
+    "updates",
+    "donate",
+  ]);
 });
 
 for (const route of PROGRAM_ROUTES) {
