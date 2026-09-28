@@ -90,13 +90,11 @@ test.describe("navigation", () => {
       .toBeLessThan(300);
   });
 
-  test("Contact scrolls to the footer contact details", async ({
-    page,
-    isMobile,
-  }) => {
+  test("Contact opens the contact page", async ({ page, isMobile }) => {
     await page.goto(url("/programs/tribal"));
     await (await headerLink(page, isMobile, "Contact")).click();
-    await expect(page.locator("footer#contact")).toBeInViewport();
+    await expect(page).toHaveURL(url("/contact"));
+    await expect(page.locator("h1")).toHaveText("We'd Love to Hear From You");
   });
 
   test("logo returns to the top of the home page", async ({ page }) => {

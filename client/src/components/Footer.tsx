@@ -30,8 +30,13 @@ export default function Footer() {
             </p>
             <p className="text-sm opacity-90">
               <strong>Founder:</strong> Sujata Palanki<br />
-              +91 9533 843636
+              <a href="tel:+919533843636" className="hover:text-secondary transition-colors">
+                +91 95338 43636
+              </a>
             </p>
+            <Link href="/contact" className="inline-block mt-4 text-sm font-semibold underline underline-offset-4 hover:text-secondary transition-colors">
+              Send us a message
+            </Link>
           </div>
         </div>
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-90">

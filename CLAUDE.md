@@ -30,7 +30,8 @@ Pushing to `main` runs the tests, then deploys to production (~2–3 minutes). T
 - **Never invent facts, numbers, names, or partnerships.** Unconfirmed claims go in
   `CONTENT_TO_VERIFY.md` as questions.
 - Donate buttons open WhatsApp (`wa.me/919533843636`), so label them honestly
-  ("Donate", "Chat With Us to Donate"). There is no payment page.
+  ("Donate", "Chat With Us to Donate"). There is no payment page. The contact form (Web3Forms,
+  free plan: 250 messages/month) emails `manavsahayata@gmail.com`; never call Web3Forms for real in tests.
 - Indian English context: "₹", "sarees", "dhotis", place names in Andhra Pradesh.
 
 ## Where to change things
@@ -38,6 +39,8 @@ Pushing to `main` runs the tests, then deploys to production (~2–3 minutes). T
 - Page copy → `client/src/pages/*.tsx`
 - Page title/description/share image → `client/src/lib/seo-pages.json` (also drives the sitemap)
 - Program list/order (header, footer, program nav) → `client/src/lib/programs.ts`
+- Contact form → `client/src/pages/Contact.tsx`; Web3Forms key + inquiry options → `client/src/lib/contact.ts`.
+  Link to it with `/contact?interest=donate|volunteer|program|partner|other` to preselect the inquiry type.
 - New page → route in `client/src/App.tsx` + `seo-pages.json` (+ `programs.ts` for a program)
 - Photos → resize first (`sips -Z 1280 -s formatOptions 75 <file>`), put in `client/public/images/`,
   reference via `getAssetPath()`, `loading="lazy"` below the first screen

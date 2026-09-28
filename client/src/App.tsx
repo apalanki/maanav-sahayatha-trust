@@ -9,6 +9,7 @@ import MedicalServices from "./pages/MedicalServices";
 import TribalDistribution from "./pages/TribalDistribution";
 import BalaVikas from "./pages/BalaVikas";
 import ReligiousCultural from "./pages/ReligiousCultural";
+import Contact from "./pages/Contact";
 
 // Deploy base path without the trailing slash ("" at a domain root)
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -38,6 +39,7 @@ function Router() {
       <Route path={"/programs/tribal"} component={TribalDistribution} />
       <Route path={"/programs/bala-vikas"} component={BalaVikas} />
       <Route path={"/programs/religious-cultural"} component={ReligiousCultural} />
+      <Route path={"/contact"} component={Contact} />
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>

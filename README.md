@@ -22,7 +22,8 @@ git push origin main                      # deploy (GitHub Actions → GitHub Pa
 
 A static, client-rendered **React** site. There is no backend or database; every page is built to
 static files and hosted on **GitHub Pages** with the custom domain `manavsahayata.org`
-(domain registered at Cloudflare). Donations are handled by opening a **WhatsApp** chat.
+(domain registered at Cloudflare). Donations are handled by opening a **WhatsApp** chat. The contact
+form posts to **Web3Forms**, which emails each message to `manavsahayata@gmail.com`.
 
 | Area | Tech |
 |---|---|
@@ -42,6 +43,7 @@ static files and hosted on **GitHub Pages** with the custom domain `manavsahayat
 | `/programs/medical` | `client/src/pages/MedicalServices.tsx` |
 | `/programs/tribal` | `client/src/pages/TribalDistribution.tsx` |
 | `/programs/religious-cultural` | `client/src/pages/ReligiousCultural.tsx` |
+| `/contact` | `client/src/pages/Contact.tsx` (contact form + other ways to reach the trust) |
 | anything else | `client/src/pages/NotFound.tsx` |
 
 Routes are declared in `client/src/App.tsx`, which also updates the page title/description on
@@ -110,6 +112,7 @@ server/index.ts              Optional Express server for non-GitHub hosting
 | Edit page text | The page component in `client/src/pages/` |
 | Change a page's Google title/description or share image | `client/src/lib/seo-pages.json` |
 | Add a page | Route in `App.tsx` + entry in `seo-pages.json` (+ `PROGRAMS` in `lib/programs.ts` for a program page) |
+| Contact form (fields, key) | `client/src/pages/Contact.tsx`; options and Web3Forms key in `client/src/lib/contact.ts`. Without a key, the page shows WhatsApp instead of the form |
 | Contact details / WhatsApp number | `components/Footer.tsx`, and the `wa.me` links in `Header.tsx` and the pages |
 | Organization details for search engines | `organization` object in `scripts/generate-seo.mjs` |
 | Brand colors | `client/src/lib/branding.ts` (logo colors: blue `#2D65AF`, orange `#F17D00`) |
@@ -138,6 +141,9 @@ projects, **desktop** (1440×900) and **mobile** (390×844):
   failed requests, no broken images, and no horizontal scrolling; home sections are in order;
   program pages have a breadcrumb and "other programs" links; navigation works (program links,
   reload, About Us, Contact, logo back to top, keyboard-accessible Programs menu, mobile menu, 404 page).
+- **`e2e/contact.spec.ts`** – the contact form sends the right fields to Web3Forms (the API call is
+  intercepted, so no email is sent; the test build uses a fake key), shows success and error states,
+  validates required fields, and preselects the inquiry type from `?interest=`.
 - **`e2e/seo.spec.ts`** – raw HTML (no JavaScript) of every page has HTTP 200 and its own title,
   description, canonical URL, share image, and structured data; sitemap, robots.txt, 404 handling,
   and icons are correct.

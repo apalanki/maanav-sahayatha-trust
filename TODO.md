@@ -41,7 +41,8 @@
       exemption** status — Indian donors look for this before giving
 - [ ] Add a direct way to give without chatting first: a UPI QR code / UPI ID and bank details, or
       Razorpay payment links (supports one-time and recurring donations in INR)
-- [ ] Add a simple contact form (e.g. Formspree or Web3Forms, free tiers work with static hosting)
+- [x] Contact page with a form (Web3Forms → manavsahayata@gmail.com)
+- [ ] Add the Web3Forms access key to `client/src/lib/contact.ts` to switch the form on
 
 ### Content (Medium Priority)
 - [ ] News / updates page for recent camps, distributions, and events

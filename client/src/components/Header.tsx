@@ -66,12 +66,12 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               Contact
-            </a>
+            </Link>
             <a
               href={whatsappDonationLink}
               target="_blank"
@@ -125,13 +125,13 @@ export default function Header() {
                   {program.shortName}
                 </Link>
               ))}
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="block py-2 text-sm font-medium hover:text-primary transition-colors"
                 onClick={closeMobileMenu}
               >
                 Contact
-              </a>
+              </Link>
               <a
                 href={whatsappDonationLink}
                 target="_blank"

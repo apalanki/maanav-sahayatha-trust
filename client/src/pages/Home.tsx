@@ -252,6 +252,12 @@ export default function HomePage() {
                 Chat With Us to Donate
               </Button>
             </a>
+            <p className="mt-6 text-sm opacity-90">
+              Prefer email?{" "}
+              <Link href="/contact?interest=donate" className="font-semibold underline underline-offset-4">
+                Send us a message
+              </Link>
+            </p>
           </div>
         </div>
       </section>
