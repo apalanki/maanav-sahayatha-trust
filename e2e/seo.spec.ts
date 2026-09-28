@@ -29,6 +29,26 @@ for (const [route, meta] of Object.entries(PAGES)) {
   });
 }
 
+test("titles and descriptions fit in search results and are unique", () => {
+  const titles = Object.values(PAGES).map(p => p.title);
+  const descriptions = Object.values(PAGES).map(p => p.description);
+  for (const [route, { title, description }] of Object.entries(PAGES)) {
+    expect(title.length, `${route} title length`).toBeLessThanOrEqual(65);
+    expect(
+      description.length,
+      `${route} description length`
+    ).toBeGreaterThanOrEqual(70);
+    expect(
+      description.length,
+      `${route} description length`
+    ).toBeLessThanOrEqual(160);
+  }
+  expect(new Set(titles).size, "unique titles").toBe(titles.length);
+  expect(new Set(descriptions).size, "unique descriptions").toBe(
+    descriptions.length
+  );
+});
+
 test("sitemap.xml lists every page", async ({ request }) => {
   const response = await request.get(url("/sitemap.xml"));
   expect(response.status()).toBe(200);

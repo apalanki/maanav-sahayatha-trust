@@ -2,13 +2,13 @@
   "siteName": "Maanav Sahayata Trust",
   "pages": {
     "/": {
-      "title": "Maanav Sahayata Trust | Charity for Tribal Communities in Visakhapatnam",
-      "description": "Since 2004, Maanav Sahayata Trust has supported tribal and rural families near Visakhapatnam, Andhra Pradesh with scholarships, medical camps, after-school centers, and essential supplies.",
+      "title": "Maanav Sahayata Trust | Tribal Charity in Visakhapatnam",
+      "description": "Since 2004, Maanav Sahayata Trust has supported tribal families near Visakhapatnam with scholarships, medical camps, after-school centers, and supplies.",
       "image": "/images/tribal/IMG_20251207_123010466_HDR_AE.jpg"
     },
     "/programs/education": {
       "title": "Scholarships & Educational Support | Maanav Sahayata Trust",
-      "description": "Scholarships, exam coaching, and mentorship for deserving tribal and rural students in Andhra Pradesh, with a special focus on girls' education. Help a student stay in school.",
+      "description": "Scholarships, exam coaching, and mentoring for deserving tribal and rural students in Andhra Pradesh, with a special focus on girls' education.",
       "image": "/images/education/IMG_20241020_173824.jpg"
     },
     "/programs/bala-vikas": {
@@ -28,12 +28,12 @@
     },
     "/programs/religious-cultural": {
       "title": "Temple Renovation & Tribal Culture | Maanav Sahayata Trust",
-      "description": "18 Sri Ram temples renovated and a new Hanuman temple built in tribal villages, plus support for Bhajans, Kolatam, and the cultural traditions that bind communities.",
+      "description": "18 Sri Ram temples renovated and a new Hanuman temple built in tribal villages, plus support for Bhajans, Kolatam, and tribal traditions.",
       "image": "/images/religious/IMG-20260313-WA0045.jpg"
     },
     "/contact": {
       "title": "Contact Us | Maanav Sahayata Trust",
-      "description": "Get in touch with Maanav Sahayata Trust in Visakhapatnam to donate, volunteer, partner with us, or ask about our programs. Send a message or reach us on WhatsApp.",
+      "description": "Contact Maanav Sahayata Trust in Visakhapatnam to donate, volunteer, partner with us, or ask about our programs. Message us or chat on WhatsApp.",
       "image": "/images/tribal/IMG_20251207_123010466_HDR_AE.jpg"
     },
     "/donate": {
