@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
-import { ArrowRight, Check, Copy, Landmark, Smartphone } from "lucide-react";
+import { ArrowRight, Check, Copy, Landmark } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import UpiAppLogo, {
+  UPI_APP_COLORS,
+  type UpiApp,
+} from "@/components/UpiAppLogo";
 import { getAssetPath } from "@/lib/utils";
 import { PROGRAMS } from "@/lib/programs";
 import {
@@ -169,14 +173,26 @@ export default function DonatePage() {
                     </p>
                     <div className="grid grid-cols-1 gap-2">
                       {upiAppLinks(isIOS).map(({ app, href }) => (
-                        <a key={app} href={href}>
-                          <Button
-                            size="lg"
-                            className="w-full bg-primary hover:bg-primary/90 flex items-center justify-center gap-2"
-                          >
-                            <Smartphone className="w-5 h-5" />
-                            Pay with {app}
-                          </Button>
+                        <a
+                          key={app}
+                          href={href}
+                          aria-label={`Pay with ${app}`}
+                          className="flex h-12 w-full items-center justify-center gap-2 overflow-hidden rounded-md border-2 border-border bg-white text-base font-semibold text-foreground hover:border-primary transition-colors"
+                        >
+                          <span>Pay with</span>
+                          {app === "PhonePe" ? (
+                            <>
+                              <UpiAppLogo app="PhonePe" className="w-6 h-6" />
+                              <span style={{ color: UPI_APP_COLORS.PhonePe }}>
+                                PhonePe
+                              </span>
+                            </>
+                          ) : (
+                            <UpiAppLogo
+                              app={app as UpiApp}
+                              className="w-14 h-14"
+                            />
+                          )}
                         </a>
                       ))}
                       <a href={UPI_PAY_LINK}>
