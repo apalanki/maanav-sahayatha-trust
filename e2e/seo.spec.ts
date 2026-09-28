@@ -56,16 +56,33 @@ test("unknown URLs return 404 and are not indexed", async ({ request }) => {
   );
 });
 
-test("favicon and home-screen icon are linked and served", async ({
+test("official favicons and the web manifest are linked and served", async ({
   request,
 }) => {
   const html = await (await request.get(url("/"))).text();
-  const icons = [
-    ...html.matchAll(/<link rel="(icon|apple-touch-icon)"[^>]*href="([^"]+)"/g),
+  const links = [
+    ...html.matchAll(
+      /<link rel="(icon|shortcut icon|apple-touch-icon|manifest)"[^>]*href="([^"]+)"/g
+    ),
   ];
-  expect(icons.map(m => m[1]).sort()).toEqual(["apple-touch-icon", "icon"]);
-  for (const [, rel, href] of icons) {
+  expect(new Set(links.map(m => m[1]))).toEqual(
+    new Set(["icon", "shortcut icon", "apple-touch-icon", "manifest"])
+  );
+  for (const [, rel, href] of links) {
+    expect(href, rel).toContain("/favicons/");
     const response = await request.get(new URL(href, url("/")).toString());
     expect(response.status(), `${rel} ${href}`).toBe(200);
+  }
+
+  // The manifest names the trust and its icons resolve
+  const manifestHref = links.find(m => m[1] === "manifest")![2];
+  const manifestUrl = new URL(manifestHref, url("/"));
+  const manifest = await (await request.get(manifestUrl.toString())).json();
+  expect(manifest.name).toBe("Maanav Sahayata Trust");
+  for (const icon of manifest.icons) {
+    const response = await request.get(
+      new URL(icon.src, manifestUrl).toString()
+    );
+    expect(response.status(), icon.src).toBe(200);
   }
 });

@@ -106,7 +106,7 @@ there is nothing else to change. Overrides: `VITE_BASE_PATH`, `SITE_URL`.
 ```
 client/
   index.html                 HTML shell (fonts, favicon links, default title/description)
-  public/                    Static files copied as-is: CNAME, favicon.svg, apple-touch-icon.png,
+  public/                    Static files copied as-is: CNAME, favicons/ (official icon set + manifest.json),
                              logo.png, images/<program>/*.jpg
   src/
     App.tsx                  Routes, router base path, per-route title/description
