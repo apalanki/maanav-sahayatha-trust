@@ -17,7 +17,12 @@ export default function Footer() {
               contribution, large or small, helps us reach one more family.
             </p>
             <p className="text-sm opacity-90 mt-4">
-              Registered Trust · Reg. No. 32/2023
+              Registered Trust
+              <br />
+              Regd. No. 4-32/2023 (Book IV)
+              <br />
+              <span className="whitespace-nowrap">Sub-Registrar Office</span>,
+              Madhurawada
             </p>
           </div>
           <div>

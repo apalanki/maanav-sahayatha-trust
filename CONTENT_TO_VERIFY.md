@@ -12,7 +12,7 @@ Mark items `[x]` once confirmed (and note who confirmed and when), or update the
 - [ ] Founder **Sujata Palanki** — `Footer.tsx`, `generate-seo.mjs`
 - [ ] Phone / WhatsApp **+91 95338 43636** — `Footer.tsx`, `generate-seo.mjs`, and every `wa.me/919533843636` link
 - [ ] Address **1416, MK Gold Coast, Yendada-530045, Visakhapatnam** — `Footer.tsx`, `generate-seo.mjs`
-- [x] Trust registration number **32/2023** (provided by the owner, 2026-09-27) — `Home.tsx` (Our Story), `Footer.tsx`, `generate-seo.mjs` (`identifier`)
+- [x] Trust deed registration: **Document No. 4-32/2023, Book IV, Sub-Registrar Office Madhurawada**, registered 13-04-2023 (from the registration certificate, 2026-09-27). The certificate's *identification number* (4-315-32-2023) is the office's internal scanning reference and is not shown on the site — `Home.tsx` (Our Story), `Footer.tsx`, `generate-seo.mjs` (`identifier`)
 - [ ] **80G / 12A** status and numbers (not on the site yet; would build donor trust)
 
 ## Programs

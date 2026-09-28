@@ -46,7 +46,11 @@ const organization = {
   description: pages["/"].description,
   slogan: "Service to others is the purpose of life",
   foundingDate: "2004",
-  identifier: { "@type": "PropertyValue", propertyID: "Trust registration number", value: "32/2023" },
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "Trust deed registration (Book IV, Sub-Registrar Office, Madhurawada)",
+    value: "4-32/2023",
+  },
   founder: { "@type": "Person", name: "Sujata Palanki" },
   telephone: "+91-9533843636",
   address: {
