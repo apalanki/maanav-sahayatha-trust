@@ -59,6 +59,22 @@ test("home page sections appear in the intended order", async ({ page }) => {
 });
 
 for (const route of PROGRAM_ROUTES) {
+  test(`${route} opens with the main photo before the title (shared layout)`, async ({
+    page,
+  }) => {
+    await page.goto(url(route));
+    const photoFirst = await page.evaluate(() => {
+      const img = document.querySelector("main img")!;
+      const h1 = document.querySelector("main h1")!;
+      return !!(
+        img.compareDocumentPosition(h1) & Node.DOCUMENT_POSITION_FOLLOWING
+      );
+    });
+    expect(photoFirst).toBe(true);
+  });
+}
+
+for (const route of PROGRAM_ROUTES) {
   test(`${route} has a breadcrumb and links to the other programs`, async ({
     page,
   }) => {

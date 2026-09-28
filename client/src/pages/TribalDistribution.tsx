@@ -27,11 +27,20 @@ export default function TribalDistributionProgram() {
         {/* Program Overview */}
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Image */}
+            <div className="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                src={getAssetPath("/images/tribal/11.jpg")}
+                alt="Tribal distribution event - serving communities"
+                className="w-full rounded-lg object-cover aspect-[4/3]"
+              />
+            </div>
+
             {/* Content */}
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-8 bg-primary" />
-                <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+              <div className="flex items-center gap-2 sm:gap-3 mb-4">
+                <div className="w-1 h-6 sm:h-8 bg-primary flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wide">
                   Community Service
                 </span>
               </div>
@@ -51,15 +60,6 @@ export default function TribalDistributionProgram() {
                 respect and in partnership with local communities. Because
                 everyone deserves their basic needs met with dignity.
               </p>
-            </div>
-
-            {/* Image */}
-            <div className="bg-white p-4 rounded-lg shadow-lg">
-              <img
-                src={getAssetPath("/images/tribal/11.jpg")}
-                alt="Tribal distribution event - serving communities"
-                className="w-full rounded-lg object-cover aspect-[4/3]"
-              />
             </div>
           </div>
         </div>

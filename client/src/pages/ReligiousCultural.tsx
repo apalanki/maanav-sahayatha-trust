@@ -27,11 +27,20 @@ export default function ReligiousCulturalProgram() {
         {/* Program Overview */}
         <div className="mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Image */}
+            <div className="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                src={getAssetPath("/images/religious/IMG-20260313-WA0045.jpg")}
+                alt="Cultural and religious traditions in tribal communities"
+                className="w-full rounded-lg object-cover aspect-[4/3]"
+              />
+            </div>
+
             {/* Content */}
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-8 bg-primary" />
-                <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+              <div className="flex items-center gap-2 sm:gap-3 mb-4">
+                <div className="w-1 h-6 sm:h-8 bg-primary flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wide">
                   Cultural Heritage
                 </span>
               </div>
@@ -52,15 +61,6 @@ export default function ReligiousCulturalProgram() {
                 change, preserving their spiritual and cultural identity matters
                 more than ever.
               </p>
-            </div>
-
-            {/* Image */}
-            <div className="bg-white p-4 rounded-lg shadow-lg">
-              <img
-                src={getAssetPath("/images/religious/IMG-20260313-WA0045.jpg")}
-                alt="Cultural and religious traditions in tribal communities"
-                className="w-full rounded-lg object-cover aspect-[4/3]"
-              />
             </div>
           </div>
         </div>
@@ -142,25 +142,46 @@ export default function ReligiousCulturalProgram() {
           </div>
         </div>
 
-        {/* Long-Term Impact */}
-        <div className="mb-12 bg-gradient-to-br from-secondary/5 to-primary/5 border border-secondary/20 rounded-lg p-8">
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+        {/* Heritage Story */}
+        <div className="mb-12">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-8 text-primary">
             Preserving Heritage for Future Generations
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-            As tribal communities face modernization and external influences,
-            maintaining strong cultural and spiritual identity becomes
-            increasingly important. MST's religious and cultural services ensure
-            that traditions, values, and practices are celebrated and passed on
-            to younger generations rather than lost.
-          </p>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Temples and cultural spaces become focal points for community
-            life—places where elders share wisdom, children learn traditions,
-            and families celebrate festivals together. This work ensures tribal
-            culture remains vibrant, respected, and integral to community
-            identity for decades to come.
-          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Image */}
+            <div className="bg-white p-4 rounded-lg shadow-lg">
+              <img
+                loading="lazy"
+                decoding="async"
+                src={getAssetPath("/images/religious/IMG_5777.JPEG")}
+                alt="Women performing a traditional group dance at a village celebration"
+                className="w-full rounded-lg object-cover aspect-[4/3]"
+              />
+            </div>
+
+            {/* Story */}
+            <div className="flex flex-col justify-center">
+              <h3 className="text-xl font-bold text-foreground mb-4">
+                Traditions Passed Down Through Generations
+              </h3>
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
+                As tribal communities face modernization and external
+                influences, maintaining strong cultural and spiritual identity
+                becomes increasingly important. MST's religious and cultural
+                services ensure that traditions, values, and practices are
+                celebrated and passed on to younger generations rather than
+                lost.
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                Temples and cultural spaces become focal points for community
+                life—places where elders share wisdom, children learn
+                traditions, and families celebrate festivals together. This work
+                ensures tribal culture remains vibrant, respected, and integral
+                to community identity for decades to come.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Visual Impact */}
