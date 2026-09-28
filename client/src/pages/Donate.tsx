@@ -166,8 +166,8 @@ export default function DonatePage() {
                     </p>
                   </div>
 
-                  {/* Phones: open a UPI app straight to the payment */}
-                  <div className="md:hidden order-first space-y-3">
+                  {/* Touchscreens (phones and tablets): open a UPI app straight to the payment */}
+                  <div className="hidden pointer-coarse:block order-first space-y-3">
                     <p className="text-sm font-semibold text-foreground">
                       Pay with your UPI app
                     </p>

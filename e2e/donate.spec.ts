@@ -107,6 +107,7 @@ test.describe("on iPhone", () => {
       "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
     viewport: { width: 390, height: 844 },
     isMobile: true,
+    hasTouch: true,
   });
 
   test("Google Pay uses the iPhone link format", async ({ page }) => {
@@ -148,3 +149,24 @@ test("Donate buttons across the site lead to the donate page", async ({
   await expect(page).toHaveURL(url("/donate"));
   await expect(page.locator("h1")).toHaveText("Your Gift Changes Lives");
 });
+
+for (const [orientation, viewport] of [
+  ["portrait", { width: 820, height: 1180 }],
+  ["landscape", { width: 1180, height: 820 }],
+] as const) {
+  test.describe(`on a tablet (${orientation})`, () => {
+    test.use({ viewport, hasTouch: true, isMobile: true });
+
+    test("shows the UPI app buttons", async ({ page }) => {
+      await page.goto(url("/donate"));
+      for (const name of [
+        "Pay with Google Pay",
+        "Pay with PhonePe",
+        "Pay with Paytm",
+        "Other UPI App",
+      ]) {
+        await expect(page.getByRole("link", { name })).toBeVisible();
+      }
+    });
+  });
+}
