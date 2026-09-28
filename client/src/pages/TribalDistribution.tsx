@@ -55,10 +55,12 @@ export default function TribalDistributionProgram() {
                 challenges.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                We provide warm sweaters for children, sarees and blankets for
-                families, eye care camps, and essential supplies—delivered with
-                respect and in partnership with local communities. Because
-                everyone deserves their basic needs met with dignity.
+                We distribute 5,000 blankets across tribal areas and give warm
+                sweaters to the children in our Bala Vikas centers, along with
+                sarees for families, eye care camps, and essential
+                supplies—delivered with respect and in partnership with local
+                communities. Because everyone deserves their basic needs met
+                with dignity.
               </p>
             </div>
           </div>
@@ -81,10 +83,10 @@ export default function TribalDistributionProgram() {
                 </h3>
               </div>
               <p className="text-base text-muted-foreground mb-4 leading-relaxed">
-                Sweaters for children, sarees and dhotis for adults, and warm
-                blankets for families—distributed annually before winter to
-                ensure tribal communities stay warm and healthy during cold
-                months.
+                We distribute 5,000 warm blankets across tribal areas, sweaters
+                to Bala Vikas students, and sarees and dhotis for adults—before
+                winter, so tribal communities stay warm and healthy through the
+                cold months.
               </p>
               <p className="text-sm text-muted-foreground italic">
                 Thousands of families across remote villages receive essential
@@ -281,7 +283,7 @@ export default function TribalDistributionProgram() {
           <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-8 text-primary">
             Distribution Events
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white p-3 rounded-lg shadow">
               <img
                 loading="lazy"
@@ -308,6 +310,17 @@ export default function TribalDistributionProgram() {
                   "/images/tribal/WhatsApp Image 2025-12-04 at 8.34.50 AM (2).jpeg"
                 )}
                 alt="Tribal outreach program"
+                className="w-full rounded-lg object-cover aspect-video"
+              />
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow">
+              <img
+                loading="lazy"
+                decoding="async"
+                src={getAssetPath(
+                  "/images/tribal/clothing-distribution-2025-11-23.jpg"
+                )}
+                alt="A young woman receives new clothing from trust volunteers at a distribution event"
                 className="w-full rounded-lg object-cover aspect-video"
               />
             </div>

@@ -23,6 +23,7 @@ Mark items `[x]` once confirmed (and note who confirmed and when), or update the
 - [ ] **18 Sri Ram temples renovated** and **one Hanuman temple built** — `ReligiousCultural.tsx`, `Home.tsx` card, `seo-pages.json`
 - [ ] Partnership with **Vema Netralaya** (eye camps, cataract surgeries, eyeglasses) — `MedicalServices.tsx`, `TribalDistribution.tsx`, `seo-pages.json`
 - [ ] Partnership with **Bhagavan Sri Sathya Sai Seva Trust, Visakhapatnam** — `TribalDistribution.tsx`, `seo-pages.json`
+- [x] **5,000 blankets** distributed in tribal areas and **sweaters for Bala Vikas students** (provided by the owner, 2026-09-27) — `TribalDistribution.tsx` (overview, Clothing Distribution card)
 - [ ] Distribution events serve **thousands of families** across **multiple districts** of Andhra Pradesh — `TribalDistribution.tsx`
 - [ ] Medical support covers prenatal care, vaccinations, pediatric care, chronic disease management — `MedicalServices.tsx` ("Who We Serve")
 
