@@ -41,7 +41,8 @@
       exemption** status — Indian donors look for this before giving
 - [x] **Donate page (`/donate`)** with the trust's UPI QR code and ID (verified), copy button, pay-by-app on
       phones, and WhatsApp for sharing transaction details; every Donate button links to it
-- [ ] Donate page follow-ups: bank transfer details (NEFT), 80G/12A status, real "what your gift does"
+- [x] Bank transfer details (NEFT/RTGS/IMPS) with copy buttons on the Donate page
+- [ ] Donate page follow-ups: 80G/12A status, real "what your gift does"
       figures (e.g. cost of a scholarship or a winter blanket)
 - [x] Contact page with a form (Web3Forms → manavsahayata@gmail.com)
 

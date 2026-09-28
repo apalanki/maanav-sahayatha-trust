@@ -31,7 +31,8 @@ Pushing to `main` runs the tests, then deploys to production (~2–3 minutes). T
   `CONTENT_TO_VERIFY.md` as questions.
 - **Donate buttons go to `/donate`** (UPI QR + ID). The UPI ID lives in `lib/contact.ts` and the QR image in
   `client/public/images/donate/upi-qr.png`; they must always match (e2e/donate.spec.ts decodes the QR).
-  Never change either without a new QR from the trust. WhatsApp links remain for questions.
+  Never change either without a new QR from the trust. Bank details (`BANK_ACCOUNT` in `lib/contact.ts`) are
+  shown exactly as the bank has them, including the "Maanav" spelling. WhatsApp links remain for questions.
 - Show `<WhatsAppIcon />` (components/WhatsAppIcon.tsx) on every WhatsApp link: white on navy buttons, WhatsApp green `#25D366` elsewhere (brand rules). The contact form (Web3Forms,
   free plan: 250 messages/month) emails `manavsahayata@gmail.com`; never call Web3Forms for real in tests.
 - Indian English context: "₹", "sarees", "dhotis", place names in Andhra Pradesh.

@@ -9,6 +9,7 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { getAssetPath } from "@/lib/utils";
 import { PROGRAMS } from "@/lib/programs";
 import {
+  BANK_ACCOUNT,
   UPI_ID,
   UPI_PAYEE_NAME,
   UPI_PAY_LINK,
@@ -30,8 +31,54 @@ const GIFT_USES: Record<string, string> = {
     "Temple renovation and tribal cultural traditions",
 };
 
-export default function DonatePage() {
+/** Copies a value; falls back to selecting the on-screen text if the clipboard is unavailable */
+function CopyButton({
+  value,
+  targetId,
+  label,
+  size = "default",
+}: {
+  value: string;
+  targetId: string;
+  label: string;
+  size?: "default" | "sm";
+}) {
   const [copied, setCopied] = useState(false);
+
+  async function copy() {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      const el = document.getElementById(targetId);
+      if (el) window.getSelection()?.selectAllChildren(el);
+    }
+  }
+
+  return (
+    <Button
+      type="button"
+      variant="outline"
+      size={size}
+      onClick={copy}
+      className="h-auto flex-shrink-0 flex items-center gap-1.5"
+      aria-label={copied ? `${label} copied` : `Copy ${label}`}
+    >
+      {copied ? (
+        <>
+          <Check className="w-4 h-4" /> Copied
+        </>
+      ) : (
+        <>
+          <Copy className="w-4 h-4" /> Copy
+        </>
+      )}
+    </Button>
+  );
+}
+
+export default function DonatePage() {
   // iPhones/iPads use a different Google Pay link than Android
   const isIOS =
     /iPad|iPhone|iPod/.test(navigator.userAgent) ||
@@ -40,18 +87,6 @@ export default function DonatePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  async function copyUpiId() {
-    try {
-      await navigator.clipboard.writeText(UPI_ID);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
-    } catch {
-      // Clipboard unavailable: select the ID so the visitor can copy it manually
-      const el = document.getElementById("upi-id");
-      if (el) window.getSelection()?.selectAllChildren(el);
-    }
-  }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -72,102 +107,142 @@ export default function DonatePage() {
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Every contribution, large or small, helps a student stay in school,
             brings a medical camp to a remote village, or keeps a family warm
-            through winter. Give in seconds with any UPI app.
+            through winter. Give in seconds with any UPI app, or by bank
+            transfer.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-12 items-start">
           {/* UPI */}
-          <Card className="lg:col-span-3 p-6 sm:p-8 bg-white">
-            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-6">
-              Give Instantly with UPI
-            </h2>
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <img
-                src={getAssetPath("/images/donate/upi-qr.png")}
-                alt={`UPI QR code for ${UPI_PAYEE_NAME}, UPI ID ${UPI_ID}`}
-                className="order-last md:order-none w-72 max-w-full h-auto rounded-lg border border-border flex-shrink-0"
-              />
-              <div className="w-full flex flex-col gap-5">
-                <ol className="space-y-2 text-base text-muted-foreground list-decimal pl-5">
-                  <li>
-                    Open any UPI app: Google Pay, PhonePe, Paytm, or BHIM.
-                  </li>
-                  <li>Scan the QR code, or pay to the UPI ID below.</li>
-                  <li>Enter the amount you'd like to give and confirm.</li>
-                </ol>
+          <div className="lg:col-span-3 space-y-6">
+            <Card className="p-6 sm:p-8 bg-white">
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-6">
+                Give Instantly with UPI
+              </h2>
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <img
+                  src={getAssetPath("/images/donate/upi-qr.png")}
+                  alt={`UPI QR code for ${UPI_PAYEE_NAME}, UPI ID ${UPI_ID}`}
+                  className="order-last md:order-none w-72 max-w-full h-auto rounded-lg border border-border flex-shrink-0"
+                />
+                <div className="w-full flex flex-col gap-5">
+                  <ol className="space-y-2 text-base text-muted-foreground list-decimal pl-5">
+                    <li>
+                      Open any UPI app: Google Pay, PhonePe, Paytm, or BHIM.
+                    </li>
+                    <li>Scan the QR code, or pay to the UPI ID below.</li>
+                    <li>Enter the amount you'd like to give and confirm.</li>
+                  </ol>
 
-                <div>
-                  <p className="text-sm font-semibold text-foreground mb-1.5">
-                    UPI ID
-                  </p>
-                  <div className="flex items-stretch gap-2">
-                    <span
-                      id="upi-id"
-                      className="flex-1 min-w-0 break-words rounded-md border border-border bg-background px-3 py-2.5 text-sm font-semibold text-foreground"
-                    >
-                      {/* Allow a line break only after the "@" */}
-                      {UPI_ID.split("@")[0]}@<wbr />
-                      {UPI_ID.split("@")[1]}
-                    </span>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={copyUpiId}
-                      className="h-auto flex items-center gap-1.5"
-                      aria-live="polite"
-                    >
-                      {copied ? (
-                        <>
-                          <Check className="w-4 h-4" /> Copied
-                        </>
-                      ) : (
-                        <>
-                          <Copy className="w-4 h-4" /> Copy
-                        </>
-                      )}
-                    </Button>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground mb-1.5">
+                      UPI ID
+                    </p>
+                    <div className="flex items-stretch gap-2">
+                      <span
+                        id="upi-id"
+                        className="flex-1 min-w-0 break-words rounded-md border border-border bg-background px-3 py-2.5 text-sm font-semibold text-foreground"
+                      >
+                        {/* Allow a line break only after the "@" */}
+                        {UPI_ID.split("@")[0]}@<wbr />
+                        {UPI_ID.split("@")[1]}
+                      </span>
+                      <CopyButton
+                        value={UPI_ID}
+                        targetId="upi-id"
+                        label="UPI ID"
+                      />
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-2">
+                      The payee name will show as{" "}
+                      <strong className="text-foreground">
+                        {UPI_PAYEE_NAME}
+                      </strong>
+                      .
+                    </p>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    The payee name will show as{" "}
-                    <strong className="text-foreground">
-                      {UPI_PAYEE_NAME}
-                    </strong>
-                    .
-                  </p>
-                </div>
 
-                {/* Phones: open a UPI app straight to the payment */}
-                <div className="md:hidden order-first space-y-3">
-                  <p className="text-sm font-semibold text-foreground">
-                    Pay with your UPI app
-                  </p>
-                  <div className="grid grid-cols-1 gap-2">
-                    {upiAppLinks(isIOS).map(({ app, href }) => (
-                      <a key={app} href={href}>
-                        <Button
-                          size="lg"
-                          className="w-full bg-primary hover:bg-primary/90 flex items-center justify-center gap-2"
-                        >
-                          <Smartphone className="w-5 h-5" />
-                          Pay with {app}
+                  {/* Phones: open a UPI app straight to the payment */}
+                  <div className="md:hidden order-first space-y-3">
+                    <p className="text-sm font-semibold text-foreground">
+                      Pay with your UPI app
+                    </p>
+                    <div className="grid grid-cols-1 gap-2">
+                      {upiAppLinks(isIOS).map(({ app, href }) => (
+                        <a key={app} href={href}>
+                          <Button
+                            size="lg"
+                            className="w-full bg-primary hover:bg-primary/90 flex items-center justify-center gap-2"
+                          >
+                            <Smartphone className="w-5 h-5" />
+                            Pay with {app}
+                          </Button>
+                        </a>
+                      ))}
+                      <a href={UPI_PAY_LINK}>
+                        <Button size="lg" variant="outline" className="w-full">
+                          Other UPI App
                         </Button>
                       </a>
-                    ))}
-                    <a href={UPI_PAY_LINK}>
-                      <Button size="lg" variant="outline" className="w-full">
-                        Other UPI App
-                      </Button>
-                    </a>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      If your app doesn't open or declines the payment, copy the
+                      UPI ID below and pay to it from your UPI app.
+                    </p>
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    If your app doesn't open or declines the payment, copy the
-                    UPI ID below and pay to it from your UPI app.
-                  </p>
                 </div>
               </div>
-            </div>
-          </Card>
+            </Card>
+
+            {/* Bank transfer */}
+            <Card className="p-6 sm:p-8 bg-white">
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-2">
+                Bank Transfer
+              </h2>
+              <p className="text-base text-muted-foreground leading-relaxed mb-4">
+                Prefer to transfer from your bank? Use NEFT, RTGS, or IMPS from
+                net banking or your bank's app.
+              </p>
+              <dl>
+                {[
+                  { label: "Account name", value: BANK_ACCOUNT.name },
+                  {
+                    label: "Account number",
+                    value: BANK_ACCOUNT.number,
+                    id: "bank-account-number",
+                  },
+                  { label: "IFSC", value: BANK_ACCOUNT.ifsc, id: "bank-ifsc" },
+                  { label: "Bank", value: BANK_ACCOUNT.bank },
+                  { label: "Branch", value: BANK_ACCOUNT.branch },
+                ].map(({ label, value, id }) => (
+                  <div
+                    key={label}
+                    className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 py-3 border-b border-border last:border-0"
+                  >
+                    <dt className="sm:w-40 flex-shrink-0 text-sm font-semibold text-foreground">
+                      {label}
+                    </dt>
+                    <dd className="flex items-center justify-between sm:justify-start gap-3 flex-1 min-w-0">
+                      <span
+                        id={id}
+                        className="text-base font-semibold text-foreground break-all"
+                      >
+                        {value}
+                      </span>
+                      {id && (
+                        <CopyButton
+                          value={value}
+                          targetId={id}
+                          label={label}
+                          size="sm"
+                        />
+                      )}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </Card>
+          </div>
 
           {/* After giving + registration */}
           <aside className="lg:col-span-2 space-y-6">
@@ -176,8 +251,9 @@ export default function DonatePage() {
                 After You Give
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-5">
-                Please send us your name and UPI transaction ID so we can thank
-                you personally and send an acknowledgement.
+                Please send us your name and the UPI transaction ID or bank UTR
+                number so we can thank you personally and send an
+                acknowledgement.
               </p>
               <div className="flex flex-col gap-3">
                 <a

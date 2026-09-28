@@ -40,8 +40,10 @@ test("shows the UPI ID and copies it", async ({
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   await page.goto(url("/donate"));
   await expect(page.locator("#upi-id")).toHaveText(UPI_ID);
-  await page.getByRole("button", { name: "Copy" }).click();
-  await expect(page.getByRole("button", { name: "Copied" })).toBeVisible();
+  await page.getByRole("button", { name: "Copy UPI ID" }).click();
+  await expect(
+    page.getByRole("button", { name: "UPI ID copied" })
+  ).toBeVisible();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
     UPI_ID
   );
@@ -50,6 +52,32 @@ test("shows the UPI ID and copies it", async ({
 const PARAMS =
   `pa=${UPI_ID}&pn=Maanav%20Sahayata&cu=INR` +
   "&tn=Donation%20to%20Manav%20Sahayata%20Trust";
+
+test("shows the trust's bank details and copies account number and IFSC", async ({
+  page,
+  context,
+}) => {
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  await page.goto(url("/donate"));
+  const bank = page.locator("dl");
+  for (const text of [
+    "Maanav Sahayata Trust",
+    "50200081701516",
+    "HDFC0009397",
+    "HDFC Bank",
+    "Yendada, Visakhapatnam 530045",
+  ]) {
+    await expect(bank).toContainText(text);
+  }
+  await page.getByRole("button", { name: "Copy Account number" }).click();
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
+    "50200081701516"
+  );
+  await page.getByRole("button", { name: "Copy IFSC" }).click();
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
+    "HDFC0009397"
+  );
+});
 
 test("phones get Google Pay, PhonePe, and Paytm buttons for the trust's UPI ID", async ({
   page,

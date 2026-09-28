@@ -52,11 +52,24 @@ export function upiAppLinks(isIOS: boolean) {
   ];
 }
 
+/**
+ * Bank account for NEFT / RTGS / IMPS transfers (from the trust, 2026-09-27).
+ * IFSC verified: HDFC Bank, Yendada branch, Visakhapatnam 530045. The account name is the
+ * bank's spelling ("Maanav") and must be shown exactly as the bank has it.
+ */
+export const BANK_ACCOUNT = {
+  name: "Maanav Sahayata Trust",
+  number: "50200081701516",
+  ifsc: "HDFC0009397",
+  bank: "HDFC Bank",
+  branch: "Yendada, Visakhapatnam 530045",
+};
+
 /** WhatsApp message for donors sharing their transaction details after giving */
 export const WHATSAPP_DONATED_LINK =
   "https://wa.me/919533843636?text=" +
   encodeURIComponent(
-    "Hello, I just donated to Manav Sahayata Trust by UPI.\nName: \nAmount: \nUPI transaction ID: "
+    "Hello, I just donated to Manav Sahayata Trust.\nName: \nAmount: \nPaid by (UPI / bank transfer): \nUPI transaction ID or bank UTR: "
   );
 
 export const PHONE_DISPLAY = "+91 95338 43636";
