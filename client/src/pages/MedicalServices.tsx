@@ -1,18 +1,20 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Heart, Pill, Building2, Eye, MessageCircle } from "lucide-react";
+import { Heart, Pill, Building2, Eye } from "lucide-react";
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function MedicalServicesProgram() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const whatsappDonationLink = "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20MST's%20Medical%20Services%20program";
+  const whatsappDonationLink =
+    "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20MST's%20Medical%20Services%20program";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -28,7 +30,9 @@ export default function MedicalServicesProgram() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src={getAssetPath("/images/tribal/IMG_20251207_123121544_HDR_AE.jpg")}
+                src={getAssetPath(
+                  "/images/tribal/IMG_20251207_123121544_HDR_AE.jpg"
+                )}
                 alt="Medical camp providing healthcare in tribal village"
                 className="w-full rounded-lg object-cover aspect-[4/3]"
               />
@@ -38,16 +42,25 @@ export default function MedicalServicesProgram() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-1 h-8 bg-secondary" />
-                <span className="text-sm font-semibold text-secondary uppercase tracking-wide">Healthcare Access</span>
+                <span className="text-sm font-semibold text-secondary uppercase tracking-wide">
+                  Healthcare Access
+                </span>
               </div>
               <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
                 No One Should Suffer Without Care
               </h1>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-                In remote tribal villages, a simple infection can become life-threatening. Mothers give birth without prenatal care. The elderly go blind from cataracts that could easily be treated. These aren't rare tragedies—they're daily realities when healthcare is hours away and unaffordable.
+                In remote tribal villages, a simple infection can become
+                life-threatening. Mothers give birth without prenatal care. The
+                elderly go blind from cataracts that could easily be treated.
+                These aren't rare tragedies—they're daily realities when
+                healthcare is hours away and unaffordable.
               </p>
               <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-                We bring doctors, medicines, and hope directly to these communities through medical camps, free treatments, and financial assistance for hospital care. Because healthcare is a right, not a privilege.
+                We bring doctors, medicines, and hope directly to these
+                communities through medical camps, free treatments, and
+                financial assistance for hospital care. Because healthcare is a
+                right, not a privilege.
               </p>
             </div>
           </div>
@@ -65,10 +78,15 @@ export default function MedicalServicesProgram() {
                 <div className="p-3 rounded-lg bg-primary">
                   <Heart className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Medical Camps</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                  Medical Camps
+                </h3>
               </div>
               <p className="text-base text-foreground/80 leading-relaxed">
-                Regular health camps in tribal villages provide free medical consultations, basic health check-ups, and immediate care. We bring doctors and medical professionals to communities that have limited or no access to healthcare facilities.
+                Regular health camps in tribal villages provide free medical
+                consultations, basic health check-ups, and immediate care. We
+                bring doctors and medical professionals to communities that have
+                limited or no access to healthcare facilities.
               </p>
             </Card>
 
@@ -77,10 +95,15 @@ export default function MedicalServicesProgram() {
                 <div className="p-3 rounded-lg bg-secondary">
                   <Pill className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Medicine Distribution</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                  Medicine Distribution
+                </h3>
               </div>
               <p className="text-base text-foreground/80 leading-relaxed">
-                Essential medicines are distributed to remote communities, ensuring that families have access to basic treatments for common ailments. This program prevents minor health issues from becoming serious due to lack of medication.
+                Essential medicines are distributed to remote communities,
+                ensuring that families have access to basic treatments for
+                common ailments. This program prevents minor health issues from
+                becoming serious due to lack of medication.
               </p>
             </Card>
 
@@ -89,10 +112,15 @@ export default function MedicalServicesProgram() {
                 <div className="p-3 rounded-lg bg-primary">
                   <Building2 className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Hospital Treatment Support</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                  Hospital Treatment Support
+                </h3>
               </div>
               <p className="text-base text-foreground/80 leading-relaxed">
-                Financial assistance for hospital treatment at nearby facilities helps families access critical care they couldn't otherwise afford. We support surgeries, specialized treatments, and ongoing medical needs.
+                Financial assistance for hospital treatment at nearby facilities
+                helps families access critical care they couldn't otherwise
+                afford. We support surgeries, specialized treatments, and
+                ongoing medical needs.
               </p>
             </Card>
 
@@ -101,10 +129,15 @@ export default function MedicalServicesProgram() {
                 <div className="p-3 rounded-lg bg-secondary">
                   <Eye className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Eye Care & Cataract Surgeries</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                  Eye Care & Cataract Surgeries
+                </h3>
               </div>
               <p className="text-base text-foreground/80 leading-relaxed">
-                Through partnerships with organizations like Vema Netralaya, we conduct eye camps, perform cataract surgeries, and distribute eyeglasses—restoring sight and independence to elderly community members.
+                Through partnerships with organizations like Vema Netralaya, we
+                conduct eye camps, perform cataract surgeries, and distribute
+                eyeglasses—restoring sight and independence to elderly community
+                members.
               </p>
             </Card>
           </div>
@@ -117,21 +150,30 @@ export default function MedicalServicesProgram() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">Women & Mothers</h4>
+              <h4 className="font-bold text-lg mb-2 text-foreground">
+                Women & Mothers
+              </h4>
               <p className="text-foreground/80 leading-relaxed">
-                Prenatal care, maternal health services, and treatment for conditions that disproportionately affect women in remote areas.
+                Prenatal care, maternal health services, and treatment for
+                conditions that disproportionately affect women in remote areas.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">Children</h4>
+              <h4 className="font-bold text-lg mb-2 text-foreground">
+                Children
+              </h4>
               <p className="text-foreground/80 leading-relaxed">
-                Pediatric care, vaccinations, treatment for common childhood illnesses, and nutritional support for healthy development.
+                Pediatric care, vaccinations, treatment for common childhood
+                illnesses, and nutritional support for healthy development.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">Elderly</h4>
+              <h4 className="font-bold text-lg mb-2 text-foreground">
+                Elderly
+              </h4>
               <p className="text-foreground/80 leading-relaxed">
-                Chronic disease management, cataract surgeries, mobility support, and specialized care for age-related health conditions.
+                Chronic disease management, cataract surgeries, mobility
+                support, and specialized care for age-related health conditions.
               </p>
             </div>
           </div>
@@ -161,13 +203,23 @@ export default function MedicalServicesProgram() {
                 Donkada Village & Beyond
               </h3>
               <p className="text-base text-foreground/80 mb-4 leading-relaxed">
-                In remote villages like Donkada, where there are no roads or basic facilities, MST has provided comprehensive healthcare support to women, children, and elderly patients. These communities face extreme poverty and isolation, making access to medical care nearly impossible without intervention.
+                In remote villages like Donkada, where there are no roads or
+                basic facilities, MST has provided comprehensive healthcare
+                support to women, children, and elderly patients. These
+                communities face extreme poverty and isolation, making access to
+                medical care nearly impossible without intervention.
               </p>
               <p className="text-base text-foreground/80 mb-4 leading-relaxed">
-                Our medical camps bring immediate relief—treating infections, providing prenatal care, addressing chronic conditions, and arranging life-changing surgeries. For many families, this is their only access to professional medical care.
+                Our medical camps bring immediate relief—treating infections,
+                providing prenatal care, addressing chronic conditions, and
+                arranging life-changing surgeries. For many families, this is
+                their only access to professional medical care.
               </p>
               <p className="text-base text-foreground/80 leading-relaxed">
-                Healthcare doesn't stand alone. Our medical work goes hand in hand with our education, distribution, and cultural programs, so families receive care for the whole person and the whole community.
+                Healthcare doesn't stand alone. Our medical work goes hand in
+                hand with our education, distribution, and cultural programs, so
+                families receive care for the whole person and the whole
+                community.
               </p>
             </div>
           </div>
@@ -179,10 +231,18 @@ export default function MedicalServicesProgram() {
             Partnerships for Greater Impact
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-            MST collaborates with medical professionals, hospitals, and organizations to maximize our impact. Our partnership with <strong>Vema Netralaya</strong> has enabled us to conduct specialized eye camps and cataract surgeries in tribal villages, transforming the lives of elderly community members who had lost their sight.
+            MST collaborates with medical professionals, hospitals, and
+            organizations to maximize our impact. Our partnership with{" "}
+            <strong>Vema Netralaya</strong> has enabled us to conduct
+            specialized eye camps and cataract surgeries in tribal villages,
+            transforming the lives of elderly community members who had lost
+            their sight.
           </p>
           <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-            Local doctors volunteer their time to conduct health camps, and nearby hospitals provide discounted or subsidized care to patients referred by the Trust. These collaborations ensure that quality healthcare reaches even the most remote areas.
+            Local doctors volunteer their time to conduct health camps, and
+            nearby hospitals provide discounted or subsidized care to patients
+            referred by the Trust. These collaborations ensure that quality
+            healthcare reaches even the most remote areas.
           </p>
         </div>
 
@@ -196,7 +256,9 @@ export default function MedicalServicesProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/tribal/IMG_20251207_123010466_HDR_AE.jpg")}
+                src={getAssetPath(
+                  "/images/tribal/IMG_20251207_123010466_HDR_AE.jpg"
+                )}
                 alt="Community medical outreach"
                 className="w-full rounded-lg object-cover aspect-video"
               />
@@ -214,7 +276,9 @@ export default function MedicalServicesProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/tribal/WhatsApp Image 2026-01-05 at 6.09.28 PM (1).jpeg")}
+                src={getAssetPath(
+                  "/images/tribal/WhatsApp Image 2026-01-05 at 6.09.28 PM (1).jpeg"
+                )}
                 alt="Healthcare support in tribal communities"
                 className="w-full rounded-lg object-cover aspect-video"
               />
@@ -228,14 +292,20 @@ export default function MedicalServicesProgram() {
             Bring Healthcare to Those Who Need It Most
           </h3>
           <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Your support funds medical camps, provides medicines, and helps families afford life-saving treatments. You can be the reason someone receives care when they need it most.
+            Your support funds medical camps, provides medicines, and helps
+            families afford life-saving treatments. You can be the reason
+            someone receives care when they need it most.
           </p>
-          <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
+          <a
+            href={whatsappDonationLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 flex items-center gap-2 mx-auto"
             >
-              <MessageCircle className="w-5 h-5" />
+              <WhatsAppIcon className="w-5 h-5" />
               Chat With Us to Donate
             </Button>
           </a>

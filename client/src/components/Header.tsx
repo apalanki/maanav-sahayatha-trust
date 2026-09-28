@@ -1,9 +1,10 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { getAssetPath } from "@/lib/utils";
 import { PROGRAMS, homeSectionHref } from "@/lib/programs";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -81,7 +82,7 @@ export default function Header() {
                 size="sm"
                 className="bg-primary hover:bg-primary/90 flex items-center gap-2"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
                 Donate
               </Button>
             </a>
@@ -142,7 +143,7 @@ export default function Header() {
                   size="sm"
                   className="w-full bg-primary hover:bg-primary/90 flex items-center justify-center gap-2"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <WhatsAppIcon className="w-4 h-4" />
                   Donate
                 </Button>
               </a>

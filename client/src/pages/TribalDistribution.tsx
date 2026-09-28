@@ -1,18 +1,20 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MapPin, Users, Package, Eye, MessageCircle } from "lucide-react";
+import { MapPin, Users, Package, Eye } from "lucide-react";
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ProgramBreadcrumb, OtherPrograms } from "@/components/ProgramNav";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function TribalDistributionProgram() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const whatsappDonationLink = "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20MST's%20Tribal%20Distribution%20program";
+  const whatsappDonationLink =
+    "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20MST's%20Tribal%20Distribution%20program";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -29,16 +31,25 @@ export default function TribalDistributionProgram() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-1 h-8 bg-primary" />
-                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Community Service</span>
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+                  Community Service
+                </span>
               </div>
               <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
                 Meeting Basic Needs with Dignity
               </h1>
               <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-                Imagine winter in a remote village with no warm clothing for your children. Imagine watching your elderly parents struggle without basic supplies. For thousands of tribal families across Andhra Pradesh, these aren't hypotheticals—they're everyday challenges.
+                Imagine winter in a remote village with no warm clothing for
+                your children. Imagine watching your elderly parents struggle
+                without basic supplies. For thousands of tribal families across
+                Andhra Pradesh, these aren't hypotheticals—they're everyday
+                challenges.
               </p>
               <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-                We provide warm sweaters for children, sarees and blankets for families, eye care camps, and essential supplies—delivered with respect and in partnership with local communities. Because everyone deserves their basic needs met with dignity.
+                We provide warm sweaters for children, sarees and blankets for
+                families, eye care camps, and essential supplies—delivered with
+                respect and in partnership with local communities. Because
+                everyone deserves their basic needs met with dignity.
               </p>
             </div>
 
@@ -65,13 +76,19 @@ export default function TribalDistributionProgram() {
                 <div className="p-3 rounded-lg bg-secondary">
                   <Package className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Clothing Distribution</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                  Clothing Distribution
+                </h3>
               </div>
               <p className="text-base text-foreground/80 mb-4 leading-relaxed">
-                Sweaters for children, sarees and dhotis for adults, and warm blankets for families—distributed annually before winter to ensure tribal communities stay warm and healthy during cold months.
+                Sweaters for children, sarees and dhotis for adults, and warm
+                blankets for families—distributed annually before winter to
+                ensure tribal communities stay warm and healthy during cold
+                months.
               </p>
               <p className="text-sm text-muted-foreground italic">
-                Thousands of families across remote villages receive essential clothing and winter supplies through our distribution events.
+                Thousands of families across remote villages receive essential
+                clothing and winter supplies through our distribution events.
               </p>
             </Card>
 
@@ -80,13 +97,18 @@ export default function TribalDistributionProgram() {
                 <div className="p-3 rounded-lg bg-secondary">
                   <Eye className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Eye Camps & Cataract Surgeries</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                  Eye Camps & Cataract Surgeries
+                </h3>
               </div>
               <p className="text-base text-foreground/80 mb-4 leading-relaxed">
-                Specialized eye camps bring ophthalmologists to tribal villages. Cataract surgeries restore sight to elderly community members, and eyeglasses are distributed to those with vision impairments.
+                Specialized eye camps bring ophthalmologists to tribal villages.
+                Cataract surgeries restore sight to elderly community members,
+                and eyeglasses are distributed to those with vision impairments.
               </p>
               <p className="text-sm text-muted-foreground italic">
-                Run in partnership with local doctors and medical organizations, these camps transform lives by restoring sight.
+                Run in partnership with local doctors and medical organizations,
+                these camps transform lives by restoring sight.
               </p>
             </Card>
 
@@ -95,13 +117,18 @@ export default function TribalDistributionProgram() {
                 <div className="p-3 rounded-lg bg-primary">
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Essential Supplies</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                  Essential Supplies
+                </h3>
               </div>
               <p className="text-base text-foreground/80 mb-4 leading-relaxed">
-                Beyond clothing, we distribute essential household items, school supplies for children, and other necessities based on community needs and priorities identified through local partnerships.
+                Beyond clothing, we distribute essential household items, school
+                supplies for children, and other necessities based on community
+                needs and priorities identified through local partnerships.
               </p>
               <p className="text-sm text-muted-foreground italic">
-                We meet immediate needs while building relationships that lead to lasting development.
+                We meet immediate needs while building relationships that lead
+                to lasting development.
               </p>
             </Card>
 
@@ -110,13 +137,19 @@ export default function TribalDistributionProgram() {
                 <div className="p-3 rounded-lg bg-primary">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">Village Outreach</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                  Village Outreach
+                </h3>
               </div>
               <p className="text-base text-foreground/80 mb-4 leading-relaxed">
-                Our distribution events reach villages across multiple districts, bringing support to communities living in extreme isolation with limited infrastructure and no access to markets or services.
+                Our distribution events reach villages across multiple
+                districts, bringing support to communities living in extreme
+                isolation with limited infrastructure and no access to markets
+                or services.
               </p>
               <p className="text-sm text-muted-foreground italic">
-                Serving tribal villages across Andhra Pradesh, from coastal regions to remote hill areas.
+                Serving tribal villages across Andhra Pradesh, from coastal
+                regions to remote hill areas.
               </p>
             </Card>
           </div>
@@ -156,13 +189,23 @@ export default function TribalDistributionProgram() {
                 Reaching Remote Communities
               </h3>
               <p className="text-base text-foreground/80 mb-4 leading-relaxed">
-                Tribal villages are often located in areas with no roads, no electricity, and extremely limited access to basic services. Families live in poverty, subsisting on minimal resources, and face harsh conditions—especially during winter months.
+                Tribal villages are often located in areas with no roads, no
+                electricity, and extremely limited access to basic services.
+                Families live in poverty, subsisting on minimal resources, and
+                face harsh conditions—especially during winter months.
               </p>
               <p className="text-base text-foreground/80 mb-4 leading-relaxed">
-                MST's distribution programs bring tangible, immediate relief to these communities. A warm sweater for a child, a saree for a mother, a blanket for an elderly family member—these are not luxuries but necessities that improve health, dignity, and quality of life.
+                MST's distribution programs bring tangible, immediate relief to
+                these communities. A warm sweater for a child, a saree for a
+                mother, a blanket for an elderly family member—these are not
+                luxuries but necessities that improve health, dignity, and
+                quality of life.
               </p>
               <p className="text-base text-foreground/80 leading-relaxed">
-                Beyond material support, these distribution events create connections between MST and tribal communities, building trust that enables our other programs—education, medical care, and cultural preservation—to flourish.
+                Beyond material support, these distribution events create
+                connections between MST and tribal communities, building trust
+                that enables our other programs—education, medical care, and
+                cultural preservation—to flourish.
               </p>
             </div>
           </div>
@@ -174,25 +217,39 @@ export default function TribalDistributionProgram() {
             A Holistic, Community-Centered Approach
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-            Our distribution work is more than one-time relief—it's part of MST's wider commitment to community development. We coordinate distribution events with medical camps, educational outreach, and cultural programs.
+            Our distribution work is more than one-time relief—it's part of
+            MST's wider commitment to community development. We coordinate
+            distribution events with medical camps, educational outreach, and
+            cultural programs.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">Integration with Medical Care</h4>
+              <h4 className="font-bold text-lg mb-2 text-foreground">
+                Integration with Medical Care
+              </h4>
               <p className="text-foreground/80 text-sm leading-relaxed">
-                Distribution events often include medical camps, allowing us to address both immediate material needs and health concerns in a single visit.
+                Distribution events often include medical camps, allowing us to
+                address both immediate material needs and health concerns in a
+                single visit.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">Partnership with Local Leaders</h4>
+              <h4 className="font-bold text-lg mb-2 text-foreground">
+                Partnership with Local Leaders
+              </h4>
               <p className="text-foreground/80 text-sm leading-relaxed">
-                We work closely with village elders, community leaders, and local organizations to ensure support reaches those who need it most.
+                We work closely with village elders, community leaders, and
+                local organizations to ensure support reaches those who need it
+                most.
               </p>
             </div>
             <div>
-              <h4 className="font-bold text-lg mb-2 text-foreground">Respect for Tribal Culture</h4>
+              <h4 className="font-bold text-lg mb-2 text-foreground">
+                Respect for Tribal Culture
+              </h4>
               <p className="text-foreground/80 text-sm leading-relaxed">
-                All programs are conducted with deep respect for tribal traditions, customs, and decision-making processes.
+                All programs are conducted with deep respect for tribal
+                traditions, customs, and decision-making processes.
               </p>
             </div>
           </div>
@@ -204,10 +261,18 @@ export default function TribalDistributionProgram() {
             Partnership with Bhagavan Sri Sathya Sai Seva Trust
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
-            Through our collaboration with <strong>Bhagavan Sri Sathya Sai Seva Trust</strong> in Visakhapatnam, we have significantly expanded our reach and impact. This partnership enables us to conduct large-scale distribution events that serve thousands of families across remote tribal regions.
+            Through our collaboration with{" "}
+            <strong>Bhagavan Sri Sathya Sai Seva Trust</strong> in
+            Visakhapatnam, we have significantly expanded our reach and impact.
+            This partnership enables us to conduct large-scale distribution
+            events that serve thousands of families across remote tribal
+            regions.
           </p>
           <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-            Together, we coordinate logistics, mobilize volunteers, and ensure that essential supplies reach even the most isolated villages—bringing warmth, dignity, and hope to communities that are often overlooked.
+            Together, we coordinate logistics, mobilize volunteers, and ensure
+            that essential supplies reach even the most isolated
+            villages—bringing warmth, dignity, and hope to communities that are
+            often overlooked.
           </p>
         </div>
 
@@ -239,7 +304,9 @@ export default function TribalDistributionProgram() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={getAssetPath("/images/tribal/WhatsApp Image 2025-12-04 at 8.34.50 AM (2).jpeg")}
+                src={getAssetPath(
+                  "/images/tribal/WhatsApp Image 2025-12-04 at 8.34.50 AM (2).jpeg"
+                )}
                 alt="Tribal outreach program"
                 className="w-full rounded-lg object-cover aspect-video"
               />
@@ -253,14 +320,20 @@ export default function TribalDistributionProgram() {
             Bring Warmth and Hope to Remote Villages
           </h3>
           <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
-            Your support provides warm clothing for children before winter, essential supplies for families, and eye care that restores sight. Help us reach more tribal villages where basic needs often go unmet.
+            Your support provides warm clothing for children before winter,
+            essential supplies for families, and eye care that restores sight.
+            Help us reach more tribal villages where basic needs often go unmet.
           </p>
-          <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer">
+          <a
+            href={whatsappDonationLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 flex items-center gap-2 mx-auto"
             >
-              <MessageCircle className="w-5 h-5" />
+              <WhatsAppIcon className="w-5 h-5" />
               Chat With Us to Donate
             </Button>
           </a>

@@ -12,12 +12,20 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Heart, Users, BookOpen, Stethoscope, Home as HomeIcon, MapPin, MessageCircle } from "lucide-react";
+import {
+  Heart,
+  Users,
+  BookOpen,
+  Stethoscope,
+  Home as HomeIcon,
+  MapPin,
+} from "lucide-react";
 import { Link } from "wouter";
 import { getCardStyle } from "@/lib/branding";
 import { getAssetPath } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function HomePage() {
   // Scroll to a section when arriving from another page via a link like /#about
@@ -61,7 +69,8 @@ export default function HomePage() {
   ];
 
   // WhatsApp donation link - opens chat with pre-filled message
-  const whatsappDonationLink = "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20Manav%20Sahayata%20Trust";
+  const whatsappDonationLink =
+    "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20Manav%20Sahayata%20Trust";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -75,23 +84,41 @@ export default function HomePage() {
             <div>
               <div className="flex items-center gap-2 sm:gap-3 mb-6">
                 <div className="w-1 h-6 sm:h-8 bg-primary flex-shrink-0" />
-                <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wide">Service to Others is the Purpose of Life</span>
+                <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wide">
+                  Service to Others is the Purpose of Life
+                </span>
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Together, We Bring Education, Healthcare & Hope to Tribal Villages
+                Together, We Bring Education, Healthcare & Hope to Tribal
+                Villages
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
-                Since 2004, Manav Sahayata Trust has been bringing hope to rural and tribal communities through education, healthcare, and cultural support—treating every person with dignity and respect. With your help, we can reach even more families.
+                Since 2004, Manav Sahayata Trust has been bringing hope to rural
+                and tribal communities through education, healthcare, and
+                cultural support—treating every person with dignity and respect.
+                With your help, we can reach even more families.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                  <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-semibold flex items-center justify-center gap-2">
-                    <MessageCircle className="w-5 h-5" />
+                <a
+                  href={whatsappDonationLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-semibold flex items-center justify-center gap-2"
+                  >
+                    <WhatsAppIcon className="w-5 h-5" />
                     Donate Today
                   </Button>
                 </a>
                 <a href="#story" className="w-full sm:w-auto">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary/5">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary/5"
+                  >
                     Read Their Story
                   </Button>
                 </a>
@@ -101,7 +128,9 @@ export default function HomePage() {
             {/* Image */}
             <div className="bg-white p-4 rounded-lg shadow-lg">
               <img
-                src={getAssetPath("/images/tribal/IMG_20251207_123010466_HDR_AE.jpg")}
+                src={getAssetPath(
+                  "/images/tribal/IMG_20251207_123010466_HDR_AE.jpg"
+                )}
                 alt="MST community gathering - serving tribal communities"
                 className="w-full rounded-lg bg-white object-cover aspect-[4/3]"
               />
@@ -111,26 +140,40 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-8 sm:py-12 md:py-14 section-textured scroll-mt-24">
+      <section
+        id="about"
+        className="py-8 sm:py-12 md:py-14 section-textured scroll-mt-24"
+      >
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Content */}
             <div className="md:order-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-1 h-8 bg-primary" />
-                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Founded on Service</span>
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+                  Founded on Service
+                </span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Our Story
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-                Our journey began in 2004 as quiet, grassroots service to rural and tribal communities—not with fanfare, but with steady commitment. After nearly two decades of building trust and relationships, we became a formally registered trust in 2023.
+                Our journey began in 2004 as quiet, grassroots service to rural
+                and tribal communities—not with fanfare, but with steady
+                commitment. After nearly two decades of building trust and
+                relationships, we became a formally registered trust in 2023.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
-                We believe in Swami Vivekananda's timeless truth: <em>"Service to others is the purpose of life."</em> That's why we support those who need it most, treating every person with dignity and recognizing that potential exists everywhere—it just needs opportunity.
+                We believe in Swami Vivekananda's timeless truth:{" "}
+                <em>"Service to others is the purpose of life."</em> That's why
+                we support those who need it most, treating every person with
+                dignity and recognizing that potential exists everywhere—it just
+                needs opportunity.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                Working alongside local partners and volunteers, we focus on sustainable, community-led change that lasts beyond our involvement.
+                Working alongside local partners and volunteers, we focus on
+                sustainable, community-led change that lasts beyond our
+                involvement.
               </p>
             </div>
 
@@ -149,18 +192,26 @@ export default function HomePage() {
       </section>
 
       {/* Programs Section */}
-      <section id="programs" className="py-8 sm:py-12 md:py-14 bg-white scroll-mt-24">
+      <section
+        id="programs"
+        className="py-8 sm:py-12 md:py-14 bg-white scroll-mt-24"
+      >
         <div className="container">
           <div className="max-w-3xl mb-12">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-1 h-8 bg-primary" />
-              <span className="text-sm font-semibold text-primary uppercase tracking-wide">What We Do</span>
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+                What We Do
+              </span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
               Five Ways We Create Change
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground">
-              Every person has potential. Every community has strength. Our programs help unlock both—bringing education, healthcare, and cultural support to those who need it most. Your generosity makes every one of them possible.
+              Every person has potential. Every community has strength. Our
+              programs help unlock both—bringing education, healthcare, and
+              cultural support to those who need it most. Your generosity makes
+              every one of them possible.
             </p>
           </div>
 
@@ -173,15 +224,23 @@ export default function HomePage() {
                 <Card
                   key={index}
                   className={`p-6 sm:p-8 hover:shadow-lg transition-shadow h-full flex flex-col ${
-                    index === 4 ? 'md:col-span-2 md:max-w-md md:mx-auto' : ''
+                    index === 4 ? "md:col-span-2 md:max-w-md md:mx-auto" : ""
                   }`}
-                  style={{ border: style.border, backgroundColor: style.background }}
+                  style={{
+                    border: style.border,
+                    backgroundColor: style.background,
+                  }}
                 >
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-2.5 rounded-lg flex-shrink-0" style={{ backgroundColor: style.iconBackground }}>
+                    <div
+                      className="p-2.5 rounded-lg flex-shrink-0"
+                      style={{ backgroundColor: style.iconBackground }}
+                    >
                       <Icon className="w-5 h-5 text-white" />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground">{program.title}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                      {program.title}
+                    </h3>
                   </div>
                   <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed flex-grow">
                     {program.desc}
@@ -205,12 +264,17 @@ export default function HomePage() {
       </section>
 
       {/* Success Story Section */}
-      <section id="story" className="py-8 sm:py-12 md:py-14 section-textured scroll-mt-24">
+      <section
+        id="story"
+        className="py-8 sm:py-12 md:py-14 section-textured scroll-mt-24"
+      >
         <div className="container">
           <div className="max-w-3xl mb-12">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-1 h-8 bg-primary" />
-              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Real Stories, Real Impact</span>
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+                Real Stories, Real Impact
+              </span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
               From Students to Teachers—A Story of Hope
@@ -218,43 +282,73 @@ export default function HomePage() {
           </div>
 
           {/* Success Story */}
-          <Card className="p-6 sm:p-8 md:p-12 bg-white" style={{ borderLeft: `4px solid #003D7A` }}>
-            <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">Pragada Suresh and Ch. Santosh</h3>
+          <Card
+            className="p-6 sm:p-8 md:p-12 bg-white"
+            style={{ borderLeft: `4px solid #003D7A` }}
+          >
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
+              Pragada Suresh and Ch. Santosh
+            </h3>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-              Two young men from a remote tribal village in Donkada once struggled to afford their education. With support from MST and encouragement from generous donors, they persevered—and in 2025, both passed the District Selection Committee Teacher Recruitment Examination.
+              Two young men from a remote tribal village in Donkada once
+              struggled to afford their education. With support from MST and
+              encouragement from generous donors, they persevered—and in 2025,
+              both passed the District Selection Committee Teacher Recruitment
+              Examination.
             </p>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
-              Today, they teach in the same remote tribal areas where they grew up, serving their communities with dedication and earning deep respect from students and parents. Despite limited facilities and challenging conditions, they show up every day—because they know firsthand how education can transform a life.
+              Today, they teach in the same remote tribal areas where they grew
+              up, serving their communities with dedication and earning deep
+              respect from students and parents. Despite limited facilities and
+              challenging conditions, they show up every day—because they know
+              firsthand how education can transform a life.
             </p>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              This is the ripple effect of your support: students become teachers, beneficiaries become change-makers, and communities grow stronger across generations.
+              This is the ripple effect of your support: students become
+              teachers, beneficiaries become change-makers, and communities grow
+              stronger across generations.
             </p>
           </Card>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section id="donate" className="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground">
+      <section
+        id="donate"
+        className="py-16 sm:py-20 md:py-24 bg-primary text-primary-foreground"
+      >
         <div className="container text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               Be Part of Someone's Transformation
             </h2>
             <p className="text-base sm:text-lg mb-8 leading-relaxed opacity-95">
-              Your support—whether large or small—helps a student stay in school, restores sight to an elderly villager, or keeps cultural traditions alive. Every contribution creates real, lasting change in someone's life. Message us on WhatsApp, and we'll personally guide you on how to give.
+              Your support—whether large or small—helps a student stay in
+              school, restores sight to an elderly villager, or keeps cultural
+              traditions alive. Every contribution creates real, lasting change
+              in someone's life. Message us on WhatsApp, and we'll personally
+              guide you on how to give.
             </p>
-            <a href={whatsappDonationLink} target="_blank" rel="noopener noreferrer" className="inline-block">
+            <a
+              href={whatsappDonationLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
               <Button
                 size="lg"
                 className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary font-semibold flex items-center justify-center gap-2"
               >
-                <MessageCircle className="w-5 h-5" />
+                <WhatsAppIcon className="w-5 h-5" />
                 Chat With Us to Donate
               </Button>
             </a>
             <p className="mt-6 text-sm opacity-90">
               Prefer email?{" "}
-              <Link href="/contact?interest=donate" className="font-semibold underline underline-offset-4">
+              <Link
+                href="/contact?interest=donate"
+                className="font-semibold underline underline-offset-4"
+              >
                 Send us a message
               </Link>
             </p>

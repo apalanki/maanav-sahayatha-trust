@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { useSearch } from "wouter";
-import { CheckCircle2, MapPin, MessageCircle, Phone, Send } from "lucide-react";
+import { CheckCircle2, MapPin, Phone, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
@@ -13,11 +13,12 @@ import {
   WEB3FORMS_ENDPOINT,
   WHATSAPP_LINK,
 } from "@/lib/contact";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
 const fieldClass =
-  "w-full rounded-md border border-border bg-white px-3 py-2.5 text-base text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary";
+  "w-full rounded-md border border-border bg-white px-3 py-2.5 text-base text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary";
 const labelClass = "block text-sm font-semibold text-foreground mb-1.5";
 
 export default function ContactPage() {
@@ -83,19 +84,19 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
 
-      <main className="container py-8 sm:py-12">
+      <main className="container py-8">
         {/* Intro */}
         <div className="max-w-3xl mb-10">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-1 h-8 bg-primary" />
-            <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+          <div className="flex items-center gap-2 sm:gap-3 mb-4">
+            <div className="w-1 h-6 sm:h-8 bg-primary flex-shrink-0" />
+            <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wide">
               Get in Touch
             </span>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4 text-foreground">
+          <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
             We'd Love to Hear From You
           </h1>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
             Whether you'd like to support a student's education, sponsor a
             medical camp, volunteer, or simply learn more about our work, send
             us a message and we'll get back to you.
@@ -107,10 +108,10 @@ export default function ContactPage() {
           <Card className="lg:col-span-2 p-6 sm:p-8 bg-white">
             {!WEB3FORMS_ACCESS_KEY ? (
               <div>
-                <h2 className="text-2xl font-serif font-bold text-foreground mb-3">
+                <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-3">
                   Message Us on WhatsApp
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-6">
                   The quickest way to reach us is on WhatsApp. Tell us how you'd
                   like to help or what you'd like to know, and we'll reply
                   personally.
@@ -124,7 +125,7 @@ export default function ContactPage() {
                     size="lg"
                     className="bg-primary hover:bg-primary/90 flex items-center gap-2"
                   >
-                    <MessageCircle className="w-5 h-5" />
+                    <WhatsAppIcon className="w-5 h-5" />
                     Chat With Us on WhatsApp
                   </Button>
                 </a>
@@ -135,10 +136,10 @@ export default function ContactPage() {
                   className="w-12 h-12 text-primary mx-auto mb-4"
                   aria-hidden="true"
                 />
-                <h2 className="text-2xl font-serif font-bold text-foreground mb-3">
+                <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-3">
                   Thank you, {senderName}!
                 </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6 max-w-md mx-auto">
+                <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-6 max-w-md mx-auto">
                   Your message has been sent. We'll get back to you soon. We're
                   grateful you took the time to reach out.
                 </p>
@@ -152,7 +153,7 @@ export default function ContactPage() {
                 className="space-y-5"
                 aria-label="Contact form"
               >
-                <h2 className="text-2xl font-serif font-bold text-foreground">
+                <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary">
                   Send Us a Message
                 </h2>
 
@@ -186,7 +187,7 @@ export default function ContactPage() {
                   <div>
                     <label htmlFor="phone" className={labelClass}>
                       Phone / WhatsApp{" "}
-                      <span className="font-normal text-muted-foreground">
+                      <span className="font-normal text-foreground/60">
                         (optional)
                       </span>
                     </label>
@@ -225,7 +226,7 @@ export default function ContactPage() {
                 <div>
                   <label htmlFor="program" className={labelClass}>
                     Related program{" "}
-                    <span className="font-normal text-muted-foreground">
+                    <span className="font-normal text-foreground/60">
                       (optional)
                     </span>
                   </label>
@@ -297,7 +298,7 @@ export default function ContactPage() {
                     <Send className="w-4 h-4" />
                     {status === "sending" ? "Sending…" : "Send Message"}
                   </Button>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-sm text-foreground/70">
                     We'll only use your details to reply to you.
                   </p>
                 </div>
@@ -308,15 +309,12 @@ export default function ContactPage() {
           {/* Other ways to reach us */}
           <aside className="space-y-6">
             <Card className="p-6 bg-white">
-              <h2 className="text-xl font-serif font-bold text-foreground mb-4">
+              <h2 className="text-xl sm:text-2xl font-serif font-bold text-primary mb-4">
                 Other Ways to Reach Us
               </h2>
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start gap-3">
-                  <MessageCircle
-                    className="w-5 h-5 text-primary flex-shrink-0 mt-0.5"
-                    aria-hidden="true"
-                  />
+                  <WhatsAppIcon className="w-5 h-5 text-[#25D366] flex-shrink-0 mt-0.5" />
                   <span>
                     <span className="block font-semibold text-foreground">
                       WhatsApp
@@ -357,7 +355,7 @@ export default function ContactPage() {
                     <span className="block font-semibold text-foreground">
                       Address
                     </span>
-                    <span className="text-muted-foreground">
+                    <span className="text-foreground/80">
                       1416, MK Gold Coast, Yendada-530045
                       <br />
                       Visakhapatnam, Andhra Pradesh, India

@@ -30,7 +30,8 @@ Pushing to `main` runs the tests, then deploys to production (~2–3 minutes). T
 - **Never invent facts, numbers, names, or partnerships.** Unconfirmed claims go in
   `CONTENT_TO_VERIFY.md` as questions.
 - Donate buttons open WhatsApp (`wa.me/919533843636`), so label them honestly
-  ("Donate", "Chat With Us to Donate"). There is no payment page. The contact form (Web3Forms,
+  ("Donate", "Chat With Us to Donate"). There is no payment page. Show `<WhatsAppIcon />` (components/WhatsAppIcon.tsx)
+  on every WhatsApp link: white on navy buttons, WhatsApp green `#25D366` elsewhere (brand rules). The contact form (Web3Forms,
   free plan: 250 messages/month) emails `manavsahayata@gmail.com`; never call Web3Forms for real in tests.
 - Indian English context: "₹", "sarees", "dhotis", place names in Andhra Pradesh.
 
