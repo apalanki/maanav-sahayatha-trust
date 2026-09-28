@@ -9,7 +9,7 @@
 - [x] Program pages: Educational Support, Bala Vikas Schools, Medical Services, Tribal Distribution,
       Religious & Cultural Services
 - [x] Official MST branding (navy blue `#003D7A` and saffron orange `#FF9900`)
-- [x] Donor-focused copy; WhatsApp "Donate" / "Chat With Us to Donate" buttons
+- [x] Donor-focused copy; "Donate" buttons lead to the UPI Donate page
 - [x] Navigation: About Us and Contact links, keyboard-accessible Programs menu, breadcrumbs, and
       "Explore Our Other Programs" links; logo returns to the top of the home page
 - [x] Mobile-first responsive design (checked at phone and desktop widths)
