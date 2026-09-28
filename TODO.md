@@ -42,7 +42,6 @@
 - [ ] Add a direct way to give without chatting first: a UPI QR code / UPI ID and bank details, or
       Razorpay payment links (supports one-time and recurring donations in INR)
 - [x] Contact page with a form (Web3Forms → manavsahayata@gmail.com)
-- [ ] Add the Web3Forms access key to `client/src/lib/contact.ts` to switch the form on
 
 ### Content (Medium Priority)
 - [ ] News / updates page for recent camps, distributions, and events

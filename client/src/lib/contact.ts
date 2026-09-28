@@ -9,7 +9,8 @@
  * the Contact page hides the form and shows the other ways to get in touch.
  */
 export const WEB3FORMS_ACCESS_KEY: string =
-  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "";
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
+  "7ddcc658-6885-41bd-8e4c-1cc68d86c954";
 export const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 export const INQUIRY_TYPES = [
