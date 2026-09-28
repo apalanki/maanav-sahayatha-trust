@@ -19,13 +19,49 @@ function RouteMeta() {
   const [location] = useLocation();
 
   useEffect(() => {
-    const pages: Record<string, { title: string; description: string }> = seo.pages;
+    const pages: Record<string, { title: string; description: string }> =
+      seo.pages;
     const page = pages[location.replace(/(.)\/$/, "$1")];
     document.title = page?.title ?? `Page Not Found | ${seo.siteName}`;
     document
       .querySelector('meta[name="description"]')
-      ?.setAttribute("content", page?.description ?? seo.pages["/"].description);
+      ?.setAttribute(
+        "content",
+        page?.description ?? seo.pages["/"].description
+      );
   }, [location]);
+
+  return null;
+}
+
+/**
+ * Links to a section on the current page (e.g. "About Us" or "Read Their Story" on the home page)
+ * scroll smoothly without adding "#section" to the URL. Other links behave normally.
+ */
+function SmoothSectionLinks() {
+  useEffect(() => {
+    const onClick = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.button !== 0) return;
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+        return;
+      const link = (event.target as Element | null)?.closest?.("a[href*='#']");
+      if (!(link instanceof HTMLAnchorElement)) return;
+      const target = new URL(link.href);
+      if (
+        target.origin !== location.origin ||
+        target.pathname !== location.pathname
+      )
+        return;
+      const section = document.getElementById(
+        decodeURIComponent(target.hash.slice(1))
+      );
+      if (!section) return;
+      event.preventDefault();
+      section.scrollIntoView({ behavior: "smooth" });
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
 
   return null;
 }
@@ -38,7 +74,10 @@ function Router() {
       <Route path={"/programs/medical"} component={MedicalServices} />
       <Route path={"/programs/tribal"} component={TribalDistribution} />
       <Route path={"/programs/bala-vikas"} component={BalaVikas} />
-      <Route path={"/programs/religious-cultural"} component={ReligiousCultural} />
+      <Route
+        path={"/programs/religious-cultural"}
+        component={ReligiousCultural}
+      />
       <Route path={"/contact"} component={Contact} />
       {/* Final fallback route */}
       <Route component={NotFound} />
@@ -51,6 +90,7 @@ function App() {
     <ErrorBoundary>
       <WouterRouter base={basePath}>
         <RouteMeta />
+        <SmoothSectionLinks />
         <Router />
       </WouterRouter>
     </ErrorBoundary>

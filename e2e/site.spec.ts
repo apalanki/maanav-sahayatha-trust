@@ -80,7 +80,8 @@ test.describe("navigation", () => {
   }) => {
     await page.goto(url("/programs/medical"));
     await (await headerLink(page, isMobile, "About Us")).click();
-    await expect(page).toHaveURL(url("/#about"));
+    // Lands on the home page with the fragment removed from the URL
+    await expect(page).toHaveURL(url("/"));
     await expect
       .poll(() =>
         page.evaluate(
@@ -88,6 +89,21 @@ test.describe("navigation", () => {
         )
       )
       .toBeLessThan(300);
+  });
+
+  test("in-page links scroll without adding a #fragment to the URL", async ({
+    page,
+    isMobile,
+  }) => {
+    await page.goto(url("/"));
+    await (await headerLink(page, isMobile, "About Us")).click();
+    await expect(page.locator("#about")).toBeInViewport();
+    expect(page.url()).toBe(url("/"));
+
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.getByRole("link", { name: "Read Their Story" }).click();
+    await expect(page.locator("#story")).toBeInViewport();
+    expect(page.url()).toBe(url("/"));
   });
 
   test("Contact opens the contact page", async ({ page, isMobile }) => {

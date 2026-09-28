@@ -28,10 +28,19 @@ import Footer from "@/components/Footer";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function HomePage() {
-  // Scroll to a section when arriving from another page via a link like /#about
+  // Arriving from another page via a link like /#about: scroll to the section,
+  // then drop the fragment so it doesn't linger in the address bar
   useEffect(() => {
-    if (window.location.hash) {
-      document.getElementById(window.location.hash.slice(1))?.scrollIntoView();
+    const target =
+      window.location.hash &&
+      document.getElementById(window.location.hash.slice(1));
+    if (target) {
+      target.scrollIntoView();
+      history.replaceState(
+        history.state,
+        "",
+        window.location.pathname + window.location.search
+      );
     }
   }, []);
 
