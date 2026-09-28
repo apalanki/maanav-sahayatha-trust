@@ -39,7 +39,7 @@ const organization = {
   "@context": "https://schema.org",
   "@type": "NGO",
   name: siteName,
-  alternateName: "MST",
+  alternateName: ["MST", "Manav Sahayata Trust"],
   url: `${siteUrl}/`,
   logo: assetUrl("/logo.png"),
   image: assetUrl(pages["/"].image),

@@ -1,6 +1,6 @@
-# Manav Sahayata Trust – Website
+# Maanav Sahayata Trust – Website
 
-Website for **Manav Sahayata Trust (MST)**, a charity serving rural and tribal communities near
+Website for **Maanav Sahayata Trust (MST)**, a charity serving rural and tribal communities near
 Visakhapatnam, Andhra Pradesh since 2004 (education, healthcare, Bala Vikas after-school centers,
 tribal outreach, and religious & cultural programs).
 

@@ -1,5 +1,5 @@
 /**
- * Home Page - Manav Sahayata Trust
+ * Home Page - Maanav Sahayata Trust
  *
  * Design Philosophy: Humanitarian Editorial Modernism
  * - Documentary clarity and dignity
@@ -105,7 +105,7 @@ export default function HomePage() {
                 Villages
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
-                Since 2004, Manav Sahayata Trust has been bringing hope to rural
+                Since 2004, Maanav Sahayata Trust has been bringing hope to rural
                 and tribal communities through education, healthcare, and
                 cultural support—treating every person with dignity and respect.
                 With your help, we can reach even more families.
@@ -351,7 +351,7 @@ export default function HomePage() {
             <p className="mt-6 text-sm opacity-90">
               Prefer to talk first?{" "}
               <a
-                href="https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20Manav%20Sahayata%20Trust"
+                href="https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20support%20Maanav%20Sahayata%20Trust"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold underline underline-offset-4"

@@ -30,7 +30,7 @@ export const UPI_ID = "maanavsahayata@okhdfcbank";
 export const UPI_PAYEE_NAME = "Maanav Sahayata";
 const UPI_PARAMS =
   `pa=${UPI_ID}&pn=${encodeURIComponent(UPI_PAYEE_NAME)}&cu=INR` +
-  `&tn=${encodeURIComponent("Donation to Manav Sahayata Trust")}`;
+  `&tn=${encodeURIComponent("Donation to Maanav Sahayata Trust")}`;
 
 /** Generic UPI link: the phone asks which UPI app to use (BHIM, bank apps, …) */
 export const UPI_PAY_LINK = `upi://pay?${UPI_PARAMS}`;
@@ -54,8 +54,8 @@ export function upiAppLinks(isIOS: boolean) {
 
 /**
  * Bank account for NEFT / RTGS / IMPS transfers (from the trust, 2026-09-27).
- * IFSC verified: HDFC Bank, Yendada branch, Visakhapatnam 530045. The account name is the
- * bank's spelling ("Maanav") and must be shown exactly as the bank has it.
+ * IFSC verified: HDFC Bank, Yendada branch, Visakhapatnam 530045. The account name must be
+ * shown exactly as the bank has it.
  */
 export const BANK_ACCOUNT = {
   name: "Maanav Sahayata Trust",
@@ -69,9 +69,9 @@ export const BANK_ACCOUNT = {
 export const WHATSAPP_DONATED_LINK =
   "https://wa.me/919533843636?text=" +
   encodeURIComponent(
-    "Hello, I just donated to Manav Sahayata Trust.\nName: \nAmount: \nPaid by (UPI / bank transfer): \nUPI transaction ID or bank UTR: "
+    "Hello, I just donated to Maanav Sahayata Trust.\nName: \nAmount: \nPaid by (UPI / bank transfer): \nUPI transaction ID or bank UTR: "
   );
 
 export const PHONE_DISPLAY = "+91 95338 43636";
 export const WHATSAPP_LINK =
-  "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Manav%20Sahayata%20Trust";
+  "https://wa.me/919533843636?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Maanav%20Sahayata%20Trust";

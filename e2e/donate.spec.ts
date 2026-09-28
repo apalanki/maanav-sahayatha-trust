@@ -51,7 +51,7 @@ test("shows the UPI ID and copies it", async ({
 
 const PARAMS =
   `pa=${UPI_ID}&pn=Maanav%20Sahayata&cu=INR` +
-  "&tn=Donation%20to%20Manav%20Sahayata%20Trust";
+  "&tn=Donation%20to%20Maanav%20Sahayata%20Trust";
 
 test("shows the trust's bank details and copies account number and IFSC", async ({
   page,

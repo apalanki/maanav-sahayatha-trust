@@ -18,7 +18,7 @@ export default function Header() {
           {/* Logo - doubles as the Home link; always lands at the top of the home page */}
           <Link
             href="/"
-            aria-label="Manav Sahayata Trust home"
+            aria-label="Maanav Sahayata Trust home"
             onClick={() => {
               setMobileMenuOpen(false);
               window.scrollTo({ top: 0 });
@@ -26,7 +26,7 @@ export default function Header() {
           >
             <img
               src={getAssetPath("/logo.png")}
-              alt="Manav Sahayata Trust"
+              alt="Maanav Sahayata Trust"
               className="h-12 sm:h-14 w-auto cursor-pointer"
             />
           </Link>

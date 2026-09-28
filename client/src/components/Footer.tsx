@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">Manav Sahayata Trust</h3>
+            <h3 className="font-bold text-lg mb-4">Maanav Sahayata Trust</h3>
             <p className="text-sm opacity-90 leading-relaxed">
               Serving rural and tribal communities through education,
               healthcare, and cultural development since 2004. Every
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-90">
           <p className="text-sm">
-            &copy; {new Date().getFullYear()} Manav Sahayata Trust. All rights
+            &copy; {new Date().getFullYear()} Maanav Sahayata Trust. All rights
             reserved.
           </p>
         </div>

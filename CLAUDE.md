@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Static React site for **Manav Sahayata Trust**, a charity serving tribal communities near
+Static React site for **Maanav Sahayata Trust**, a charity serving tribal communities near
 Visakhapatnam. Live at **https://manavsahayata.org** (GitHub Pages; domain/DNS on Cloudflare).
 Read **README.md** for architecture and file layout; this file holds the working rules.
 
@@ -32,7 +32,7 @@ Pushing to `main` runs the tests, then deploys to production (~2–3 minutes). T
 - **Donate buttons go to `/donate`** (UPI QR + ID). The UPI ID lives in `lib/contact.ts` and the QR image in
   `client/public/images/donate/upi-qr.png`; they must always match (e2e/donate.spec.ts decodes the QR).
   Never change either without a new QR from the trust. Bank details (`BANK_ACCOUNT` in `lib/contact.ts`) are
-  shown exactly as the bank has them, including the "Maanav" spelling. WhatsApp links remain for questions.
+  shown exactly as the bank has them. WhatsApp links remain for questions.
 - Show `<WhatsAppIcon />` (components/WhatsAppIcon.tsx) on every WhatsApp link: white on navy buttons, WhatsApp green `#25D366` elsewhere (brand rules). The contact form (Web3Forms,
   free plan: 250 messages/month) emails `manavsahayata@gmail.com`; never call Web3Forms for real in tests.
 - Indian English context: "₹", "sarees", "dhotis", place names in Andhra Pradesh.

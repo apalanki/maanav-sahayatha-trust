@@ -302,7 +302,7 @@ export default function DonatePage() {
                     A Registered Trust
                   </h2>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Manav Sahayata Trust,{" "}
+                    Maanav Sahayata Trust,{" "}
                     <span className="whitespace-nowrap">
                       Regd. No. 4-32/2023
                     </span>{" "}

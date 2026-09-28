@@ -60,7 +60,7 @@ export default function ContactPage() {
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
           subject: `Website inquiry: ${interest} (from ${data.name})`,
-          from_name: "Manav Sahayata Trust website",
+          from_name: "Maanav Sahayata Trust website",
           name: data.name,
           email: data.email,
           phone: data.phone || "Not provided",

@@ -1,4 +1,4 @@
-# Manav Sahayata Trust Website - Roadmap
+# Maanav Sahayata Trust Website - Roadmap
 
 **Live site:** https://manavsahayata.org · **Deployment guide:** [DEPLOYMENT.md](DEPLOYMENT.md) ·
 **Facts to confirm:** [CONTENT_TO_VERIFY.md](CONTENT_TO_VERIFY.md)
@@ -34,6 +34,13 @@
       media profiles; share profile links so they can be added to the site and structured data
 - [ ] Set up a domain email address (e.g. `contact@manavsahayata.org`) with Cloudflare Email Routing
       (free forwarding to Gmail)
+
+### Domain matching the trust's name (planned)
+- [ ] Register a domain with the correct spelling (e.g. `maanavsahayata.org`), then: add DNS records
+      (DNS only), put the new domain in `client/public/CNAME`, set it in GitHub → Settings → Pages,
+      enforce HTTPS, and add it to Google Search Console (keep the old property to watch the move)
+- [ ] Keep `manavsahayata.org` redirecting to the new domain (Cloudflare redirect rule), so existing
+      links and search results keep working
 
 ### Donor trust & giving (High Priority)
 - [ ] Confirm the facts on the site and gather current statistics (see [CONTENT_TO_VERIFY.md](CONTENT_TO_VERIFY.md))

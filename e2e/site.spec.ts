@@ -143,7 +143,7 @@ test.describe("navigation", () => {
   });
 
   test("logo returns to the top of the home page", async ({ page }) => {
-    const logo = page.getByRole("link", { name: "Manav Sahayata Trust home" });
+    const logo = page.getByRole("link", { name: "Maanav Sahayata Trust home" });
     const scrollY = () => page.evaluate(() => window.scrollY);
 
     await page.goto(url("/programs/medical"));
