@@ -79,6 +79,22 @@ there is nothing else to change. Overrides: `VITE_BASE_PATH`, `SITE_URL`.
   loaded from Google Fonts in `client/index.html` and mapped in the `@theme` block of `index.css`.
 - **Color:** navy `#003D7A` and saffron `#FF9900` in the UI (`lib/branding.ts`, CSS variables in
   `index.css`); the logo and favicon use blue `#2D65AF` and orange `#F17D00`.
+- **Type scale** (keep new content on it):
+
+  | Role | Classes |
+  |---|---|
+  | Home hero title (h1) | Cormorant, `text-4xl sm:text-5xl md:text-6xl`, navy |
+  | Page title (h1) | `text-4xl sm:text-5xl font-serif font-bold text-primary` |
+  | Section heading (h2) | `text-3xl sm:text-4xl font-serif font-bold text-primary` |
+  | Donate-box / story title (h3) | `font-serif text-2xl sm:text-3xl font-bold text-primary` |
+  | Card title (h3) | `text-xl font-bold text-foreground` (Manrope) |
+  | Eyebrow label | `text-xs sm:text-sm font-semibold text-primary uppercase tracking-wide` + navy rule |
+  | Body text | `text-base sm:text-lg text-muted-foreground leading-relaxed` |
+  | Card text | `text-base text-muted-foreground leading-relaxed` |
+  | Captions / small print | `text-sm text-muted-foreground` |
+
+  Headings are navy (white on navy backgrounds). Don't use orange (`text-secondary`) for text: it fails
+  contrast on light backgrounds. `text-muted-foreground` is the one body-text grey.
 - **Patterns:** small uppercase "eyebrow" labels with a vertical rule, alternating photo/text rows,
   textured backgrounds (`.section-textured`) alternating with white sections, restrained hover effects.
 - **Copy:** donor-focused and specific, never guilt-driven; every page ends with a donate call to action.

@@ -30,22 +30,22 @@ export default function ReligiousCulturalProgram() {
             {/* Content */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-8 bg-secondary" />
-                <span className="text-sm font-semibold text-secondary uppercase tracking-wide">
+                <div className="w-1 h-8 bg-primary" />
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">
                   Cultural Heritage
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+              <h1 className="text-4xl sm:text-5xl font-serif font-bold mb-4 text-primary">
                 Where Culture and Faith Unite Communities
               </h1>
-              <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
                 In remote tribal villages, temples aren't just places of
                 worship—they're where communities gather, celebrate, and connect
                 across generations. Cultural traditions like Bhajans and Kolatam
                 aren't just performances—they're living links to heritage and
                 identity.
               </p>
-              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 We've renovated 18 temples, built a new one, and created spaces
                 where tribal families can practice their faith and pass
                 traditions on to their children. As these communities face rapid
@@ -67,7 +67,7 @@ export default function ReligiousCulturalProgram() {
 
         {/* Our Programs */}
         <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-8 text-primary">
             How We Support Spiritual & Cultural Life
           </h2>
 
@@ -77,11 +77,11 @@ export default function ReligiousCulturalProgram() {
                 <div className="p-3 rounded-lg bg-secondary">
                   <HomeIcon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Temple Renovation & Construction
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 MST has renovated 18 Sri Ram temples in tribal villages and
                 constructed one Hanuman temple, providing spaces for spiritual
                 gathering and community connection. These temples serve as
@@ -94,11 +94,11 @@ export default function ReligiousCulturalProgram() {
                 <div className="p-3 rounded-lg bg-secondary">
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Cultural Programs
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Beyond temple work, the Trust conducts and supports numerous
                 religious and cultural programs that preserve and celebrate
                 tribal traditions—including Bhajans, Kolatam, and other cultural
@@ -111,11 +111,11 @@ export default function ReligiousCulturalProgram() {
                 <div className="p-3 rounded-lg bg-primary">
                   <Sparkles className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Spiritual Gathering Spaces
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 We create and maintain spaces where tribal communities can
                 gather for prayer, festivals, and cultural celebrations. These
                 spaces strengthen bonds, pass traditions to younger generations,
@@ -128,11 +128,11 @@ export default function ReligiousCulturalProgram() {
                 <div className="p-3 rounded-lg bg-secondary">
                   <Heart className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Cultural Identity Preservation
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 We help tribal cultural and spiritual heritage stay strong and
                 vibrant as communities develop, supporting the traditional
                 practices and ceremonies that define tribal identity and connect
@@ -144,17 +144,17 @@ export default function ReligiousCulturalProgram() {
 
         {/* Long-Term Impact */}
         <div className="mb-12 bg-gradient-to-br from-secondary/5 to-primary/5 border border-secondary/20 rounded-lg p-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-foreground">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
             Preserving Heritage for Future Generations
           </h2>
-          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
             As tribal communities face modernization and external influences,
             maintaining strong cultural and spiritual identity becomes
             increasingly important. MST's religious and cultural services ensure
             that traditions, values, and practices are celebrated and passed on
             to younger generations rather than lost.
           </p>
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Temples and cultural spaces become focal points for community
             life—places where elders share wisdom, children learn traditions,
             and families celebrate festivals together. This work ensures tribal
@@ -165,7 +165,7 @@ export default function ReligiousCulturalProgram() {
 
         {/* Visual Impact */}
         <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-8 text-primary">
             Cultural Celebrations & Traditions
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -201,10 +201,10 @@ export default function ReligiousCulturalProgram() {
 
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
-          <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-4 text-foreground">
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-4 text-primary">
             Help Keep Culture and Traditions Alive
           </h3>
-          <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
             Your support helps renovate temples, fund cultural programs, and
             create spaces where communities gather and traditions thrive. Help
             ensure tribal heritage lives on for generations to come.

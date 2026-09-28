@@ -41,22 +41,22 @@ export default function MedicalServicesProgram() {
             {/* Content */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-8 bg-secondary" />
-                <span className="text-sm font-semibold text-secondary uppercase tracking-wide">
+                <div className="w-1 h-8 bg-primary" />
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">
                   Healthcare Access
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+              <h1 className="text-4xl sm:text-5xl font-serif font-bold mb-4 text-primary">
                 No One Should Suffer Without Care
               </h1>
-              <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
                 In remote tribal villages, a simple infection can become
                 life-threatening. Mothers give birth without prenatal care. The
                 elderly go blind from cataracts that could easily be treated.
                 These aren't rare tragedies—they're daily realities when
                 healthcare is hours away and unaffordable.
               </p>
-              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 We bring doctors, medicines, and hope directly to these
                 communities through medical camps, free treatments, and
                 financial assistance for hospital care. Because healthcare is a
@@ -68,7 +68,7 @@ export default function MedicalServicesProgram() {
 
         {/* Our Approach */}
         <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-8 text-primary">
             Our Medical Support Programs
           </h2>
 
@@ -78,11 +78,11 @@ export default function MedicalServicesProgram() {
                 <div className="p-3 rounded-lg bg-primary">
                   <Heart className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Medical Camps
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Regular health camps in tribal villages provide free medical
                 consultations, basic health check-ups, and immediate care. We
                 bring doctors and medical professionals to communities that have
@@ -95,11 +95,11 @@ export default function MedicalServicesProgram() {
                 <div className="p-3 rounded-lg bg-secondary">
                   <Pill className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Medicine Distribution
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Essential medicines are distributed to remote communities,
                 ensuring that families have access to basic treatments for
                 common ailments. This program prevents minor health issues from
@@ -112,11 +112,11 @@ export default function MedicalServicesProgram() {
                 <div className="p-3 rounded-lg bg-primary">
                   <Building2 className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Hospital Treatment Support
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Financial assistance for hospital treatment at nearby facilities
                 helps families access critical care they couldn't otherwise
                 afford. We support surgeries, specialized treatments, and
@@ -129,11 +129,11 @@ export default function MedicalServicesProgram() {
                 <div className="p-3 rounded-lg bg-secondary">
                   <Eye className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Eye Care & Cataract Surgeries
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Through partnerships with organizations like Vema Netralaya, we
                 conduct eye camps, perform cataract surgeries, and distribute
                 eyeglasses—restoring sight and independence to elderly community
@@ -145,7 +145,7 @@ export default function MedicalServicesProgram() {
 
         {/* Focus Areas */}
         <div className="mb-12 bg-accent/5 border border-border rounded-lg p-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-6 text-primary">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-6 text-primary">
             Who We Serve
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -153,7 +153,7 @@ export default function MedicalServicesProgram() {
               <h4 className="font-bold text-lg mb-2 text-foreground">
                 Women & Mothers
               </h4>
-              <p className="text-foreground/80 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Prenatal care, maternal health services, and treatment for
                 conditions that disproportionately affect women in remote areas.
               </p>
@@ -162,7 +162,7 @@ export default function MedicalServicesProgram() {
               <h4 className="font-bold text-lg mb-2 text-foreground">
                 Children
               </h4>
-              <p className="text-foreground/80 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Pediatric care, vaccinations, treatment for common childhood
                 illnesses, and nutritional support for healthy development.
               </p>
@@ -171,7 +171,7 @@ export default function MedicalServicesProgram() {
               <h4 className="font-bold text-lg mb-2 text-foreground">
                 Elderly
               </h4>
-              <p className="text-foreground/80 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 Chronic disease management, cataract surgeries, mobility
                 support, and specialized care for age-related health conditions.
               </p>
@@ -181,7 +181,7 @@ export default function MedicalServicesProgram() {
 
         {/* Impact Story */}
         <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-8 text-primary">
             Where We Work
           </h2>
 
@@ -199,23 +199,23 @@ export default function MedicalServicesProgram() {
 
             {/* Story */}
             <div className="flex flex-col justify-center">
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-xl font-bold text-foreground mb-4">
                 Donkada Village & Beyond
               </h3>
-              <p className="text-base text-foreground/80 mb-4 leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
                 In remote villages like Donkada, where there are no roads or
                 basic facilities, MST has provided comprehensive healthcare
                 support to women, children, and elderly patients. These
                 communities face extreme poverty and isolation, making access to
                 medical care nearly impossible without intervention.
               </p>
-              <p className="text-base text-foreground/80 mb-4 leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
                 Our medical camps bring immediate relief—treating infections,
                 providing prenatal care, addressing chronic conditions, and
                 arranging life-changing surgeries. For many families, this is
                 their only access to professional medical care.
               </p>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Healthcare doesn't stand alone. Our medical work goes hand in
                 hand with our education, distribution, and cultural programs, so
                 families receive care for the whole person and the whole
@@ -227,10 +227,10 @@ export default function MedicalServicesProgram() {
 
         {/* Partnership Highlight */}
         <div className="mb-12 bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 rounded-lg p-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-primary">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
             Partnerships for Greater Impact
           </h2>
-          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
             MST collaborates with medical professionals, hospitals, and
             organizations to maximize our impact. Our partnership with{" "}
             <strong>Vema Netralaya</strong> has enabled us to conduct
@@ -238,7 +238,7 @@ export default function MedicalServicesProgram() {
             transforming the lives of elderly community members who had lost
             their sight.
           </p>
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Local doctors volunteer their time to conduct health camps, and
             nearby hospitals provide discounted or subsidized care to patients
             referred by the Trust. These collaborations ensure that quality
@@ -248,7 +248,7 @@ export default function MedicalServicesProgram() {
 
         {/* Additional Images */}
         <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-8 text-primary">
             Our Medical Outreach
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -288,10 +288,10 @@ export default function MedicalServicesProgram() {
 
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
-          <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-4 text-foreground">
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-4 text-primary">
             Bring Healthcare to Those Who Need It Most
           </h3>
-          <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
             Your support funds medical camps, provides medicines, and helps
             families afford life-saving treatments. You can be the reason
             someone receives care when they need it most.

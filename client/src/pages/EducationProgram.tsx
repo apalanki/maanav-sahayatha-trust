@@ -44,16 +44,16 @@ export default function EducationProgram() {
                   Our Mission
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+              <h1 className="text-4xl sm:text-5xl font-serif font-bold mb-4 text-primary">
                 Education Changes Everything
               </h1>
-              <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
                 A talented student shouldn't have to drop out of school because
                 their family can't afford fees. Education isn't just about
                 learning—it's about breaking cycles of poverty and creating
                 community leaders who give back.
               </p>
-              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 We provide scholarships, exam preparation support, and special
                 assistance for girls facing financial barriers—ensuring that
                 deserving students can pursue their dreams with dignity,
@@ -65,7 +65,7 @@ export default function EducationProgram() {
 
         {/* Our Approach */}
         <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-8 text-primary">
             How We Support Students
           </h2>
 
@@ -75,11 +75,11 @@ export default function EducationProgram() {
                 <div className="p-3 rounded-lg bg-primary">
                   <GraduationCap className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Scholarships & Financial Aid
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Full and partial scholarships cover school and college fees for
                 students who show merit and dedication but lack the means to
                 continue. Each scholarship goes to a student with genuine
@@ -92,11 +92,11 @@ export default function EducationProgram() {
                 <div className="p-3 rounded-lg bg-secondary">
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Exam Preparation Support
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Specialized support for students preparing for competitive
                 examinations—often the pathway to better opportunities.
                 Coaching, study materials, and mentorship help students compete
@@ -109,11 +109,11 @@ export default function EducationProgram() {
                 <div className="p-3 rounded-lg bg-primary">
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Special Focus on Girls' Education
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Academically bright girls facing financial difficulties receive
                 targeted support. Education for girls is particularly
                 transformative for families and communities, creating ripple
@@ -126,11 +126,11 @@ export default function EducationProgram() {
                 <div className="p-3 rounded-lg bg-secondary">
                   <Lightbulb className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-foreground">
                   Mentorship & Guidance
                 </h3>
               </div>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Beyond financial support, students receive ongoing mentorship,
                 career guidance, and encouragement. Building confidence and
                 fostering resilience are as important as funding education
@@ -142,16 +142,16 @@ export default function EducationProgram() {
 
         {/* Long-Term Impact */}
         <div className="mb-12 bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 rounded-lg p-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-foreground">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
             The Ripple Effect of Education
           </h2>
-          <p className="text-base sm:text-lg text-foreground/80 mb-4 leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
             When you educate one person, you transform an entire community. Our
             former students have become engineers, doctors, and teachers—and
             many return to serve the very villages where they grew up, inspiring
             the next generation.
           </p>
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Like Pragada Suresh and Ch. Santosh—two young men who received MST
             scholarships, became teachers, and now dedicate their lives to
             educating children in remote tribal schools. This is the power of
@@ -161,7 +161,7 @@ export default function EducationProgram() {
 
         {/* Program in Action */}
         <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-8 text-primary">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-8 text-primary">
             Our Educational Programs in Action
           </h2>
 
@@ -180,7 +180,7 @@ export default function EducationProgram() {
                 />
               </div>
               <div className="p-4">
-                <p className="text-sm text-foreground/80 leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Students from rural and tribal communities receiving
                   comprehensive educational support—scholarships, learning
                   materials, and mentorship to help them succeed academically
@@ -203,7 +203,7 @@ export default function EducationProgram() {
                 />
               </div>
               <div className="p-4">
-                <p className="text-sm text-foreground/80 leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Regular mentorship sessions provide academic guidance, exam
                   preparation support, and career counseling, building students'
                   confidence and helping them navigate their educational journey
@@ -226,7 +226,7 @@ export default function EducationProgram() {
                 />
               </div>
               <div className="p-4">
-                <p className="text-sm text-foreground/80 leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Through personalized attention and guidance, students develop
                   academic skills, gain confidence, and prepare for competitive
                   examinations that open doors to better opportunities and
@@ -239,10 +239,10 @@ export default function EducationProgram() {
 
         {/* Call to Action */}
         <div className="mt-16 bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
-          <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-4 text-foreground">
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-4 text-primary">
             Help a Student Stay in School
           </h3>
-          <p className="text-base sm:text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
             Your support keeps talented students in school when financial
             hardship would otherwise force them to drop out. Give a deserving
             student the chance to learn, grow, and transform their community.

@@ -102,7 +102,7 @@ export default function HomePage() {
                   Service to Others is the Purpose of Life
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-6 leading-tight">
                 Together, We Bring Education, Healthcare & Hope to Tribal
                 Villages
               </h1>
@@ -168,7 +168,7 @@ export default function HomePage() {
                   Founded on Service
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
                 Our Story
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
@@ -219,7 +219,7 @@ export default function HomePage() {
                 What We Do
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
               Five Ways We Create Change
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground">
@@ -255,7 +255,7 @@ export default function HomePage() {
                     >
                       <Icon className="w-5 h-5 text-white" />
                     </div>
-                    <h3 className="text-xl lg:text-lg leading-snug font-bold text-foreground">
+                    <h3 className="text-xl leading-snug font-bold text-foreground">
                       {program.title}
                     </h3>
                   </div>
@@ -293,7 +293,7 @@ export default function HomePage() {
                 Real Stories, Real Impact
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
               From Students to Teachers—A Story of Hope
             </h2>
           </div>
@@ -303,7 +303,7 @@ export default function HomePage() {
             className="p-6 sm:p-8 md:p-12 bg-white"
             style={{ borderLeft: `4px solid #003D7A` }}
           >
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-4">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-primary mb-4">
               Pragada Suresh and Ch. Santosh
             </h3>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 leading-relaxed">
@@ -336,7 +336,7 @@ export default function HomePage() {
       >
         <div className="container text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Be Part of Someone's Transformation
             </h2>
             <p className="text-base sm:text-lg mb-8 leading-relaxed opacity-95">

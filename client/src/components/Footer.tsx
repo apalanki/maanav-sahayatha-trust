@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-90">
-          <p>
+          <p className="text-sm">
             &copy; {new Date().getFullYear()} Manav Sahayata Trust. All rights
             reserved.
           </p>

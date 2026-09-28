@@ -93,10 +93,10 @@ export default function ContactPage() {
               Get in Touch
             </span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-serif font-bold mb-4 text-primary">
+          <h1 className="text-4xl sm:text-5xl font-serif font-bold mb-4 text-primary">
             We'd Love to Hear From You
           </h1>
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Whether you'd like to support a student's education, sponsor a
             medical camp, volunteer, or simply learn more about our work, send
             us a message and we'll get back to you.
@@ -111,7 +111,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-3">
                   Message Us on WhatsApp
                 </h2>
-                <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-6">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6">
                   The quickest way to reach us is on WhatsApp. Tell us how you'd
                   like to help or what you'd like to know, and we'll reply
                   personally.
@@ -139,7 +139,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-3">
                   Thank you, {senderName}!
                 </h2>
-                <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-6 max-w-md mx-auto">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 max-w-md mx-auto">
                   Your message has been sent. We'll get back to you soon. We're
                   grateful you took the time to reach out.
                 </p>
@@ -298,7 +298,7 @@ export default function ContactPage() {
                     <Send className="w-4 h-4" />
                     {status === "sending" ? "Sending…" : "Send Message"}
                   </Button>
-                  <p className="text-sm text-foreground/70">
+                  <p className="text-sm text-muted-foreground">
                     We'll only use your details to reply to you.
                   </p>
                 </div>
@@ -355,7 +355,7 @@ export default function ContactPage() {
                     <span className="block font-semibold text-foreground">
                       Address
                     </span>
-                    <span className="text-foreground/80">
+                    <span className="text-muted-foreground">
                       1416, MK Gold Coast, Yendada-530045
                       <br />
                       Visakhapatnam, Andhra Pradesh, India

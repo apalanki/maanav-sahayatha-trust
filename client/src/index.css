@@ -68,7 +68,7 @@
   --popover: oklch(0.99 0.001 0);
   --popover-foreground: oklch(0.25 0.02 0);
   --muted: oklch(0.88 0.003 0);
-  --muted-foreground: oklch(0.50 0.05 0);
+  --muted-foreground: oklch(0.40 0.015 0);  /* Body text grey (neutral, not pink) */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.92 0.004 0);
